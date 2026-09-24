@@ -1,0 +1,10 @@
+component,paper_object,implementation,check,status
+type_and_effect_analysis,paper static judgments,artifact/src/tidemark/core.py,strict semantics and boundary tests,executable correspondence evidence
+candidate_discovery,carrier applicability rules,core.py and reference.py,production/reference candidate agreement,finite differential check
+interval_selection,canonical selector theorem,core.py and reference.py,"independent DP over 65,536 instances",bounded exhaustive correspondence
+framing,frame round trip and injectivity,core.py and reference.py,"12,309 exhaustive legal messages plus large integer boundaries",bounded plus human proof
+replay,heterogeneous replay theorem,core.py; reference.py; structural.py,complete target equality and derivation checks,finite executable correspondence
+extraction,extractor left inverse,core.py and reference.py,"round trips, trailing-zero distinction, payload mutations",finite executable correspondence
+certificate_check,abstract soundness judgment,core.py and reference.py,"2,000 certificate mutations and separate-source agreement",conditional on parser and serializer correspondence
+serialized_surface,canonical JSON and digest binding,core.py,"strict parsing, unknown-field, noncanonical-byte, digest tests",cryptographic collision resistance assumed
+llvm_projection,external phase audit,external_llvm.py,396 compilation attempts and retained failures,not a semantic refinement

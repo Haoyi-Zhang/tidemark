@@ -1,0 +1,6 @@
+PDF: paper/main.pdf
+Pages: 48
+Encrypted: False
+Openable (PyMuPDF): True
+Likely scanned: False
+XFA present: False

@@ -1,0 +1,20 @@
+Title:           TideMark: Type-Guided Certification of Program-Watermark Embedding
+Subject:         ACM TOPLAS research article - review manuscript
+Keywords:        program watermarking; translation validation; type and effect systems; proof-carrying code; certified transformation
+Author:          Haoyi Zhang; Huaijin Ran; Xunzhu Tang
+Creator:         ACM acmart TOPLAS review manuscript with native TikZ and PGFPlots figures
+Producer:        pdfTeX/acmart; final audited postflight
+Custom Metadata: no
+Metadata Stream: no
+Tagged:          no
+UserProperties:  no
+Suspects:        no
+Form:            none
+JavaScript:      no
+Pages:           48
+Encrypted:       no
+Page size:       486 x 720 pts
+Page rot:        0
+File size:       3236033 bytes
+Optimized:       no
+PDF version:     1.7

@@ -1,0 +1,13 @@
+{
+  "all_passed": true,
+  "assigned_authors": 3,
+  "citation_occurrences": 85,
+  "findings": [],
+  "native_figures": 6,
+  "pages": 48,
+  "pdf_sha256": "b59389f49c801c4e2043d57ade9e66f80e0332cdb529616157a5ce086305a7f7",
+  "reference_entries": 75,
+  "reserved_author_slots": 3,
+  "schema": "submission-verification",
+  "unit_tests_expected": 80
+}

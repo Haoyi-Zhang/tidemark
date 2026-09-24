@@ -1,0 +1,50 @@
+{
+  "contact_sheets_each": 4,
+  "dpi": 180,
+  "engines": [
+    "PDFium",
+    "Poppler pdftoppm"
+  ],
+  "figure_findings": {
+    "connectors": "no connector crosses text, another connector, or a node interior",
+    "modules": "no observed text-module or module-module overlap",
+    "native_sources": "TikZ and PGFPlots only",
+    "plots": "no observed label-axis or legend-data collision",
+    "typography": "Linux Libertine text, NewTX Math, Inconsolata code; embedded",
+    "whitespace": "aspect ratios fit the manuscript rectangles without redundant title bands"
+  },
+  "figures_checked": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "findings": [],
+  "full_size_spot_checks": [
+    1,
+    3,
+    10,
+    12,
+    18,
+    36,
+    38,
+    45,
+    48
+  ],
+  "page_dimensions_pixels": [
+    1215,
+    1800
+  ],
+  "page_order": "numeric",
+  "pages_each": 48,
+  "pdf_sha256": "b59389f49c801c4e2043d57ade9e66f80e0332cdb529616157a5ce086305a7f7",
+  "renderer_parity": {
+    "all_dimensions_equal": true,
+    "max_mean_absolute_channel_difference": 8.01153574150282,
+    "pages": 48
+  },
+  "schema": "visual-audit",
+  "verdict": "PASS_NO_OBSERVED_TEXT_MODULE_LINE_TABLE_OR_RENDERER_SENSITIVE_DEFECT"
+}

@@ -1,0 +1,46 @@
+metric,value,unit,evidence,scope
+programs,400,programs,artifact/data/derived/evaluation-summary.json,fixed internal corpus
+bindings,13464,bindings,artifact/data/derived/evaluation-summary.json,fixed internal corpus
+selected,5782,sites,artifact/data/derived/evaluation-summary.json,fixed internal corpus
+header_bits,1321,bits,artifact/data/derived/evaluation-summary.json,fixed internal corpus
+payload_bits,4461,bits,artifact/data/derived/evaluation-summary.json,fixed internal corpus
+full_executions,3200,executions,artifact/data/derived/evaluation-summary.json,fixed internal corpus
+local_carrier_cases,809,comparisons,artifact/data/derived/evaluation-summary.json,fixed internal corpus
+certificate_mutations,2000,mutations,artifact/data/derived/evaluation-summary.json,fixed internal corpus
+proof_mutations,3000,mutations,artifact/data/derived/evaluation-summary.json,fixed internal corpus
+interval_instances,65536,instances,artifact/data/derived/evaluation-summary.json,fixed internal corpus
+frame_cases,12309,messages,artifact/data/derived/evaluation-summary.json,fixed internal corpus
+derivations,800,derivations,artifact/data/derived/evaluation-summary.json,fixed internal corpus
+full_semantic_differences,0,count,artifact/data/derived/evaluation-summary.json,observed finite audit outcome
+local_carrier_differences,0,count,artifact/data/derived/evaluation-summary.json,observed finite audit outcome
+reference_acceptance_differences,0,count,artifact/data/derived/evaluation-summary.json,observed finite audit outcome
+reference_evaluator_differences,0,count,artifact/data/derived/evaluation-summary.json,observed finite audit outcome
+reference_selection_differences,0,count,artifact/data/derived/evaluation-summary.json,observed finite audit outcome
+reference_target_differences,0,count,artifact/data/derived/evaluation-summary.json,observed finite audit outcome
+accepted_mutations,0,count,artifact/data/derived/evaluation-summary.json,observed finite audit outcome
+accepted_proof_mutations,0,count,artifact/data/derived/evaluation-summary.json,observed finite audit outcome
+selector_differences,0,count,artifact/data/derived/evaluation-summary.json,observed finite audit outcome
+frame_failures,0,count,artifact/data/derived/evaluation-summary.json,observed finite audit outcome
+derivation_failures,0,count,artifact/data/derived/evaluation-summary.json,observed finite audit outcome
+derivation_producer_differences,0,count,artifact/data/derived/evaluation-summary.json,observed finite audit outcome
+llvm_O0_successful_modules,78,count,artifact/data/derived/llvm-projection.json,read-only textual opportunity projection
+llvm_O0_failed_modules,54,count,artifact/data/derived/llvm-projection.json,read-only textual opportunity projection
+llvm_O0_instructions,3592,count,artifact/data/derived/llvm-projection.json,read-only textual opportunity projection
+llvm_O0_selected_sites,92,count,artifact/data/derived/llvm-projection.json,read-only textual opportunity projection
+llvm_O0_payload_bits,40,count,artifact/data/derived/llvm-projection.json,read-only textual opportunity projection
+llvm_O0_operand_only_payload_bits,31,count,artifact/data/derived/llvm-projection.json,read-only textual opportunity projection
+llvm_O0_adjacent_only_payload_bits,2,count,artifact/data/derived/llvm-projection.json,read-only textual opportunity projection
+llvm_O1_successful_modules,78,count,artifact/data/derived/llvm-projection.json,read-only textual opportunity projection
+llvm_O1_failed_modules,54,count,artifact/data/derived/llvm-projection.json,read-only textual opportunity projection
+llvm_O1_instructions,2342,count,artifact/data/derived/llvm-projection.json,read-only textual opportunity projection
+llvm_O1_selected_sites,160,count,artifact/data/derived/llvm-projection.json,read-only textual opportunity projection
+llvm_O1_payload_bits,90,count,artifact/data/derived/llvm-projection.json,read-only textual opportunity projection
+llvm_O1_operand_only_payload_bits,61,count,artifact/data/derived/llvm-projection.json,read-only textual opportunity projection
+llvm_O1_adjacent_only_payload_bits,19,count,artifact/data/derived/llvm-projection.json,read-only textual opportunity projection
+llvm_O2_successful_modules,78,count,artifact/data/derived/llvm-projection.json,read-only textual opportunity projection
+llvm_O2_failed_modules,54,count,artifact/data/derived/llvm-projection.json,read-only textual opportunity projection
+llvm_O2_instructions,2428,count,artifact/data/derived/llvm-projection.json,read-only textual opportunity projection
+llvm_O2_selected_sites,172,count,artifact/data/derived/llvm-projection.json,read-only textual opportunity projection
+llvm_O2_payload_bits,99,count,artifact/data/derived/llvm-projection.json,read-only textual opportunity projection
+llvm_O2_operand_only_payload_bits,67,count,artifact/data/derived/llvm-projection.json,read-only textual opportunity projection
+llvm_O2_adjacent_only_payload_bits,23,count,artifact/data/derived/llvm-projection.json,read-only textual opportunity projection

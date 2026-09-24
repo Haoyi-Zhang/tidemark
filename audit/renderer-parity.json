@@ -1,0 +1,633 @@
+{
+  "all_dimensions_equal": true,
+  "dpi": 180,
+  "max_mean_absolute_channel_difference": 8.01153574150282,
+  "pages": 48,
+  "rows": [
+    {
+      "dimensions_equal": true,
+      "mean_absolute_channel_difference": 5.538578722755678,
+      "page": 1,
+      "pdfium_size": [
+        1215,
+        1800
+      ],
+      "poppler_size": [
+        1215,
+        1800
+      ]
+    },
+    {
+      "dimensions_equal": true,
+      "mean_absolute_channel_difference": 7.328572168876696,
+      "page": 2,
+      "pdfium_size": [
+        1215,
+        1800
+      ],
+      "poppler_size": [
+        1215,
+        1800
+      ]
+    },
+    {
+      "dimensions_equal": true,
+      "mean_absolute_channel_difference": 5.446813747904283,
+      "page": 3,
+      "pdfium_size": [
+        1215,
+        1800
+      ],
+      "poppler_size": [
+        1215,
+        1800
+      ]
+    },
+    {
+      "dimensions_equal": true,
+      "mean_absolute_channel_difference": 4.904677488187776,
+      "page": 4,
+      "pdfium_size": [
+        1215,
+        1800
+      ],
+      "poppler_size": [
+        1215,
+        1800
+      ]
+    },
+    {
+      "dimensions_equal": true,
+      "mean_absolute_channel_difference": 3.94175689681451,
+      "page": 5,
+      "pdfium_size": [
+        1215,
+        1800
+      ],
+      "poppler_size": [
+        1215,
+        1800
+      ]
+    },
+    {
+      "dimensions_equal": true,
+      "mean_absolute_channel_difference": 4.726759335467154,
+      "page": 6,
+      "pdfium_size": [
+        1215,
+        1800
+      ],
+      "poppler_size": [
+        1215,
+        1800
+      ]
+    },
+    {
+      "dimensions_equal": true,
+      "mean_absolute_channel_difference": 6.211827465325407,
+      "page": 7,
+      "pdfium_size": [
+        1215,
+        1800
+      ],
+      "poppler_size": [
+        1215,
+        1800
+      ]
+    },
+    {
+      "dimensions_equal": true,
+      "mean_absolute_channel_difference": 5.606028959000152,
+      "page": 8,
+      "pdfium_size": [
+        1215,
+        1800
+      ],
+      "poppler_size": [
+        1215,
+        1800
+      ]
+    },
+    {
+      "dimensions_equal": true,
+      "mean_absolute_channel_difference": 6.0777282426459385,
+      "page": 9,
+      "pdfium_size": [
+        1215,
+        1800
+      ],
+      "poppler_size": [
+        1215,
+        1800
+      ]
+    },
+    {
+      "dimensions_equal": true,
+      "mean_absolute_channel_difference": 3.408672915714068,
+      "page": 10,
+      "pdfium_size": [
+        1215,
+        1800
+      ],
+      "poppler_size": [
+        1215,
+        1800
+      ]
+    },
+    {
+      "dimensions_equal": true,
+      "mean_absolute_channel_difference": 5.252407254991617,
+      "page": 11,
+      "pdfium_size": [
+        1215,
+        1800
+      ],
+      "poppler_size": [
+        1215,
+        1800
+      ]
+    },
+    {
+      "dimensions_equal": true,
+      "mean_absolute_channel_difference": 5.161528120713306,
+      "page": 12,
+      "pdfium_size": [
+        1215,
+        1800
+      ],
+      "poppler_size": [
+        1215,
+        1800
+      ]
+    },
+    {
+      "dimensions_equal": true,
+      "mean_absolute_channel_difference": 3.243204694406341,
+      "page": 13,
+      "pdfium_size": [
+        1215,
+        1800
+      ],
+      "poppler_size": [
+        1215,
+        1800
+      ]
+    },
+    {
+      "dimensions_equal": true,
+      "mean_absolute_channel_difference": 3.04062414266118,
+      "page": 14,
+      "pdfium_size": [
+        1215,
+        1800
+      ],
+      "poppler_size": [
+        1215,
+        1800
+      ]
+    },
+    {
+      "dimensions_equal": true,
+      "mean_absolute_channel_difference": 5.377404359091602,
+      "page": 15,
+      "pdfium_size": [
+        1215,
+        1800
+      ],
+      "poppler_size": [
+        1215,
+        1800
+      ]
+    },
+    {
+      "dimensions_equal": true,
+      "mean_absolute_channel_difference": 5.029141441853376,
+      "page": 16,
+      "pdfium_size": [
+        1215,
+        1800
+      ],
+      "poppler_size": [
+        1215,
+        1800
+      ]
+    },
+    {
+      "dimensions_equal": true,
+      "mean_absolute_channel_difference": 5.248780368846212,
+      "page": 17,
+      "pdfium_size": [
+        1215,
+        1800
+      ],
+      "poppler_size": [
+        1215,
+        1800
+      ]
+    },
+    {
+      "dimensions_equal": true,
+      "mean_absolute_channel_difference": 4.914162475232434,
+      "page": 18,
+      "pdfium_size": [
+        1215,
+        1800
+      ],
+      "poppler_size": [
+        1215,
+        1800
+      ]
+    },
+    {
+      "dimensions_equal": true,
+      "mean_absolute_channel_difference": 5.74113778387441,
+      "page": 19,
+      "pdfium_size": [
+        1215,
+        1800
+      ],
+      "poppler_size": [
+        1215,
+        1800
+      ]
+    },
+    {
+      "dimensions_equal": true,
+      "mean_absolute_channel_difference": 5.392358177107148,
+      "page": 20,
+      "pdfium_size": [
+        1215,
+        1800
+      ],
+      "poppler_size": [
+        1215,
+        1800
+      ]
+    },
+    {
+      "dimensions_equal": true,
+      "mean_absolute_channel_difference": 4.917240969364426,
+      "page": 21,
+      "pdfium_size": [
+        1215,
+        1800
+      ],
+      "poppler_size": [
+        1215,
+        1800
+      ]
+    },
+    {
+      "dimensions_equal": true,
+      "mean_absolute_channel_difference": 4.011993598536809,
+      "page": 22,
+      "pdfium_size": [
+        1215,
+        1800
+      ],
+      "poppler_size": [
+        1215,
+        1800
+      ]
+    },
+    {
+      "dimensions_equal": true,
+      "mean_absolute_channel_difference": 5.816004572473709,
+      "page": 23,
+      "pdfium_size": [
+        1215,
+        1800
+      ],
+      "poppler_size": [
+        1215,
+        1800
+      ]
+    },
+    {
+      "dimensions_equal": true,
+      "mean_absolute_channel_difference": 6.592875476299344,
+      "page": 24,
+      "pdfium_size": [
+        1215,
+        1800
+      ],
+      "poppler_size": [
+        1215,
+        1800
+      ]
+    },
+    {
+      "dimensions_equal": true,
+      "mean_absolute_channel_difference": 7.209056393842402,
+      "page": 25,
+      "pdfium_size": [
+        1215,
+        1800
+      ],
+      "poppler_size": [
+        1215,
+        1800
+      ]
+    },
+    {
+      "dimensions_equal": true,
+      "mean_absolute_channel_difference": 5.249398567291571,
+      "page": 26,
+      "pdfium_size": [
+        1215,
+        1800
+      ],
+      "poppler_size": [
+        1215,
+        1800
+      ]
+    },
+    {
+      "dimensions_equal": true,
+      "mean_absolute_channel_difference": 2.246192653558909,
+      "page": 27,
+      "pdfium_size": [
+        1215,
+        1800
+      ],
+      "poppler_size": [
+        1215,
+        1800
+      ]
+    },
+    {
+      "dimensions_equal": true,
+      "mean_absolute_channel_difference": 5.323512726718488,
+      "page": 28,
+      "pdfium_size": [
+        1215,
+        1800
+      ],
+      "poppler_size": [
+        1215,
+        1800
+      ]
+    },
+    {
+      "dimensions_equal": true,
+      "mean_absolute_channel_difference": 5.763927145252249,
+      "page": 29,
+      "pdfium_size": [
+        1215,
+        1800
+      ],
+      "poppler_size": [
+        1215,
+        1800
+      ]
+    },
+    {
+      "dimensions_equal": true,
+      "mean_absolute_channel_difference": 5.551809632677945,
+      "page": 30,
+      "pdfium_size": [
+        1215,
+        1800
+      ],
+      "poppler_size": [
+        1215,
+        1800
+      ]
+    },
+    {
+      "dimensions_equal": true,
+      "mean_absolute_channel_difference": 5.913379058070416,
+      "page": 31,
+      "pdfium_size": [
+        1215,
+        1800
+      ],
+      "poppler_size": [
+        1215,
+        1800
+      ]
+    },
+    {
+      "dimensions_equal": true,
+      "mean_absolute_channel_difference": 6.073924096936442,
+      "page": 32,
+      "pdfium_size": [
+        1215,
+        1800
+      ],
+      "poppler_size": [
+        1215,
+        1800
+      ]
+    },
+    {
+      "dimensions_equal": true,
+      "mean_absolute_channel_difference": 5.632468221307728,
+      "page": 33,
+      "pdfium_size": [
+        1215,
+        1800
+      ],
+      "poppler_size": [
+        1215,
+        1800
+      ]
+    },
+    {
+      "dimensions_equal": true,
+      "mean_absolute_channel_difference": 6.987774119798812,
+      "page": 34,
+      "pdfium_size": [
+        1215,
+        1800
+      ],
+      "poppler_size": [
+        1215,
+        1800
+      ]
+    },
+    {
+      "dimensions_equal": true,
+      "mean_absolute_channel_difference": 3.6578727328151195,
+      "page": 35,
+      "pdfium_size": [
+        1215,
+        1800
+      ],
+      "poppler_size": [
+        1215,
+        1800
+      ]
+    },
+    {
+      "dimensions_equal": true,
+      "mean_absolute_channel_difference": 3.8914898643499463,
+      "page": 36,
+      "pdfium_size": [
+        1215,
+        1800
+      ],
+      "poppler_size": [
+        1215,
+        1800
+      ]
+    },
+    {
+      "dimensions_equal": true,
+      "mean_absolute_channel_difference": 4.120488187776254,
+      "page": 37,
+      "pdfium_size": [
+        1215,
+        1800
+      ],
+      "poppler_size": [
+        1215,
+        1800
+      ]
+    },
+    {
+      "dimensions_equal": true,
+      "mean_absolute_channel_difference": 6.121595336076818,
+      "page": 38,
+      "pdfium_size": [
+        1215,
+        1800
+      ],
+      "poppler_size": [
+        1215,
+        1800
+      ]
+    },
+    {
+      "dimensions_equal": true,
+      "mean_absolute_channel_difference": 5.493583142813596,
+      "page": 39,
+      "pdfium_size": [
+        1215,
+        1800
+      ],
+      "poppler_size": [
+        1215,
+        1800
+      ]
+    },
+    {
+      "dimensions_equal": true,
+      "mean_absolute_channel_difference": 5.79421536351166,
+      "page": 40,
+      "pdfium_size": [
+        1215,
+        1800
+      ],
+      "poppler_size": [
+        1215,
+        1800
+      ]
+    },
+    {
+      "dimensions_equal": true,
+      "mean_absolute_channel_difference": 6.817946654473403,
+      "page": 41,
+      "pdfium_size": [
+        1215,
+        1800
+      ],
+      "poppler_size": [
+        1215,
+        1800
+      ]
+    },
+    {
+      "dimensions_equal": true,
+      "mean_absolute_channel_difference": 7.511143423258649,
+      "page": 42,
+      "pdfium_size": [
+        1215,
+        1800
+      ],
+      "poppler_size": [
+        1215,
+        1800
+      ]
+    },
+    {
+      "dimensions_equal": true,
+      "mean_absolute_channel_difference": 6.591023167200121,
+      "page": 43,
+      "pdfium_size": [
+        1215,
+        1800
+      ],
+      "poppler_size": [
+        1215,
+        1800
+      ]
+    },
+    {
+      "dimensions_equal": true,
+      "mean_absolute_channel_difference": 8.01153574150282,
+      "page": 44,
+      "pdfium_size": [
+        1215,
+        1800
+      ],
+      "poppler_size": [
+        1215,
+        1800
+      ]
+    },
+    {
+      "dimensions_equal": true,
+      "mean_absolute_channel_difference": 6.238744093888127,
+      "page": 45,
+      "pdfium_size": [
+        1215,
+        1800
+      ],
+      "poppler_size": [
+        1215,
+        1800
+      ]
+    },
+    {
+      "dimensions_equal": true,
+      "mean_absolute_channel_difference": 7.55050800182899,
+      "page": 46,
+      "pdfium_size": [
+        1215,
+        1800
+      ],
+      "poppler_size": [
+        1215,
+        1800
+      ]
+    },
+    {
+      "dimensions_equal": true,
+      "mean_absolute_channel_difference": 7.8563603109282125,
+      "page": 47,
+      "pdfium_size": [
+        1215,
+        1800
+      ],
+      "poppler_size": [
+        1215,
+        1800
+      ]
+    },
+    {
+      "dimensions_equal": true,
+      "mean_absolute_channel_difference": 7.260496723060509,
+      "page": 48,
+      "pdfium_size": [
+        1215,
+        1800
+      ],
+      "poppler_size": [
+        1215,
+        1800
+      ]
+    }
+  ],
+  "schema": "renderer-parity-audit"
+}

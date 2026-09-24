@@ -1,0 +1,1 @@
+# Standard-library Python 3.11+ only. External projection additionally needs Go 1.23.2 and Clang 17.

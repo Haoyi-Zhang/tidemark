@@ -1,0 +1,16 @@
+{
+  "adjacent_citation_piles": 0,
+  "bibliography_notes_exposed": 0,
+  "citation_occurrences": 85,
+  "citation_occurrences_passed": 85,
+  "multi_key_citations": 0,
+  "pdf_sha256": "b59389f49c801c4e2043d57ade9e66f80e0332cdb529616157a5ce086305a7f7",
+  "reference_entries": 75,
+  "references_passed": 75,
+  "schema": "reference-audit-summary",
+  "scope": "Identifier and metadata consistency, peer-reviewed scholarly status, project relevance, and local claim support. This audit does not substitute for future publisher or registry maintenance.",
+  "structured_bibtex_entries": 75,
+  "uncited_entries": 0,
+  "undefined_citations": 0,
+  "unique_dois": 75
+}

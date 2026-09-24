@@ -1,0 +1,4 @@
+name,locator,identity,sha256,license,role,modified
+Go source snapshot,https://go.dev/dl/,Go 1.23.2 source distribution,d00831e3de5042e56a05d232a6fb596a9db8dea7dc0664a36e877e9db14afc7e,Go BSD-style license retained at artifact/external/go-source-snapshot/LICENSE,132-source external LLVM opportunity projection,no upstream source modifications
+Clang compiler,https://github.com/swiftlang/llvm-project,clang version 17.0.0 (https://github.com/swiftlang/llvm-project.git 10999b6d034fe318f3d56c83bddb6572593a8bb0),aa7389d9766be7e61df76cf094ac4f1861fd067e12908d1e9fd5cd7eb2a078f4,Apache-2.0 WITH LLVM-exception; license record retained,unmodified command-line compilation to textual LLVM IR,no
+ACM acmart class and bibliography style,https://ctan.org/pkg/acmart,template files used by the supplied manuscript workflow,recorded by project manifest,LaTeX Project Public License,TOPLAS manuscript typesetting,"no margin, font, or bibliography-style modification"
