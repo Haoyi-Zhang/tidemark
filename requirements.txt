@@ -1,1 +1,6 @@
-# Standard-library Python 3.11+ only. External projection additionally needs Go 1.23.2 and Clang 17.
+# Core, tests, raw-data verification and finite algebra: Python standard library.
+# Paper/PDF auditing and clean-build rendering need these packages:
+PyMuPDF>=1.24
+pypdfium2>=4.0
+Pillow>=10.0
+# System dependencies are listed separately in README.md; no pip package replaces TeX or Clang.

@@ -1,0 +1,746 @@
+{
+  "schema": "tidemark-raw-derived-review-1",
+  "all_checks_passed": true,
+  "issues": [],
+  "checks": {
+    "program count": {
+      "actual": 400,
+      "expected": 400,
+      "passed": true
+    },
+    "aggregate bindings": {
+      "actual": 13464,
+      "expected": 13464,
+      "passed": true
+    },
+    "aggregate selected": {
+      "actual": 5782,
+      "expected": 5782,
+      "passed": true
+    },
+    "aggregate payload_bits": {
+      "actual": 4461,
+      "expected": 4461,
+      "passed": true
+    },
+    "aggregate header_bits": {
+      "actual": 1321,
+      "expected": 1321,
+      "passed": true
+    },
+    "aggregate source_bytes": {
+      "actual": 845239,
+      "expected": 845239,
+      "passed": true
+    },
+    "aggregate target_bytes": {
+      "actual": 844903,
+      "expected": 844903,
+      "passed": true
+    },
+    "aggregate certificate_bytes": {
+      "actual": 112461,
+      "expected": 112461,
+      "passed": true
+    },
+    "aggregate descriptor_rich_bytes": {
+      "actual": 1376904,
+      "expected": 1376904,
+      "passed": true
+    },
+    "aggregate operand": {
+      "actual": 2480,
+      "expected": 2480,
+      "passed": true
+    },
+    "aggregate identity": {
+      "actual": 1290,
+      "expected": 1290,
+      "passed": true
+    },
+    "aggregate adjacent": {
+      "actual": 2012,
+      "expected": 2012,
+      "passed": true
+    },
+    "family pure-arithmetic bindings": {
+      "actual": 1741,
+      "expected": 1741,
+      "passed": true
+    },
+    "family pure-arithmetic selected": {
+      "actual": 1091,
+      "expected": 1091,
+      "passed": true
+    },
+    "family pure-arithmetic payload_bits": {
+      "actual": 880,
+      "expected": 880,
+      "passed": true
+    },
+    "family pure-arithmetic header_bits": {
+      "actual": 211,
+      "expected": 211,
+      "passed": true
+    },
+    "family pure-arithmetic operand": {
+      "actual": 694,
+      "expected": 694,
+      "passed": true
+    },
+    "family pure-arithmetic identity": {
+      "actual": 272,
+      "expected": 272,
+      "passed": true
+    },
+    "family pure-arithmetic adjacent": {
+      "actual": 125,
+      "expected": 125,
+      "passed": true
+    },
+    "family pure-arithmetic programs": {
+      "actual": 40,
+      "expected": 40,
+      "passed": true
+    },
+    "family dependence-heavy bindings": {
+      "actual": 1652,
+      "expected": 1652,
+      "passed": true
+    },
+    "family dependence-heavy selected": {
+      "actual": 832,
+      "expected": 832,
+      "passed": true
+    },
+    "family dependence-heavy payload_bits": {
+      "actual": 641,
+      "expected": 641,
+      "passed": true
+    },
+    "family dependence-heavy header_bits": {
+      "actual": 191,
+      "expected": 191,
+      "passed": true
+    },
+    "family dependence-heavy operand": {
+      "actual": 400,
+      "expected": 400,
+      "passed": true
+    },
+    "family dependence-heavy identity": {
+      "actual": 211,
+      "expected": 211,
+      "passed": true
+    },
+    "family dependence-heavy adjacent": {
+      "actual": 221,
+      "expected": 221,
+      "passed": true
+    },
+    "family dependence-heavy programs": {
+      "actual": 40,
+      "expected": 40,
+      "passed": true
+    },
+    "family region-state bindings": {
+      "actual": 1693,
+      "expected": 1693,
+      "passed": true
+    },
+    "family region-state selected": {
+      "actual": 733,
+      "expected": 733,
+      "passed": true
+    },
+    "family region-state payload_bits": {
+      "actual": 551,
+      "expected": 551,
+      "passed": true
+    },
+    "family region-state header_bits": {
+      "actual": 182,
+      "expected": 182,
+      "passed": true
+    },
+    "family region-state operand": {
+      "actual": 232,
+      "expected": 232,
+      "passed": true
+    },
+    "family region-state identity": {
+      "actual": 201,
+      "expected": 201,
+      "passed": true
+    },
+    "family region-state adjacent": {
+      "actual": 300,
+      "expected": 300,
+      "passed": true
+    },
+    "family region-state programs": {
+      "actual": 40,
+      "expected": 40,
+      "passed": true
+    },
+    "family ordered-trace bindings": {
+      "actual": 1714,
+      "expected": 1714,
+      "passed": true
+    },
+    "family ordered-trace selected": {
+      "actual": 904,
+      "expected": 904,
+      "passed": true
+    },
+    "family ordered-trace payload_bits": {
+      "actual": 710,
+      "expected": 710,
+      "passed": true
+    },
+    "family ordered-trace header_bits": {
+      "actual": 194,
+      "expected": 194,
+      "passed": true
+    },
+    "family ordered-trace operand": {
+      "actual": 430,
+      "expected": 430,
+      "passed": true
+    },
+    "family ordered-trace identity": {
+      "actual": 249,
+      "expected": 249,
+      "passed": true
+    },
+    "family ordered-trace adjacent": {
+      "actual": 225,
+      "expected": 225,
+      "passed": true
+    },
+    "family ordered-trace programs": {
+      "actual": 40,
+      "expected": 40,
+      "passed": true
+    },
+    "family branches bindings": {
+      "actual": 1895,
+      "expected": 1895,
+      "passed": true
+    },
+    "family branches selected": {
+      "actual": 785,
+      "expected": 785,
+      "passed": true
+    },
+    "family branches payload_bits": {
+      "actual": 598,
+      "expected": 598,
+      "passed": true
+    },
+    "family branches header_bits": {
+      "actual": 187,
+      "expected": 187,
+      "passed": true
+    },
+    "family branches operand": {
+      "actual": 193,
+      "expected": 193,
+      "passed": true
+    },
+    "family branches identity": {
+      "actual": 217,
+      "expected": 217,
+      "passed": true
+    },
+    "family branches adjacent": {
+      "actual": 375,
+      "expected": 375,
+      "passed": true
+    },
+    "family branches programs": {
+      "actual": 40,
+      "expected": 40,
+      "passed": true
+    },
+    "family mixed bindings": {
+      "actual": 1869,
+      "expected": 1869,
+      "passed": true
+    },
+    "family mixed selected": {
+      "actual": 717,
+      "expected": 717,
+      "passed": true
+    },
+    "family mixed payload_bits": {
+      "actual": 539,
+      "expected": 539,
+      "passed": true
+    },
+    "family mixed header_bits": {
+      "actual": 178,
+      "expected": 178,
+      "passed": true
+    },
+    "family mixed operand": {
+      "actual": 258,
+      "expected": 258,
+      "passed": true
+    },
+    "family mixed identity": {
+      "actual": 63,
+      "expected": 63,
+      "passed": true
+    },
+    "family mixed adjacent": {
+      "actual": 396,
+      "expected": 396,
+      "passed": true
+    },
+    "family mixed programs": {
+      "actual": 40,
+      "expected": 40,
+      "passed": true
+    },
+    "family random bindings": {
+      "actual": 1820,
+      "expected": 1820,
+      "passed": true
+    },
+    "family random selected": {
+      "actual": 720,
+      "expected": 720,
+      "passed": true
+    },
+    "family random payload_bits": {
+      "actual": 542,
+      "expected": 542,
+      "passed": true
+    },
+    "family random header_bits": {
+      "actual": 178,
+      "expected": 178,
+      "passed": true
+    },
+    "family random operand": {
+      "actual": 273,
+      "expected": 273,
+      "passed": true
+    },
+    "family random identity": {
+      "actual": 77,
+      "expected": 77,
+      "passed": true
+    },
+    "family random adjacent": {
+      "actual": 370,
+      "expected": 370,
+      "passed": true
+    },
+    "family random programs": {
+      "actual": 40,
+      "expected": 40,
+      "passed": true
+    },
+    "family state-conflict-control bindings": {
+      "actual": 360,
+      "expected": 360,
+      "passed": true
+    },
+    "family state-conflict-control selected": {
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    "family state-conflict-control payload_bits": {
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    "family state-conflict-control header_bits": {
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    "family state-conflict-control operand": {
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    "family state-conflict-control identity": {
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    "family state-conflict-control adjacent": {
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    "family state-conflict-control programs": {
+      "actual": 40,
+      "expected": 40,
+      "passed": true
+    },
+    "family subtraction-control bindings": {
+      "actual": 360,
+      "expected": 360,
+      "passed": true
+    },
+    "family subtraction-control selected": {
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    "family subtraction-control payload_bits": {
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    "family subtraction-control header_bits": {
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    "family subtraction-control operand": {
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    "family subtraction-control identity": {
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    "family subtraction-control adjacent": {
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    "family subtraction-control programs": {
+      "actual": 40,
+      "expected": 40,
+      "passed": true
+    },
+    "family trace-order-control bindings": {
+      "actual": 360,
+      "expected": 360,
+      "passed": true
+    },
+    "family trace-order-control selected": {
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    "family trace-order-control payload_bits": {
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    "family trace-order-control header_bits": {
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    "family trace-order-control operand": {
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    "family trace-order-control identity": {
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    "family trace-order-control adjacent": {
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    "family trace-order-control programs": {
+      "actual": 40,
+      "expected": 40,
+      "passed": true
+    },
+    "corpus size": {
+      "actual": 400,
+      "expected": 400,
+      "passed": true
+    },
+    "corpus hash": {
+      "actual": "b33357bff0d0395e4ced5ea8fb29efb2429d4842bb0af86db17264f05b056a0d",
+      "expected": "b33357bff0d0395e4ced5ea8fb29efb2429d4842bb0af86db17264f05b056a0d",
+      "passed": true
+    },
+    "raw full-executions.csv": {
+      "actual": 3200,
+      "expected": 3200,
+      "passed": true
+    },
+    "raw local-carrier-checks.csv": {
+      "actual": 46256,
+      "expected": 46256,
+      "passed": true
+    },
+    "raw interval-audit.csv": {
+      "actual": 65536,
+      "expected": 65536,
+      "passed": true
+    },
+    "raw adjacent-pairs.jsonl": {
+      "actual": 13064,
+      "expected": 13064,
+      "passed": true
+    },
+    "raw derivations.jsonl": {
+      "actual": 800,
+      "expected": 800,
+      "passed": true
+    },
+    "certificate mutations": {
+      "actual": 2000,
+      "expected": 2000,
+      "passed": true
+    },
+    "mutation production acceptance": {
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    "mutation reference acceptance": {
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    "structural applicable mutation rows": {
+      "actual": 3280,
+      "expected": 3280,
+      "passed": true
+    },
+    "structural inapplicable mutation rows": {
+      "actual": 720,
+      "expected": 720,
+      "passed": true
+    },
+    "structural accepted mutation rows": {
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    "frame vector count": {
+      "actual": 131071,
+      "expected": 131071,
+      "passed": true
+    },
+    "valid frame count": {
+      "actual": 12309,
+      "expected": 12309,
+      "passed": true
+    },
+    "quantiles_recomputed": {
+      "passed": true
+    },
+    "zero derivation_failures": {
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    "zero derivation_producer_differences": {
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    "zero derivation_target_differences": {
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    "zero frame_failures": {
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    "zero full_semantic_differences": {
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    "zero local_carrier_differences": {
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    "zero mutation_decision_differences": {
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    "zero reference_acceptance_differences": {
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    "zero reference_evaluator_differences": {
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    "zero reference_selection_differences": {
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    "zero reference_target_differences": {
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    "zero selector_differences": {
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    "zero accepted_mutations": {
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    "zero reference_accepted_mutations": {
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    "zero accepted_proof_mutations": {
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    "finite cases": {
+      "actual": 7303,
+      "expected": 7303,
+      "passed": true
+    },
+    "countermodels": {
+      "actual": 4,
+      "expected": 4,
+      "passed": true
+    },
+    "llvm attempts": {
+      "actual": 396,
+      "expected": 396,
+      "passed": true
+    },
+    "O0 success": {
+      "actual": 78,
+      "expected": 78,
+      "passed": true
+    },
+    "O0 instructions": {
+      "actual": 3592,
+      "expected": 3592,
+      "passed": true
+    },
+    "O0 payload_bits": {
+      "actual": 40,
+      "expected": 40,
+      "passed": true
+    },
+    "O0 selected_sites": {
+      "actual": 92,
+      "expected": 92,
+      "passed": true
+    },
+    "O0 operand_only_payload_bits": {
+      "actual": 31,
+      "expected": 31,
+      "passed": true
+    },
+    "O0 identity_only_payload_bits": {
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    "O0 adjacent_only_payload_bits": {
+      "actual": 2,
+      "expected": 2,
+      "passed": true
+    },
+    "O1 success": {
+      "actual": 78,
+      "expected": 78,
+      "passed": true
+    },
+    "O1 instructions": {
+      "actual": 2342,
+      "expected": 2342,
+      "passed": true
+    },
+    "O1 payload_bits": {
+      "actual": 89,
+      "expected": 89,
+      "passed": true
+    },
+    "O1 selected_sites": {
+      "actual": 159,
+      "expected": 159,
+      "passed": true
+    },
+    "O1 operand_only_payload_bits": {
+      "actual": 61,
+      "expected": 61,
+      "passed": true
+    },
+    "O1 identity_only_payload_bits": {
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    "O1 adjacent_only_payload_bits": {
+      "actual": 18,
+      "expected": 18,
+      "passed": true
+    },
+    "O2 success": {
+      "actual": 78,
+      "expected": 78,
+      "passed": true
+    },
+    "O2 instructions": {
+      "actual": 2428,
+      "expected": 2428,
+      "passed": true
+    },
+    "O2 payload_bits": {
+      "actual": 99,
+      "expected": 99,
+      "passed": true
+    },
+    "O2 selected_sites": {
+      "actual": 172,
+      "expected": 172,
+      "passed": true
+    },
+    "O2 operand_only_payload_bits": {
+      "actual": 67,
+      "expected": 67,
+      "passed": true
+    },
+    "O2 identity_only_payload_bits": {
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    "O2 adjacent_only_payload_bits": {
+      "actual": 22,
+      "expected": 22,
+      "passed": true
+    }
+  },
+  "input_sha256": {
+    "Artifacts/data/derived/evaluation-summary-mode4.json": "4a1f90ea827958a6107833c3a0b1b43e8c895048efa8883ccfbb275a546fe466",
+    "Artifacts/data/derived/finite-algebra-mode4.json": "44b73fd96a735d476ae56575cfc7bdfa78f929fbd26d24d46345b6512183f34a",
+    "Artifacts/data/derived/llvm-projection-mode4.json": "932dc9e48f650ec4dd78f10fc7055c032dcac2389f0eb5fb3bd186731bcfe6f5"
+  },
+  "boundary": "These are current-data consistency checks, not a proof-assistant refinement or an external scientific validation."
+}

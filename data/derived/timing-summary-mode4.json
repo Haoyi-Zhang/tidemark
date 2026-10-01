@@ -1,0 +1,102 @@
+{
+  "correlations": {
+    "bindings_check_ms_spearman": 0.8756717854734974,
+    "bindings_embed_ms_spearman": 0.8411618755172766,
+    "bindings_selected_spearman": 0.4273135546123581
+  },
+  "length_groups": [
+    {
+      "check_ms_median": null,
+      "embed_ms_median": null,
+      "programs": 0,
+      "range": "12-20",
+      "selected_median": null
+    },
+    {
+      "check_ms_median": 1.337225,
+      "embed_ms_median": 0.652378,
+      "programs": 1,
+      "range": "21-28",
+      "selected_median": 15
+    },
+    {
+      "check_ms_median": 1.656889,
+      "embed_ms_median": 0.824337,
+      "programs": 105,
+      "range": "29-40",
+      "selected_median": 15
+    },
+    {
+      "check_ms_median": 2.015146,
+      "embed_ms_median": 0.980465,
+      "programs": 79,
+      "range": "41-48",
+      "selected_median": 22
+    },
+    {
+      "check_ms_median": 2.367666,
+      "embed_ms_median": 1.14908,
+      "programs": 95,
+      "range": "49+",
+      "selected_median": 22
+    }
+  ],
+  "timings": {
+    "analysis_ms": {
+      "maximum": 0.366835,
+      "median": 0.0929155,
+      "minimum": 0.017957,
+      "p75": 0.1203355,
+      "p95": 0.15544749999999996
+    },
+    "check_ms": {
+      "maximum": 5.58288,
+      "median": 1.7345234999999999,
+      "minimum": 0.184339,
+      "p75": 2.1968692499999998,
+      "p95": 2.8278948499999994
+    },
+    "derivation_ms": {
+      "maximum": 13.54685,
+      "median": 5.77158,
+      "minimum": 0.460336,
+      "p75": 7.280228999999999,
+      "p95": 9.1214391
+    },
+    "discovery_ms": {
+      "maximum": 1.556755,
+      "median": 0.4320635,
+      "minimum": 0.024127,
+      "p75": 0.52721825,
+      "p95": 0.70239305
+    },
+    "embed_ms": {
+      "maximum": 2.312025,
+      "median": 0.867101,
+      "minimum": 0.08572,
+      "p75": 1.0637425,
+      "p95": 1.35041675
+    },
+    "evaluation_ms": {
+      "maximum": 5.735631,
+      "median": 2.8362485,
+      "minimum": 0.664134,
+      "p75": 3.5721507500000005,
+      "p95": 4.36880255
+    },
+    "reference_check_ms": {
+      "maximum": 3.237727,
+      "median": 1.4898335,
+      "minimum": 0.121003,
+      "p75": 1.8344322499999999,
+      "p95": 2.3428132
+    },
+    "selection_ms": {
+      "maximum": 0.877863,
+      "median": 0.119947,
+      "minimum": 0.000551,
+      "p75": 0.15072049999999998,
+      "p95": 0.20328259999999992
+    }
+  }
+}

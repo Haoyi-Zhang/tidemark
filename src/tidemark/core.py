@@ -6,9 +6,10 @@ from dataclasses import dataclass
 from enum import Enum
 from typing import Any, Iterable, Mapping, Sequence
 
-SCHEMA = "tidemark-certificate-3"
-MODE_VERSION = "tidemark-mode-3"
-CHECKER_VERSION = "tidemark-checker-3"
+SCHEMA = "tidemark-certificate-4"
+MODE_VERSION = "tidemark-mode-4"
+CHECKER_VERSION = "tidemark-checker-4"
+FAMILY_RANK = {"identity": 0, "operand": 1, "adjacent": 2}
 
 
 class TideMarkError(ValueError):
@@ -324,7 +325,21 @@ class Site:
     orientation1: tuple[Command, ...]
 
     @property
-    def key(self) -> tuple[Any, ...]: return (self.end, self.start, {"operand": 0, "identity": 1, "adjacent": 2}[self.family])
+    def descriptor_bytes(self) -> bytes:
+        return canonical_json([
+            self.family,
+            self.start,
+            self.end,
+            [command.to_obj() for command in self.orientation0],
+            [command.to_obj() for command in self.orientation1],
+        ])
+
+    @property
+    def key(self) -> tuple[Any, ...]:
+        # Earliest finishing endpoint is the optimal interval-scheduling key.
+        # The remaining components make the maximum schedule unique for a mode.
+        return (self.end, self.start, FAMILY_RANK[self.family], self.descriptor_bytes)
+
     @property
     def footprint(self) -> tuple[int, int]: return self.start, self.end
     def render(self, bit: int) -> tuple[Command, ...]:
@@ -336,62 +351,102 @@ class Site:
 def command_bytes(command: Command) -> bytes: return canonical_json(command.to_obj())
 
 
+def _identity_atom(expr: Expr, env: Mapping[str, Type], regions: Mapping[str, Type]) -> tuple[Expr, Type] | None:
+    """Return the shared mode-4 identity base domain.
+
+    Direct and expanded identity representations are admitted only for pure
+    atoms: variables, integer literals, and Boolean literals.  In particular,
+    ``get r + 0`` and ``(x + y) + 0`` are not identity carriers.
+    """
+    if expr.tag not in {"var", "int", "bool"}:
+        return None
+    typ, effect = infer_expr(expr, env, regions)
+    if effect != Effect() or typ not in {Type.INT, Type.BOOL}:
+        return None
+    return expr, typ
+
+
 def _operand_site(index: int, command: Command, env: Mapping[str, Type], regions: Mapping[str, Type]) -> Site | None:
     expr = command.expr
     if expr.tag != "bin": return None
     op, left, right = expr.args
     if op not in {"add", "mul", "eq"}: return None
-    _, le = infer_expr(left, env, regions); _, re = infer_expr(right, env, regions)
-    if le != Effect() or re != Effect(): return None
-    lb, rb = canonical_json(left.to_obj()), canonical_json(right.to_obj())
-    if lb == rb: return None
-    lo, hi = (left, right) if lb < rb else (right, left)
-    c0 = Command(command.name, Expr.binary(op, lo, hi)); c1 = Command(command.name, Expr.binary(op, hi, lo))
-    return Site("operand", index, index, (c0,), (c1,))
+    _, left_effect = infer_expr(left, env, regions)
+    _, right_effect = infer_expr(right, env, regions)
+    if left_effect != Effect() or right_effect != Effect(): return None
+    left_bytes = canonical_json(left.to_obj())
+    right_bytes = canonical_json(right.to_obj())
+    if left_bytes == right_bytes: return None
+    low, high = (left, right) if left_bytes < right_bytes else (right, left)
+    orientation0 = Command(command.name, Expr.binary(op, low, high))
+    orientation1 = Command(command.name, Expr.binary(op, high, low))
+    return Site("operand", index, index, (orientation0,), (orientation1,))
 
 
 def _identity_site(index: int, command: Command, env: Mapping[str, Type], regions: Mapping[str, Type]) -> Site | None:
+    """Recognize either canonical representation of one typed identity carrier."""
     expr = command.expr
-    base: Expr | None = None; typ: Type | None = None
-    if expr.tag == "var":
-        base = expr; typ, eff = infer_expr(base, env, regions)
-        if eff != Effect(): return None
-    elif expr.tag == "bin":
+    base_info: tuple[Expr, Type] | None = _identity_atom(expr, env, regions)
+    if base_info is None and expr.tag == "bin":
         op, left, right = expr.args
-        if op == "add" and right == Expr.integer(0): base = left
-        elif op == "eq" and right == Expr.boolean(True): base = left
-        if base is not None:
-            typ, eff = infer_expr(base, env, regions)
-            if eff != Effect(): return None
-    if base is None or typ not in {Type.INT, Type.BOOL}: return None
+        candidate = _identity_atom(left, env, regions)
+        if candidate is not None:
+            _, typ = candidate
+            if op == "add" and typ == Type.INT and right == Expr.integer(0):
+                base_info = candidate
+            elif op == "eq" and typ == Type.BOOL and right == Expr.boolean(True):
+                base_info = candidate
+    if base_info is None:
+        return None
+    base, typ = base_info
     direct = Command(command.name, base)
-    expanded = Command(command.name, Expr.binary("add", base, Expr.integer(0)) if typ == Type.INT else Expr.binary("eq", base, Expr.boolean(True)))
+    expanded = Command(
+        command.name,
+        Expr.binary("add", base, Expr.integer(0))
+        if typ == Type.INT
+        else Expr.binary("eq", base, Expr.boolean(True)),
+    )
     return Site("identity", index, index, (direct,), (expanded,))
 
 
 def _adjacent_site(index: int, left: Command, right: Command, analysis: Analysis) -> Site | None:
     if right.name in expr_free_vars(left.expr) or left.name in expr_free_vars(right.expr): return None
     if not analysis.command_effects[index].commutes_with(analysis.command_effects[index + 1]): return None
-    lbytes, rbytes = command_bytes(left), command_bytes(right)
-    if lbytes == rbytes: return None
-    lo = (left, right) if lbytes < rbytes else (right, left)
-    hi = (right, left) if lbytes < rbytes else (left, right)
-    return Site("adjacent", index, index + 1, lo, hi)
+    left_bytes, right_bytes = command_bytes(left), command_bytes(right)
+    if left_bytes == right_bytes: return None
+    low = (left, right) if left_bytes < right_bytes else (right, left)
+    high = (right, left) if left_bytes < right_bytes else (left, right)
+    return Site("adjacent", index, index + 1, low, high)
 
 
 def discover_candidates(program: Program) -> tuple[Site, ...]:
-    analysis = typecheck_program(program); regions = dict(program.regions)
+    """Discover every mode-4 candidate before conflict resolution.
+
+    Identity takes precedence over operand classification at one command.
+    That precedence does not suppress a separately legal adjacent interval.
+    """
+    analysis = typecheck_program(program)
+    regions = dict(program.regions)
     sites: list[Site] = []
-    for i, command in enumerate(program.commands):
-        env = analysis.types_before[i]
-        ident = _identity_site(i, command, env, regions)
-        if ident is not None: sites.append(ident)
-        operand = _operand_site(i, command, env, regions)
-        if operand is not None and ident is None: sites.append(operand)
-    for i in range(len(program.commands) - 1):
-        adjacent = _adjacent_site(i, program.commands[i], program.commands[i + 1], analysis)
-        if adjacent is not None: sites.append(adjacent)
-    return tuple(sorted(sites, key=lambda s: (s.start, s.end, s.family)))
+    for index, command in enumerate(program.commands):
+        env = analysis.types_before[index]
+        identity = _identity_site(index, command, env, regions)
+        if identity is not None:
+            sites.append(identity)
+        else:
+            operand = _operand_site(index, command, env, regions)
+            if operand is not None:
+                sites.append(operand)
+    for index in range(len(program.commands) - 1):
+        adjacent = _adjacent_site(index, program.commands[index], program.commands[index + 1], analysis)
+        if adjacent is not None:
+            sites.append(adjacent)
+    return tuple(
+        sorted(
+            sites,
+            key=lambda site: (site.start, site.end, FAMILY_RANK[site.family], site.descriptor_bytes),
+        )
+    )
 
 
 def select_sites(candidates: Sequence[Site]) -> tuple[Site, ...]:

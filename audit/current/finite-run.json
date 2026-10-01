@@ -1,0 +1,12 @@
+{
+  "component": "finite",
+  "cwd": "Artifacts",
+  "command": [
+    "python3",
+    "formal/check_finite_algebra_mode4.py"
+  ],
+  "exit_code": 0,
+  "wall_seconds": 0.6063387140000032,
+  "log": "Artifacts/audit/current/finite.log",
+  "log_sha256": "44b73fd96a735d476ae56575cfc7bdfa78f929fbd26d24d46345b6512183f34a"
+}

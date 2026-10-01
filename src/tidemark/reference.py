@@ -1,186 +1,457 @@
-"""Separately written raw-JSON reference checker.
+"""Separately written raw-JSON reference checker for TideMark mode 4.
 
-This module deliberately does not import tidemark.core.  It reimplements parsing,
-carrier discovery, interval selection, framing, replay, and extraction over raw
-JSON trees so agreement exercises a different representation.
+This module intentionally does not import :mod:`tidemark.core`.  It implements
+strict parsing, typing, effects, candidate discovery, canonical scheduling,
+framing, replay, extraction, and evaluation over plain JSON values.
 """
 from __future__ import annotations
-import hashlib, json
-from typing import Any
 
-SCHEMA="tidemark-certificate-3"; MODE="tidemark-mode-3"; CHECKER="tidemark-checker-3"
+import hashlib
+import json
+from typing import Any, Iterable
 
-class RefError(ValueError): pass
+SCHEMA = "tidemark-certificate-4"
+MODE = "tidemark-mode-4"
+CHECKER = "tidemark-checker-4"
+IR_SCHEMA = "tidemark-ir-3"
+BASE_TYPES = {"Int", "Bool", "Unit"}
+FAMILY_RANK = {"identity": 0, "operand": 1, "adjacent": 2}
+PURE = (frozenset(), frozenset(), False)
 
-def canon(x:Any)->bytes: return json.dumps(x,sort_keys=True,separators=(",",":"),ensure_ascii=False,allow_nan=False).encode()
-def sha(x:bytes)->str: return hashlib.sha256(x).hexdigest()
 
-def parse(data:bytes)->Any:
-    try: x=json.loads(data.decode())
-    except Exception as e: raise RefError("json") from e
-    if canon(x)!=data: raise RefError("noncanonical")
-    return x
+class RefError(ValueError):
+    pass
 
-def fv(e:Any)->set[str]:
-    t=e[0]
-    if t=="var": return {e[1]}
-    if t in {"int","bool","get"}: return set()
-    if t=="bin": return fv(e[2])|fv(e[3])
-    if t in {"not","emit"}: return fv(e[1])
-    if t=="put": return fv(e[2])
-    if t=="if": return fv(e[1])|fv(e[2])|fv(e[3])
-    raise RefError("expr")
 
-def infer(e:Any, env:dict[str,str], regs:dict[str,str])->tuple[str,tuple[frozenset[str],frozenset[str],bool]]:
-    t=e[0]; z=(frozenset(),frozenset(),False)
-    if t=="var":
-        if len(e)!=2 or not isinstance(e[1],str) or e[1] not in env: raise RefError("var")
-        return env[e[1]],z
-    if t=="int":
-        if len(e)!=2 or type(e[1]) is not int: raise RefError("int")
-        return "Int",z
-    if t=="bool":
-        if len(e)!=2 or type(e[1]) is not bool: raise RefError("bool")
-        return "Bool",z
-    if t=="get": return regs[e[1]],(frozenset([e[1]]),frozenset(),False)
-    if t=="not":
-        a,ef=infer(e[1],env,regs)
-        if a!="Bool": raise RefError("type")
-        return "Bool",ef
-    if t=="bin":
-        op=e[1]; a,ea=infer(e[2],env,regs); b,eb=infer(e[3],env,regs)
-        ef=(ea[0]|eb[0],ea[1]|eb[1],ea[2] or eb[2])
-        if op in {"add","sub","mul","lt"}:
-            if a!="Int" or b!="Int": raise RefError("type")
-            return ("Bool" if op=="lt" else "Int"),ef
-        if op=="eq" and a==b and a!="Unit": return "Bool",ef
-        raise RefError("type")
-    if t=="put":
-        a,ef=infer(e[2],env,regs)
-        if regs[e[1]]!=a: raise RefError("type")
-        return "Unit",(ef[0],ef[1]|{e[1]},ef[2])
-    if t=="emit":
-        a,ef=infer(e[1],env,regs)
-        if a=="Unit": raise RefError("type")
-        return "Unit",(ef[0],ef[1],True)
-    if t=="if":
-        c,ec=infer(e[1],env,regs); a,ea=infer(e[2],env,regs); b,eb=infer(e[3],env,regs)
-        if c!="Bool" or a!=b: raise RefError("type")
-        return a,(ec[0]|ea[0]|eb[0],ec[1]|ea[1]|eb[1],ec[2] or ea[2] or eb[2])
-    raise RefError("expr")
+def canon(value: Any) -> bytes:
+    return json.dumps(
+        value,
+        sort_keys=True,
+        separators=(",", ":"),
+        ensure_ascii=False,
+        allow_nan=False,
+    ).encode("utf-8")
 
-def analyze(p:Any):
-    if not isinstance(p,dict) or set(p)!={"schema","params","regions","commands","result"} or p["schema"]!="tidemark-ir-3": raise RefError("program")
-    env={n:t for n,t in p["params"]}; regs={n:t for n,t in p["regions"]}; before=[]; effects=[]
-    for c in p["commands"]:
-        if c[0]!="let" or c[1] in env: raise RefError("command")
-        before.append(dict(env)); typ,ef=infer(c[2],env,regs); env[c[1]]=typ; effects.append(ef)
-    if p["result"] not in env: raise RefError("result")
-    return before,effects
 
-def commute(a,b):
-    ar,aw,ae=a; br,bw,be=b
-    return not (ae and be) and not (aw&(br|bw) or bw&(ar|aw))
+def sha(data: bytes) -> str:
+    return hashlib.sha256(data).hexdigest()
 
-def candidates(p:Any):
-    before,effects=analyze(p); regs={n:t for n,t in p["regions"]}; out=[]; cs=p["commands"]
-    for i,c in enumerate(cs):
-        e=c[2]; identity=None
-        base=None; typ=None
-        if e[0]=="var": base=e; typ,_=infer(base,before[i],regs)
-        elif e[0]=="bin" and ((e[1]=="add" and e[3]==["int",0]) or (e[1]=="eq" and e[3]==["bool",True])):
-            base=e[2]; typ,_=infer(base,before[i],regs)
-        if base is not None and typ in {"Int","Bool"}:
-            c0=["let",c[1],base]; c1=["let",c[1],["bin","add",base,["int",0]] if typ=="Int" else ["bin","eq",base,["bool",True]]]
-            identity=("identity",i,i,[c0],[c1]); out.append(identity)
-        if e[0]=="bin" and e[1] in {"add","mul","eq"} and identity is None:
-            _,le=infer(e[2],before[i],regs); _,re=infer(e[3],before[i],regs)
-            if le==(frozenset(),frozenset(),False) and re==(frozenset(),frozenset(),False) and canon(e[2])!=canon(e[3]):
-                lo,hi=(e[2],e[3]) if canon(e[2])<canon(e[3]) else (e[3],e[2])
-                out.append(("operand",i,i,[["let",c[1],["bin",e[1],lo,hi]]],[["let",c[1],["bin",e[1],hi,lo]]]))
-    for i in range(len(cs)-1):
-        a,b=cs[i],cs[i+1]
-        if b[1] in fv(a[2]) or a[1] in fv(b[2]) or not commute(effects[i],effects[i+1]): continue
-        if canon(a)==canon(b): continue
-        lo=(a,b) if canon(a)<canon(b) else (b,a); hi=(b,a) if canon(a)<canon(b) else (a,b)
-        out.append(("adjacent",i,i+1,list(lo),list(hi)))
-    return sorted(out,key=lambda s:(s[1],s[2],s[0]))
 
-def select(xs):
-    rank={"operand":0,"identity":1,"adjacent":2}; out=[]; end=-1
-    for s in sorted(xs,key=lambda s:(s[2],s[1],rank[s[0]])):
-        if s[1]>end: out.append(s); end=s[2]
-    return sorted(out,key=lambda s:(s[1],s[2],s[0]))
+def parse(data: bytes) -> Any:
+    try:
+        value = json.loads(data.decode("utf-8"))
+    except Exception as exc:
+        raise RefError("invalid UTF-8 JSON") from exc
+    if canon(value) != data:
+        raise RefError("noncanonical JSON bytes")
+    return value
 
-def hw(n):
-    if type(n) is not int or n<0: raise RefError("site count")
-    return n.bit_length()
-def frame(payload,n):
-    if any(type(bit) is not int or bit not in (0,1) for bit in payload): raise RefError("payload")
-    h=hw(n); c=n-h
-    if len(payload)>c: raise RefError("capacity")
-    if n==0: return []
-    return [((len(payload)>>k)&1) for k in reversed(range(h))]+payload+[0]*(n-h-len(payload))
-def unframe(bits):
-    if any(type(bit) is not int or bit not in (0,1) for bit in bits): raise RefError("frame bits")
-    n=len(bits); h=hw(n)
-    if not n: return []
-    L=0
-    for b in bits[:h]: L=2*L+b
-    if L>n-h or any(bits[h+L:]): raise RefError("frame")
-    return bits[h:h+L]
-def replay(p,sites,bits):
-    q=json.loads(json.dumps(p)); cs=q["commands"]
-    for s,b in sorted(zip(sites,bits),key=lambda x:x[0][1],reverse=True): cs[s[1]:s[2]+1]=s[3+b]
-    analyze(q); return q
-def extract(p,q):
-    ss=select(candidates(p)); bits=[]
-    for s in ss:
-        frag=q["commands"][s[1]:s[2]+1]; m0=frag==s[3]; m1=frag==s[4]
-        if m0==m1: raise RefError("orientation")
-        bits.append(0 if m0 else 1)
+
+def _binding_map(rows: Any, label: str) -> dict[str, str]:
+    if not isinstance(rows, list):
+        raise RefError(f"{label} must be a list")
+    result: dict[str, str] = {}
+    for row in rows:
+        if (
+            not isinstance(row, list)
+            or len(row) != 2
+            or not isinstance(row[0], str)
+            or not row[0]
+            or row[1] not in BASE_TYPES
+        ):
+            raise RefError(f"malformed {label} declaration")
+        if row[0] in result:
+            raise RefError(f"duplicate {label} declaration")
+        result[row[0]] = row[1]
+    return result
+
+
+def _expect_expr(expr: Any, tag: str, arity: int) -> None:
+    if not isinstance(expr, list) or len(expr) != arity + 1 or expr[0] != tag:
+        raise RefError(f"malformed {tag} expression")
+
+
+def infer(expr: Any, env: dict[str, str], regions: dict[str, str]) -> tuple[str, tuple[frozenset[str], frozenset[str], bool]]:
+    if not isinstance(expr, list) or not expr or not isinstance(expr[0], str):
+        raise RefError("expression must be a nonempty array")
+    tag = expr[0]
+    if tag == "var":
+        _expect_expr(expr, "var", 1)
+        if not isinstance(expr[1], str) or not expr[1] or expr[1] not in env:
+            raise RefError("unknown variable")
+        return env[expr[1]], PURE
+    if tag == "int":
+        _expect_expr(expr, "int", 1)
+        if type(expr[1]) is not int:
+            raise RefError("integer literal")
+        return "Int", PURE
+    if tag == "bool":
+        _expect_expr(expr, "bool", 1)
+        if type(expr[1]) is not bool:
+            raise RefError("Boolean literal")
+        return "Bool", PURE
+    if tag == "get":
+        _expect_expr(expr, "get", 1)
+        if not isinstance(expr[1], str) or expr[1] not in regions:
+            raise RefError("unknown region")
+        return regions[expr[1]], (frozenset({expr[1]}), frozenset(), False)
+    if tag == "not":
+        _expect_expr(expr, "not", 1)
+        typ, effect = infer(expr[1], env, regions)
+        if typ != "Bool":
+            raise RefError("not expects Bool")
+        return "Bool", effect
+    if tag == "bin":
+        _expect_expr(expr, "bin", 3)
+        if not isinstance(expr[1], str):
+            raise RefError("binary operator")
+        left_type, left_effect = infer(expr[2], env, regions)
+        right_type, right_effect = infer(expr[3], env, regions)
+        effect = (
+            left_effect[0] | right_effect[0],
+            left_effect[1] | right_effect[1],
+            left_effect[2] or right_effect[2],
+        )
+        op = expr[1]
+        if op in {"add", "sub", "mul", "lt"}:
+            if left_type != "Int" or right_type != "Int":
+                raise RefError(f"{op} expects Int operands")
+            return ("Bool" if op == "lt" else "Int"), effect
+        if op == "eq":
+            if left_type != right_type or left_type == "Unit":
+                raise RefError("eq expects equal non-Unit types")
+            return "Bool", effect
+        raise RefError("unknown binary operator")
+    if tag == "put":
+        _expect_expr(expr, "put", 2)
+        if not isinstance(expr[1], str) or expr[1] not in regions:
+            raise RefError("unknown region")
+        value_type, effect = infer(expr[2], env, regions)
+        if value_type != regions[expr[1]]:
+            raise RefError("put type mismatch")
+        return "Unit", (effect[0], effect[1] | {expr[1]}, effect[2])
+    if tag == "emit":
+        _expect_expr(expr, "emit", 1)
+        value_type, effect = infer(expr[1], env, regions)
+        if value_type == "Unit":
+            raise RefError("emit cannot observe Unit")
+        return "Unit", (effect[0], effect[1], True)
+    if tag == "if":
+        _expect_expr(expr, "if", 3)
+        cond_type, cond_effect = infer(expr[1], env, regions)
+        yes_type, yes_effect = infer(expr[2], env, regions)
+        no_type, no_effect = infer(expr[3], env, regions)
+        if cond_type != "Bool" or yes_type != no_type:
+            raise RefError("if type mismatch")
+        return yes_type, (
+            cond_effect[0] | yes_effect[0] | no_effect[0],
+            cond_effect[1] | yes_effect[1] | no_effect[1],
+            cond_effect[2] or yes_effect[2] or no_effect[2],
+        )
+    raise RefError("unknown expression tag")
+
+
+def free_variables(expr: Any) -> set[str]:
+    # Calling infer before discovery guarantees shape, but this function remains
+    # strict so it is safe when used independently in tests.
+    if not isinstance(expr, list) or not expr:
+        raise RefError("malformed expression")
+    tag = expr[0]
+    if tag == "var":
+        _expect_expr(expr, "var", 1)
+        return {expr[1]}
+    if tag in {"int", "bool", "get"}:
+        _expect_expr(expr, tag, 1)
+        return set()
+    if tag == "bin":
+        _expect_expr(expr, "bin", 3)
+        return free_variables(expr[2]) | free_variables(expr[3])
+    if tag in {"not", "emit"}:
+        _expect_expr(expr, tag, 1)
+        return free_variables(expr[1])
+    if tag == "put":
+        _expect_expr(expr, "put", 2)
+        return free_variables(expr[2])
+    if tag == "if":
+        _expect_expr(expr, "if", 3)
+        return free_variables(expr[1]) | free_variables(expr[2]) | free_variables(expr[3])
+    raise RefError("unknown expression tag")
+
+
+def analyze(program: Any) -> tuple[list[dict[str, str]], list[tuple[frozenset[str], frozenset[str], bool]], list[str], str]:
+    if not isinstance(program, dict) or set(program) != {"schema", "params", "regions", "commands", "result"}:
+        raise RefError("program object has unknown or missing fields")
+    if program["schema"] != IR_SCHEMA:
+        raise RefError("unsupported IR schema")
+    env = _binding_map(program["params"], "parameter")
+    regions = _binding_map(program["regions"], "region")
+    if not isinstance(program["commands"], list):
+        raise RefError("commands must be a list")
+    before: list[dict[str, str]] = []
+    effects: list[tuple[frozenset[str], frozenset[str], bool]] = []
+    command_types: list[str] = []
+    for command in program["commands"]:
+        if (
+            not isinstance(command, list)
+            or len(command) != 3
+            or command[0] != "let"
+            or not isinstance(command[1], str)
+            or not command[1]
+        ):
+            raise RefError("malformed command")
+        if command[1] in env:
+            raise RefError("duplicate variable")
+        before.append(dict(env))
+        typ, effect = infer(command[2], env, regions)
+        env[command[1]] = typ
+        command_types.append(typ)
+        effects.append(effect)
+    if not isinstance(program["result"], str) or program["result"] not in env:
+        raise RefError("result variable is unbound")
+    return before, effects, command_types, env[program["result"]]
+
+
+def commute(left: tuple[frozenset[str], frozenset[str], bool], right: tuple[frozenset[str], frozenset[str], bool]) -> bool:
+    left_reads, left_writes, left_emits = left
+    right_reads, right_writes, right_emits = right
+    return not (left_emits and right_emits) and not (
+        left_writes & (right_reads | right_writes)
+        or right_writes & (left_reads | left_writes)
+    )
+
+
+def _identity_atom(expr: Any, env: dict[str, str], regions: dict[str, str]) -> tuple[Any, str] | None:
+    if not isinstance(expr, list) or not expr or expr[0] not in {"var", "int", "bool"}:
+        return None
+    typ, effect = infer(expr, env, regions)
+    if effect != PURE or typ not in {"Int", "Bool"}:
+        return None
+    return expr, typ
+
+
+def _site_descriptor(site: tuple[Any, ...]) -> bytes:
+    return canon([site[0], site[1], site[2], site[3], site[4]])
+
+
+def candidates(program: Any) -> list[tuple[Any, ...]]:
+    before, effects, _, _ = analyze(program)
+    regions = {name: typ for name, typ in program["regions"]}
+    commands = program["commands"]
+    result: list[tuple[Any, ...]] = []
+    for index, command in enumerate(commands):
+        expr = command[2]
+        identity: tuple[Any, ...] | None = None
+        base_info = _identity_atom(expr, before[index], regions)
+        if base_info is None and expr[0] == "bin":
+            op, left, right = expr[1], expr[2], expr[3]
+            candidate = _identity_atom(left, before[index], regions)
+            if candidate is not None:
+                _, typ = candidate
+                if op == "add" and typ == "Int" and right == ["int", 0]:
+                    base_info = candidate
+                elif op == "eq" and typ == "Bool" and right == ["bool", True]:
+                    base_info = candidate
+        if base_info is not None:
+            base, typ = base_info
+            direct = ["let", command[1], base]
+            expanded = [
+                "let",
+                command[1],
+                ["bin", "add", base, ["int", 0]]
+                if typ == "Int"
+                else ["bin", "eq", base, ["bool", True]],
+            ]
+            identity = ("identity", index, index, [direct], [expanded])
+            result.append(identity)
+        elif expr[0] == "bin" and expr[1] in {"add", "mul", "eq"}:
+            _, left_effect = infer(expr[2], before[index], regions)
+            _, right_effect = infer(expr[3], before[index], regions)
+            if left_effect == PURE and right_effect == PURE and canon(expr[2]) != canon(expr[3]):
+                low, high = (expr[2], expr[3]) if canon(expr[2]) < canon(expr[3]) else (expr[3], expr[2])
+                result.append((
+                    "operand",
+                    index,
+                    index,
+                    [["let", command[1], ["bin", expr[1], low, high]]],
+                    [["let", command[1], ["bin", expr[1], high, low]]],
+                ))
+    for index in range(len(commands) - 1):
+        left, right = commands[index], commands[index + 1]
+        if right[1] in free_variables(left[2]) or left[1] in free_variables(right[2]):
+            continue
+        if not commute(effects[index], effects[index + 1]):
+            continue
+        if canon(left) == canon(right):
+            continue
+        low = (left, right) if canon(left) < canon(right) else (right, left)
+        high = (right, left) if canon(left) < canon(right) else (left, right)
+        result.append(("adjacent", index, index + 1, list(low), list(high)))
+    return sorted(
+        result,
+        key=lambda site: (site[1], site[2], FAMILY_RANK[site[0]], _site_descriptor(site)),
+    )
+
+
+def select(sites: Iterable[tuple[Any, ...]]) -> list[tuple[Any, ...]]:
+    selected: list[tuple[Any, ...]] = []
+    last_end = -1
+    for site in sorted(
+        sites,
+        key=lambda value: (value[2], value[1], FAMILY_RANK[value[0]], _site_descriptor(value)),
+    ):
+        if site[1] > last_end:
+            selected.append(site)
+            last_end = site[2]
+    return sorted(
+        selected,
+        key=lambda value: (value[1], value[2], FAMILY_RANK[value[0]], _site_descriptor(value)),
+    )
+
+
+def header_width(site_count: int) -> int:
+    if type(site_count) is not int or site_count < 0:
+        raise RefError("site count")
+    return site_count.bit_length()
+
+
+def frame(payload: list[int], site_count: int) -> list[int]:
+    if any(type(bit) is not int or bit not in (0, 1) for bit in payload):
+        raise RefError("payload")
+    width = header_width(site_count)
+    capacity = site_count - width
+    if len(payload) > capacity:
+        raise RefError("capacity")
+    if site_count == 0:
+        return []
+    return [((len(payload) >> shift) & 1) for shift in reversed(range(width))] + payload + [0] * (site_count - width - len(payload))
+
+
+def unframe(bits: list[int]) -> list[int]:
+    if any(type(bit) is not int or bit not in (0, 1) for bit in bits):
+        raise RefError("frame bits")
+    site_count = len(bits)
+    width = header_width(site_count)
+    if site_count == 0:
+        return []
+    length = 0
+    for bit in bits[:width]:
+        length = 2 * length + bit
+    if length > site_count - width or any(bits[width + length :]):
+        raise RefError("invalid frame")
+    return bits[width : width + length]
+
+
+def replay(program: Any, sites: list[tuple[Any, ...]], bits: list[int]) -> Any:
+    if len(sites) != len(bits):
+        raise RefError("site/bit length mismatch")
+    target = json.loads(json.dumps(program))
+    commands = target["commands"]
+    for site, bit in sorted(zip(sites, bits), key=lambda pair: pair[0][1], reverse=True):
+        if type(bit) is not int or bit not in (0, 1):
+            raise RefError("orientation bit")
+        commands[site[1] : site[2] + 1] = site[3 + bit]
+    analyze(target)
+    return target
+
+
+def extract(source: Any, target: Any) -> list[int]:
+    analyze(source)
+    analyze(target)
+    sites = select(candidates(source))
+    if len(source["commands"]) != len(target["commands"]):
+        raise RefError("target length mismatch")
+    bits: list[int] = []
+    for site in sites:
+        fragment = target["commands"][site[1] : site[2] + 1]
+        match0 = fragment == site[3]
+        match1 = fragment == site[4]
+        if match0 == match1:
+            raise RefError("non-unique orientation")
+        bits.append(0 if match0 else 1)
     return unframe(bits)
-def check(source:bytes,target:bytes,certificate:bytes):
-    c=parse(certificate)
-    if set(c)!={"schema","checker","mode","source_sha256","target_sha256","payload"}: raise RefError("cert")
-    if c["schema"]!=SCHEMA or c["mode"]!=MODE or c["checker"]!=CHECKER: raise RefError("version")
-    if sha(source)!=c["source_sha256"] or sha(target)!=c["target_sha256"]: raise RefError("digest")
-    if not isinstance(c["payload"],str) or any(ch not in "01" for ch in c["payload"]): raise RefError("payload")
-    p=parse(source); q=parse(target); payload=[int(x) for x in c["payload"]]
-    ss=select(candidates(p)); expected=replay(p,ss,frame(payload,len(ss)))
-    if canon(expected)!=target: raise RefError("target")
-    got=extract(p,q)
-    if got!=payload: raise RefError("extract")
-    return tuple(got)
 
-def _eval_expr(e,env,store,trace):
-    t=e[0]
-    if t=="var": return env[e[1]]
-    if t in {"int","bool"}: return e[1]
-    if t=="get": return store[e[1]]
-    if t=="not": return not _eval_expr(e[1],env,store,trace)
-    if t=="bin":
-        a=_eval_expr(e[2],env,store,trace); b=_eval_expr(e[3],env,store,trace); op=e[1]
-        return {"add":lambda:a+b,"sub":lambda:a-b,"mul":lambda:a*b,"eq":lambda:a==b,"lt":lambda:a<b}[op]()
-    if t=="put": store[e[1]]=_eval_expr(e[2],env,store,trace); return None
-    if t=="emit": trace.append(_eval_expr(e[1],env,store,trace)); return None
-    if t=="if": return _eval_expr(e[2] if _eval_expr(e[1],env,store,trace) else e[3],env,store,trace)
-    raise RefError("eval")
 
-def _runtime_type_ok(value,typ):
-    return ((typ=="Int" and type(value) is int) or
-            (typ=="Bool" and type(value) is bool) or
-            (typ=="Unit" and value is None))
+def check(source: bytes, target: bytes, certificate: bytes) -> tuple[int, ...]:
+    cert = parse(certificate)
+    expected_fields = {"schema", "checker", "mode", "source_sha256", "target_sha256", "payload"}
+    if not isinstance(cert, dict) or set(cert) != expected_fields:
+        raise RefError("certificate fields")
+    if cert["schema"] != SCHEMA or cert["mode"] != MODE or cert["checker"] != CHECKER:
+        raise RefError("unsupported version")
+    if sha(source) != cert["source_sha256"] or sha(target) != cert["target_sha256"]:
+        raise RefError("digest mismatch")
+    if not isinstance(cert["payload"], str) or any(char not in "01" for char in cert["payload"]):
+        raise RefError("payload")
+    source_obj = parse(source)
+    target_obj = parse(target)
+    payload = [int(char) for char in cert["payload"]]
+    sites = select(candidates(source_obj))
+    expected_target = replay(source_obj, sites, frame(payload, len(sites)))
+    if canon(expected_target) != target:
+        raise RefError("target differs from exact replay")
+    recovered = extract(source_obj, target_obj)
+    if recovered != payload:
+        raise RefError("extractor disagreement")
+    return tuple(recovered)
 
-def evaluate(program,params,initial_store):
-    before,_=analyze(program); env=dict(params); store=dict(initial_store); trace=[]
-    param_types={name:typ for name,typ in program["params"]}; region_types={name:typ for name,typ in program["regions"]}
-    if set(env)!=set(param_types) or set(store)!=set(region_types): raise RefError("runtime domain")
-    if any(not _runtime_type_ok(env[name],typ) for name,typ in param_types.items()): raise RefError("parameter type")
-    if any(not _runtime_type_ok(store[name],typ) for name,typ in region_types.items()): raise RefError("store type")
-    for index,c in enumerate(program["commands"]):
-        typ,_=infer(c[2],before[index],region_types); value=_eval_expr(c[2],env,store,trace)
-        if not _runtime_type_ok(value,typ): raise RefError("command result type")
-        env[c[1]]=value
-    if any(not _runtime_type_ok(store[name],typ) for name,typ in region_types.items()): raise RefError("final store type")
-    return env[program["result"]],store,tuple(trace)
+
+def _eval_expr(expr: Any, env: dict[str, Any], store: dict[str, Any], trace: list[Any]) -> Any:
+    tag = expr[0]
+    if tag == "var": return env[expr[1]]
+    if tag in {"int", "bool"}: return expr[1]
+    if tag == "get": return store[expr[1]]
+    if tag == "not": return not _eval_expr(expr[1], env, store, trace)
+    if tag == "bin":
+        left = _eval_expr(expr[2], env, store, trace)
+        right = _eval_expr(expr[3], env, store, trace)
+        op = expr[1]
+        if op == "add": return left + right
+        if op == "sub": return left - right
+        if op == "mul": return left * right
+        if op == "eq": return left == right
+        if op == "lt": return left < right
+        raise RefError("unknown operator")
+    if tag == "put":
+        store[expr[1]] = _eval_expr(expr[2], env, store, trace)
+        return None
+    if tag == "emit":
+        trace.append(_eval_expr(expr[1], env, store, trace))
+        return None
+    if tag == "if":
+        branch = expr[2] if _eval_expr(expr[1], env, store, trace) else expr[3]
+        return _eval_expr(branch, env, store, trace)
+    raise RefError("evaluation")
+
+
+def _runtime_type_ok(value: Any, typ: str) -> bool:
+    return (
+        (typ == "Int" and type(value) is int)
+        or (typ == "Bool" and type(value) is bool)
+        or (typ == "Unit" and value is None)
+    )
+
+
+def evaluate(program: Any, params: dict[str, Any], initial_store: dict[str, Any]) -> tuple[Any, dict[str, Any], tuple[Any, ...]]:
+    before, _, command_types, result_type = analyze(program)
+    env = dict(params)
+    store = dict(initial_store)
+    trace: list[Any] = []
+    param_types = _binding_map(program["params"], "parameter")
+    region_types = _binding_map(program["regions"], "region")
+    if set(env) != set(param_types) or set(store) != set(region_types):
+        raise RefError("runtime domain")
+    if any(not _runtime_type_ok(env[name], typ) for name, typ in param_types.items()):
+        raise RefError("parameter type")
+    if any(not _runtime_type_ok(store[name], typ) for name, typ in region_types.items()):
+        raise RefError("store type")
+    for index, command in enumerate(program["commands"]):
+        value = _eval_expr(command[2], env, store, trace)
+        if not _runtime_type_ok(value, command_types[index]):
+            raise RefError("command result type")
+        env[command[1]] = value
+    if any(not _runtime_type_ok(store[name], typ) for name, typ in region_types.items()):
+        raise RefError("final store type")
+    result = env[program["result"]]
+    if not _runtime_type_ok(result, result_type):
+        raise RefError("result type")
+    return result, store, tuple(trace)

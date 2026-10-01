@@ -1,0 +1,105 @@
+{
+  "schema": "tidemark-current-verification-matrix-2",
+  "all_executed_components_passed": true,
+  "components": [
+    {
+      "component": "unit-tests",
+      "cwd": "Artifacts",
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 2.6254602360004355,
+      "log": "Artifacts/audit/current/unit-tests.log",
+      "log_sha256": "22f97d6f585f74341f89c3d30ec2eb11032084454eeec1a606f6044bde916c61"
+    },
+    {
+      "component": "static-risk",
+      "cwd": "Artifacts",
+      "command": [
+        "python3",
+        "scripts/run_static_risk_regressions.py"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.6321812460000729,
+      "log": "Artifacts/audit/current/static-risk.log",
+      "log_sha256": "edad6d65c0cda9ea2cbd8503d980b088b04e9735d70949fdbc2b235a8897f99a"
+    },
+    {
+      "component": "raw-derived-evidence",
+      "cwd": "Artifacts",
+      "command": [
+        "python3",
+        "scripts/verify_evidence.py"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 1.4945821359997353,
+      "log": "Artifacts/audit/current/raw-derived-evidence.log",
+      "log_sha256": "699637232bb8effaedab5aa8099fe2a6da625af436b67e128df01b5ae3e8b824"
+    },
+    {
+      "component": "paper-build",
+      "cwd": "paper",
+      "command": [
+        "bash",
+        "build.sh"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 9.734047265999834,
+      "log": "Artifacts/audit/current/paper-build.log",
+      "log_sha256": "59466b7a90ab78ec1444c7c12aab06a6b21b669c0ae5f85e0c9d3a460291e32f"
+    },
+    {
+      "component": "reference-consistency",
+      "cwd": "Artifacts",
+      "command": [
+        "python3",
+        "scripts/audit_references.py"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.593420984000204,
+      "log": "Artifacts/audit/current/reference-consistency.log",
+      "log_sha256": "23858f8dc056007dc315fb209a64ebe91e6c5323f5dc6d1a4eabbaf1e0cb6109"
+    },
+    {
+      "component": "pdf-source-audit",
+      "cwd": "Artifacts",
+      "command": [
+        "python3",
+        "scripts/audit_final_pdf.py"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 1.1295775109997521,
+      "log": "Artifacts/audit/current/pdf-source-audit.log",
+      "log_sha256": "c359c9e2bd36c4f49bd34cfd614482736ab703de98b76109db9d6efbc9368bf6"
+    }
+  ],
+  "measurements_refreshed_in_this_invocation": false,
+  "actual_pdf_pages": 36,
+  "earlier_exact_48_page_goal_met": false,
+  "not_executed": [
+    {
+      "tool": "coqc",
+      "available": false,
+      "effect": "No current Coq kernel recheck is claimed."
+    },
+    {
+      "tool": "z3",
+      "available": false,
+      "effect": "The finite algebra suite is Python enumeration, not an SMT solver run."
+    }
+  ],
+  "not_claimed": [
+    "independent peer review",
+    "natural-program capacity estimation",
+    "production LLVM validation",
+    "post-transformation persistence",
+    "security or ownership guarantee"
+  ]
+}

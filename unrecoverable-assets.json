@@ -1,0 +1,32 @@
+{
+  "schema": "tidemark-unrecoverable-assets-mode4",
+  "assets": [
+    {
+      "asset": "original semantic body LaTeX for Sections 1--7",
+      "status": "NOT_RECOVERED",
+      "search_scope": "current uploaded package and separately inspected original TOPLAS-20.zip",
+      "effect": "paper/main.pdf is preserved but cannot be regenerated or synchronized without an openly labelled reconstruction"
+    },
+    {
+      "asset": "legacy 776-swap experiment inputs and executable",
+      "status": "NOT_RECOVERED",
+      "effect": "the paper count is not retained as current evidence; mode 4 records every current adjacent pair instead"
+    },
+    {
+      "asset": "legacy 7,453-case finite-algebra input record and exact executable",
+      "status": "NOT_RECOVERED",
+      "effect": "a new, declared 7,303-case mode-4 audit is reported without padding to the historical count"
+    },
+    {
+      "asset": "legacy carrier-ablation and descriptor-rich per-program raw rows",
+      "status": "NOT_RECOVERED",
+      "effect": "mode 4 reruns all seven ablations and size comparisons and labels them as new measurements"
+    },
+    {
+      "asset": "historical LLVM adapter and exact input set underlying the preserved paper table",
+      "status": "NOT_RECOVERED",
+      "effect": "mode 4 uses a current conservative adapter and records changed counts rather than preserving the old table"
+    }
+  ],
+  "policy": "Missing assets are never reconstructed from aggregate paper numbers and are never represented by placeholder PASS records."
+}

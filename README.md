@@ -1,7 +1,65 @@
-# TideMark artifact
+# TideMark Mode-4 artifact
 
-This artifact implements the typed intermediate language, type-and-effect analysis, three carrier families, canonical interval selection, self-delimiting framing, compact certificates, exact replay, extraction, and fail-closed checking used by the paper.
+This artifact implements the finite typed IR and embed-time relation in the
+adjacent paper. It does not certify LLVM, persistence after optimization,
+robustness, secrecy, ownership, or deployment security.
 
-The evidence includes a separately written raw-tree checker, a structural derivation verifier with an independent producer, deterministic corpus evaluation, certificate and proof-object mutations, exhaustive interval and frame audits, three zero-capacity controls, a conservative LLVM opportunity projection, reference provenance, per-occurrence citation support, and PDF/release audits.
+## Reproduce from this directory
 
-Run the commands in `REPRODUCE.md`. The authoritative numeric summaries are `data/derived/evaluation-summary.json` and `data/derived/llvm-projection.json`.
+```sh
+export PYTHONPATH="$PWD/src"
+export PYTHONDONTWRITEBYTECODE=1
+python3 -m unittest discover -s tests -v
+python3 scripts/run_static_risk_regressions.py
+python3 scripts/verify_evidence.py
+python3 scripts/verify_all.py
+```
+
+The default matrix checks saved raw/derived evidence, runs tests and boundary
+regressions, builds all figures and the paper, and checks citations/PDF assets.
+A new complete CPU run, with new genuine timing measurements, is:
+
+```sh
+python3 scripts/verify_all.py --rerun
+```
+
+This reruns evaluation, finite algebra, and the fixed external LLVM projection
+before rebuilding the paper. Timing and RSS are machine- and run-dependent;
+there is no assertion that reruns reproduce their bit patterns. Structural
+counts and scientific decisions are deterministic for the fixed inputs.
+To prove that generated assets are not hidden dependencies:
+
+```sh
+python3 scripts/check_clean_build.py
+```
+
+## Dependencies
+
+Linux; Python 3.11 or newer (standard library for the core); the included Go
+1.23.2 source snapshot; Clang 17 for the textual projection. Paper building also
+needs pdfTeX, BibTeX or bibtex8, the bundled acmart class and bibliography style,
+TikZ, PGFPlots, Libertine, NewTX, and Inconsolata TeX packages. PDF auditing needs
+Poppler and PyMuPDF. The recorded visual review additionally used PDFium.
+No GPU, LLM API, author contact, network service, or human-subject experiment is
+needed. Coq and Z3 are not available in the audited environment; no successful
+kernel or SMT recheck is claimed.
+
+## Scientific interpretation
+
+The 400 programs are quota constructed: family capacities, carrier totals, and
+total bindings are construction inputs. Family counts are regression outcomes,
+not independent natural-program prevalence measurements. The raw-tree reference
+checker does not import production semantics. The structural-record verifier
+reuses reference semantics and is therefore not an independent proof kernel.
+Its five fields per step are record values, not independently proven premises.
+
+The current complete raw evidence is under `data/raw/mode4/`. Each program,
+execution, selected site, certificate mutation, record mutation, adjacent-pair
+classification, frame vector, and interval instance precedes aggregation. The
+external runner retains failed compilation diagnostics as well as hashes.
+`data/derived/verification-matrix-current.json` records real component exits;
+`audit/current/` contains current logs and consistency/build/PDF audits.
+
+The 75-entry bibliography and every current citation are indexed in
+`reference/`. Read `reference-review.md` for the distinction between metadata
+corroboration, local citation fit, full-text review, and scientific correctness.

@@ -1,0 +1,12 @@
+{
+  "component": "evaluation",
+  "cwd": "Artifacts",
+  "command": [
+    "python3",
+    "scripts/run_evaluation.py"
+  ],
+  "exit_code": 0,
+  "wall_seconds": 23.73342571500001,
+  "log": "Artifacts/audit/current/evaluation.log",
+  "log_sha256": "e23704ee938024f73aaf793847bb0ea2e45fc3f7c48d966dcff183e9fcd4a73c"
+}

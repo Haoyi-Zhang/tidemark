@@ -1,3 +1,16 @@
+"""Deterministic quota-constructed proof-stress corpus.
+
+The family totals in :data:`FAMILIES` are design inputs, not measurements of a
+natural program distribution.  ``build_specs`` allocates those requested
+selected-site counts, user-bit totals, carrier-family contributions, and the
+13,464-binding aggregate across 400 programs.  ``build_program`` is the current
+public corpus constructor: it deterministically realizes one ``ProgramSpec``
+under the mode-4 IR and is used by tests and evaluation.
+
+Consequently, family-level capacity differences from this corpus are
+construction checks and controlled stress cases.  They must not be interpreted
+as independent evidence about capacity in naturally occurring programs.
+"""
 from __future__ import annotations
 import hashlib, random
 from dataclasses import dataclass
@@ -53,6 +66,7 @@ def _allocate(total:int,caps:list[int],seed:str)->list[int]:
     return out
 
 def build_specs()->list[ProgramSpec]:
+    """Allocate the fixed paper-era quotas across forty programs per family."""
     specs=[]; carrier_bindings=0
     for family,(selected,user,o,i,a) in FAMILIES.items():
         if selected:
@@ -75,6 +89,7 @@ def build_specs()->list[ProgramSpec]:
     return out
 
 def build_program(spec:ProgramSpec)->Program:
+    """Deterministically realize one current-schema program from ``spec``."""
     cmds=[]; current="arg"; serial=0
     def name(prefix):
         nonlocal serial; serial+=1; return f"{prefix}{spec.index:02d}_{serial:03d}"

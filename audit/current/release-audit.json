@@ -1,0 +1,32 @@
+{
+  "schema": "tidemark-reviewed-delivery-1",
+  "primary_manuscript": "paper/main.pdf",
+  "current_source": "paper/main.tex",
+  "root_entries": [
+    "paper",
+    "Artifacts"
+  ],
+  "pdf_sha256": "929f923cb1c4b71134f2966f62848a2205d235041673a30156a40bc544f8d0fd",
+  "actual_pages": 36,
+  "earlier_48_page_goal_met": false,
+  "required_generated_assets_present": true,
+  "reference_entries": 75,
+  "unique_dois": 75,
+  "single_key_citations": 86,
+  "local_reference_checks_passed": true,
+  "raw_evidence_checks": 147,
+  "raw_evidence_consistent": true,
+  "executed_component_matrix_passed": true,
+  "clean_generated_asset_rebuild_passed": true,
+  "observed_visual_defects": [],
+  "scope": "Finite typed IR; Mode-4 embed-time only; quota suite; reference-dependent structural records; LLVM textual opportunities, not certification.",
+  "not_claimed": [
+    "independent peer review or scientific endorsement",
+    "zero possible bugs",
+    "Best Paper or acceptance",
+    "fulltext methodological validation of all cited research",
+    "proof-assistant validation of the deployed checker"
+  ],
+  "environment_gaps": "Artifacts/local_execution_gaps.json",
+  "review_report": "Artifacts/REVIEW-REPORT-ZH.md"
+}

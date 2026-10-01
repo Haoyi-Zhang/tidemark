@@ -1,0 +1,12 @@
+{
+  "component": "boundaries",
+  "cwd": "Artifacts",
+  "command": [
+    "python3",
+    "scripts/run_static_risk_regressions.py"
+  ],
+  "exit_code": 0,
+  "wall_seconds": 0.6105018320000113,
+  "log": "Artifacts/audit/current/boundaries.log",
+  "log_sha256": "edad6d65c0cda9ea2cbd8503d980b088b04e9735d70949fdbc2b235a8897f99a"
+}

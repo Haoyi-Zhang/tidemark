@@ -1,0 +1,258 @@
+{
+  "all_passed": true,
+  "case_count": 12,
+  "cases": [
+    {
+      "boundary": "typechecks, then discovery rejects singleton carrier because the base is not a pure atomic identity operand",
+      "expected": [],
+      "name": "effectful_get_plus_zero_is_not_a_candidate",
+      "passed": true,
+      "production_candidates": [],
+      "reference_candidates": []
+    },
+    {
+      "expected_candidates": [
+        [
+          "identity",
+          0,
+          0
+        ],
+        [
+          "identity",
+          1,
+          1
+        ],
+        [
+          "adjacent",
+          1,
+          2
+        ],
+        [
+          "identity",
+          2,
+          2
+        ]
+      ],
+      "expected_selected": [
+        [
+          "identity",
+          0,
+          0
+        ],
+        [
+          "identity",
+          1,
+          1
+        ],
+        [
+          "identity",
+          2,
+          2
+        ]
+      ],
+      "explanation": "identity precedence suppresses operand classification at one command; it does not suppress the distinct [1,2] adjacent interval. y uses x, z uses b0, both commands are pure, and neither result is used by the other.",
+      "name": "identity_precedence_retains_independently_legal_adjacent_candidate",
+      "passed": true,
+      "production_candidates": [
+        [
+          "identity",
+          0,
+          0
+        ],
+        [
+          "identity",
+          1,
+          1
+        ],
+        [
+          "adjacent",
+          1,
+          2
+        ],
+        [
+          "identity",
+          2,
+          2
+        ]
+      ],
+      "reference_candidates": [
+        [
+          "identity",
+          0,
+          0
+        ],
+        [
+          "identity",
+          1,
+          1
+        ],
+        [
+          "adjacent",
+          1,
+          2
+        ],
+        [
+          "identity",
+          2,
+          2
+        ]
+      ],
+      "selected": [
+        [
+          "identity",
+          0,
+          0
+        ],
+        [
+          "identity",
+          1,
+          1
+        ],
+        [
+          "identity",
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "expected": [
+        [
+          "adjacent",
+          0,
+          1
+        ]
+      ],
+      "name": "put_and_emit_can_commute_when_resources_are_disjoint",
+      "passed": true,
+      "production_candidates": [
+        [
+          "adjacent",
+          0,
+          1
+        ]
+      ],
+      "reference_candidates": [
+        [
+          "adjacent",
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "first_observation": [
+        1,
+        {},
+        []
+      ],
+      "name": "same_typed_if_counterexample_is_well_typed",
+      "passed": true,
+      "second_observation": [
+        2,
+        {},
+        []
+      ]
+    },
+    {
+      "candidates": [],
+      "first_trace": [
+        0,
+        1
+      ],
+      "name": "ordered_emit_counterexample_is_well_typed",
+      "passed": true,
+      "second_trace": [
+        1,
+        0
+      ]
+    },
+    {
+      "boundary": "rejected during strict program schema/type analysis before candidate discovery or replay",
+      "certificate_digests_match_input": true,
+      "name": "matching_digest_unknown_type",
+      "passed": true,
+      "production": {
+        "accepted": false,
+        "exception_type": "TideMarkError",
+        "reason": "unknown type"
+      },
+      "reference": {
+        "accepted": false,
+        "exception_type": "RefError",
+        "reason": "malformed parameter declaration"
+      },
+      "source_sha256": "c0b30bc5dbd260d87d8c969a8dc47ffac6c8a2ac4dfffdf3af5e156f6873afaa"
+    },
+    {
+      "boundary": "rejected during strict program schema/type analysis before candidate discovery or replay",
+      "certificate_digests_match_input": true,
+      "name": "matching_digest_duplicate_declaration",
+      "passed": true,
+      "production": {
+        "accepted": false,
+        "exception_type": "TideMarkError",
+        "reason": "duplicate binding"
+      },
+      "reference": {
+        "accepted": false,
+        "exception_type": "RefError",
+        "reason": "duplicate parameter declaration"
+      },
+      "source_sha256": "f24844331eefe2bd6e8c5b08daedd6506a44ef74029a62430bd0ea3a0f0b78b1"
+    },
+    {
+      "boundary": "rejected during strict program schema/type analysis before candidate discovery or replay",
+      "certificate_digests_match_input": true,
+      "name": "matching_digest_extra_expression_argument",
+      "passed": true,
+      "production": {
+        "accepted": false,
+        "exception_type": "TideMarkError",
+        "reason": "malformed expression tag 'bin'"
+      },
+      "reference": {
+        "accepted": false,
+        "exception_type": "RefError",
+        "reason": "malformed bin expression"
+      },
+      "source_sha256": "a64ccf60effcca19b030f7ff5fb6e94028e64d031615764cf92e37c0490ec84b"
+    },
+    {
+      "name": "llvm_metadata_is_removed_before_equal_operand_test",
+      "operand_sites": 0,
+      "passed": true
+    },
+    {
+      "name": "llvm_poison_and_undef_are_excluded",
+      "operand_sites": 1,
+      "passed": true
+    },
+    {
+      "decision": "retain build_program as the current deterministic API because the corpus generator, tests, and evaluation all consume it",
+      "name": "build_program_is_current_deterministic_corpus_api",
+      "passed": true,
+      "program_sha256": "89dcaacccfa225ee3c9a61d702fbae3535a55cceaebd9a41d57027a433cdf6ac",
+      "selected_sites": 23,
+      "spec": {
+        "adjacent": 3,
+        "capacity": 23,
+        "family": "pure-arithmetic",
+        "filler": 10,
+        "identity": 6,
+        "index": 17,
+        "operand": 14
+      }
+    },
+    {
+      "name": "reference_checker_does_not_import_production_core",
+      "passed": true,
+      "prohibited_imports": [],
+      "reference_sha256": "d9877916989b4e4afd5eea3d41a65f8c1baf711a49fea8820ac9987af7131dcb"
+    }
+  ],
+  "failure_count": 0,
+  "failures": [],
+  "mode": "tidemark-mode-4",
+  "schema": "tidemark-static-risk-regressions-mode4"
+}

@@ -1,0 +1,209 @@
+{
+  "accepted_mutations": 0,
+  "accepted_proof_mutations": 0,
+  "adjacent": 2012,
+  "adjacent_legal_pairs": 2012,
+  "adjacent_pairs": 13064,
+  "adjacent_reason_forward_dependency": 10252,
+  "adjacent_reason_legal": 2012,
+  "adjacent_reason_state_conflict": 400,
+  "adjacent_reason_trace_conflict": 400,
+  "aggregate_certificate_source_percent": 13.305230828203621,
+  "aggregate_descriptor_rich_source_percent": 162.90114393680366,
+  "aggregate_target_growth_percent": -0.039752070124543515,
+  "bindings": 13464,
+  "certificate_bytes": 112461,
+  "certificate_mutation_categories": {
+    "noncanonical_certificate": 200,
+    "payload": 200,
+    "source_digest": 200,
+    "source_rehashed_malformed": 200,
+    "target_digest": 200,
+    "target_rehashed_nonreplay": 200,
+    "unknown_field": 200,
+    "unsupported_checker": 200,
+    "unsupported_mode": 200,
+    "unsupported_schema": 200
+  },
+  "certificate_mutations": 2000,
+  "certificate_schema": "tidemark-certificate-4",
+  "checker": "tidemark-checker-4",
+  "claim_boundary": "Finite mode-4 execution and differential checks validate this implementation on a quota-constructed suite. They do not measure a natural program distribution, prove the metatheory, refine LLVM semantics, or establish post-optimization persistence.",
+  "corpus_design": "quota-constructed proof-stress suite; family totals and aggregate bindings are design inputs",
+  "corpus_digest": "b33357bff0d0395e4ced5ea8fb29efb2429d4842bb0af86db17264f05b056a0d",
+  "corpus_digest_algorithm": "SHA-256 over 8-byte big-endian length followed by canonical program bytes for each program in corpus order",
+  "correlations": {
+    "bindings_check_ms_spearman": 0.8756717854734974,
+    "bindings_embed_ms_spearman": 0.8411618755172766,
+    "bindings_selected_spearman": 0.4273135546123581
+  },
+  "derivation_failures": 0,
+  "derivation_mutation_applicable_by_category": {
+    "after_sha256": 280,
+    "before_sha256": 280,
+    "bit": 280,
+    "delete_step": 280,
+    "family": 280,
+    "framed_bits": 400,
+    "interval": 280,
+    "selected": 400,
+    "source_hash": 400,
+    "target_hash": 400
+  },
+  "derivation_mutation_rows_by_category": {
+    "after_sha256": 400,
+    "before_sha256": 400,
+    "bit": 400,
+    "delete_step": 400,
+    "family": 400,
+    "framed_bits": 400,
+    "interval": 400,
+    "selected": 400,
+    "source_hash": 400,
+    "target_hash": 400
+  },
+  "derivation_mutations_not_applicable": 720,
+  "derivation_producer_differences": 0,
+  "derivation_step_fields": [
+    "family",
+    "interval",
+    "bit",
+    "before_sha256",
+    "after_sha256"
+  ],
+  "derivation_step_fields_per_producer": 28910,
+  "derivation_target_differences": 0,
+  "derivations": 800,
+  "descriptor_rich_bytes": 1376904,
+  "descriptor_rich_to_compact_ratio": 12.243391042227973,
+  "elapsed_seconds": 23.111040478000007,
+  "frame_failures": 0,
+  "frame_vectors": 131071,
+  "full_executions": 3200,
+  "full_semantic_differences": 0,
+  "header_bits": 1321,
+  "identity": 1290,
+  "interval_instances": 65536,
+  "legal_frames": 12309,
+  "length_groups": [
+    {
+      "check_ms_median": null,
+      "embed_ms_median": null,
+      "programs": 0,
+      "range": "12-20",
+      "selected_median": null
+    },
+    {
+      "check_ms_median": 1.337225,
+      "embed_ms_median": 0.652378,
+      "programs": 1,
+      "range": "21-28",
+      "selected_median": 15
+    },
+    {
+      "check_ms_median": 1.656889,
+      "embed_ms_median": 0.824337,
+      "programs": 105,
+      "range": "29-40",
+      "selected_median": 15
+    },
+    {
+      "check_ms_median": 2.015146,
+      "embed_ms_median": 0.980465,
+      "programs": 79,
+      "range": "41-48",
+      "selected_median": 22
+    },
+    {
+      "check_ms_median": 2.367666,
+      "embed_ms_median": 1.14908,
+      "programs": 95,
+      "range": "49+",
+      "selected_median": 22
+    }
+  ],
+  "local_carrier_cases": 46256,
+  "local_carrier_differences": 0,
+  "mode": "tidemark-mode-4",
+  "mutation_decision_differences": 0,
+  "operand": 2480,
+  "payload_bits": 4461,
+  "peak_rss_kb": 98728,
+  "programs": 400,
+  "proof_mutation_semantics": "proof_mutations counts applicable mutations; derivation_mutations_not_applicable counts zero-site records that were retained with an explicit no_steps reason",
+  "proof_mutations": 3280,
+  "reference_acceptance_differences": 0,
+  "reference_accepted_mutations": 0,
+  "reference_evaluator_calls": 6400,
+  "reference_evaluator_differences": 0,
+  "reference_evaluator_pairs": 3200,
+  "reference_evaluator_semantics": "reference_evaluator_pairs counts source/target pairs; reference_evaluator_calls is twice that value",
+  "reference_selection_differences": 0,
+  "reference_target_differences": 0,
+  "schema": "tidemark-evaluation-mode4",
+  "seed": "tidemark-fixed-seed",
+  "selected": 5782,
+  "selector_differences": 0,
+  "source_bytes": 845239,
+  "structural_dependency": "trace verifier reuses tidemark.reference for analysis, discovery, selection, framing, replay, and extraction; not an independent proof kernel",
+  "target_bytes": 844903,
+  "timing_summary": {
+    "analysis_ms": {
+      "maximum": 0.366835,
+      "median": 0.0929155,
+      "minimum": 0.017957,
+      "p75": 0.1203355,
+      "p95": 0.15544749999999996
+    },
+    "check_ms": {
+      "maximum": 5.58288,
+      "median": 1.7345234999999999,
+      "minimum": 0.184339,
+      "p75": 2.1968692499999998,
+      "p95": 2.8278948499999994
+    },
+    "derivation_ms": {
+      "maximum": 13.54685,
+      "median": 5.77158,
+      "minimum": 0.460336,
+      "p75": 7.280228999999999,
+      "p95": 9.1214391
+    },
+    "discovery_ms": {
+      "maximum": 1.556755,
+      "median": 0.4320635,
+      "minimum": 0.024127,
+      "p75": 0.52721825,
+      "p95": 0.70239305
+    },
+    "embed_ms": {
+      "maximum": 2.312025,
+      "median": 0.867101,
+      "minimum": 0.08572,
+      "p75": 1.0637425,
+      "p95": 1.35041675
+    },
+    "evaluation_ms": {
+      "maximum": 5.735631,
+      "median": 2.8362485,
+      "minimum": 0.664134,
+      "p75": 3.5721507500000005,
+      "p95": 4.36880255
+    },
+    "reference_check_ms": {
+      "maximum": 3.237727,
+      "median": 1.4898335,
+      "minimum": 0.121003,
+      "p75": 1.8344322499999999,
+      "p95": 2.3428132
+    },
+    "selection_ms": {
+      "maximum": 0.877863,
+      "median": 0.119947,
+      "minimum": 0.000551,
+      "p75": 0.15072049999999998,
+      "p95": 0.20328259999999992
+    }
+  }
+}
+data/derived/evaluation-summary-mode4.json

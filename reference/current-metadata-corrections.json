@@ -1,0 +1,71 @@
+{
+  "date": "2026-09-29",
+  "corrections": [
+    {
+      "key": "r09",
+      "field": "number",
+      "before": "18",
+      "after": "9",
+      "reason": "Publisher volume/issue record: the pages belong to issue 9, not 18.",
+      "source": "https://link.springer.com/article/10.1007/s11042-017-5373-7"
+    },
+    {
+      "key": "r58",
+      "field": "doi",
+      "before": "10.1145/267959.269968",
+      "after": "10.1145/267959.269969",
+      "reason": "The current DOI is not the DOI of the cited commutativity-analysis paper.",
+      "source": "https://people.csail.mit.edu/rinard/paper/toplas97.pdf"
+    },
+    {
+      "key": "r58",
+      "field": "url",
+      "before": "https://doi.org/10.1145/267959.269968",
+      "after": "https://doi.org/10.1145/267959.269969",
+      "reason": "Align link with corrected scholarly identifier.",
+      "source": "https://people.csail.mit.edu/rinard/paper/toplas97.pdf"
+    },
+    {
+      "key": "r41",
+      "field": "author",
+      "before": "Akito Monden and Hajimu Iida and Ken-ichi Matsumoto and Koji Torii and Katsuro Inoue",
+      "after": "Akito Monden and Hajimu Iida and Ken-ichi Matsumoto and Katsuro Inoue and Koji Torii",
+      "reason": "The institutional record orders Inoue before Torii.",
+      "source": "https://cir.nii.ac.jp/crid/1050577309352930816"
+    },
+    {
+      "key": "r10",
+      "field": "doi",
+      "before": "10.1145/1707801.1706312",
+      "after": "10.1145/1706299.1706312",
+      "reason": "Use the proceedings manifestation to match the inproceedings entry; the former identifier is a journal manifestation. ",
+      "source": "https://adam.chlipala.net/papers/ImpurePOPL10/"
+    },
+    {
+      "key": "r10",
+      "field": "url",
+      "before": "https://doi.org/10.1145/1707801.1706312",
+      "after": "https://doi.org/10.1145/1706299.1706312",
+      "reason": "Keep DOI and URL aligned.",
+      "source": "https://adam.chlipala.net/papers/ImpurePOPL10/"
+    },
+    {
+      "key": "r12",
+      "field": "doi",
+      "before": "10.1145/358438.349315",
+      "after": "10.1145/349299.349315",
+      "reason": "Use the proceedings manifestation to match the inproceedings entry; the former identifier is a journal manifestation. ",
+      "source": "https://dl.acm.org/doi/10.1145/349299.349315"
+    },
+    {
+      "key": "r12",
+      "field": "url",
+      "before": "https://doi.org/10.1145/358438.349315",
+      "after": "https://doi.org/10.1145/349299.349315",
+      "reason": "Keep DOI and URL aligned.",
+      "source": "https://dl.acm.org/doi/10.1145/349299.349315"
+    }
+  ],
+  "formatting_note": "Publisher countries/locations completed for structured proceedings entries; no conference location was invented.",
+  "pagination_exception": "r63: the publisher first-page citation gives pp. 1--37 even though the downloadable PDF includes 80 pages with extended proofs. The published range is retained."
+}

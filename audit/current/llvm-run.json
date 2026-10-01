@@ -1,0 +1,12 @@
+{
+  "component": "llvm",
+  "cwd": "Artifacts",
+  "command": [
+    "python3",
+    "scripts/run_external_llvm.py"
+  ],
+  "exit_code": 0,
+  "wall_seconds": 9.44169049300001,
+  "log": "Artifacts/audit/current/llvm.log",
+  "log_sha256": "932dc9e48f650ec4dd78f10fc7055c032dcac2389f0eb5fb3bd186731bcfe6f5"
+}

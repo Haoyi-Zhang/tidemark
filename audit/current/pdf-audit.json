@@ -1,0 +1,330 @@
+{
+  "schema": "tidemark-current-pdf-audit-2",
+  "all_mechanical_checks_passed": true,
+  "issues": [],
+  "pages": 36,
+  "previous_48_page_goal_met": false,
+  "figure_pages": {
+    "1": 3,
+    "2": 9,
+    "3": 11,
+    "4": 13,
+    "5": 23,
+    "6": 25
+  },
+  "font_objects": [
+    {
+      "font": "ONLWHO+LinLibertineT",
+      "embedded": true,
+      "unicode": true
+    },
+    {
+      "font": "RZGKTT+LinBiolinumTB",
+      "embedded": true,
+      "unicode": true
+    },
+    {
+      "font": "LXCZHN+LinBiolinumT",
+      "embedded": true,
+      "unicode": true
+    },
+    {
+      "font": "ONLWHO+LinLibertineT",
+      "embedded": true,
+      "unicode": true
+    },
+    {
+      "font": "ONLWHO+LinLibertineT",
+      "embedded": true,
+      "unicode": true
+    },
+    {
+      "font": "HYCJII+LinLibertineTB",
+      "embedded": true,
+      "unicode": true
+    },
+    {
+      "font": "UWKJRU+txsys",
+      "embedded": true,
+      "unicode": true
+    },
+    {
+      "font": "IEDUWF+LinLibertineTI",
+      "embedded": true,
+      "unicode": true
+    },
+    {
+      "font": "KSAHAN+LibertineMathMI",
+      "embedded": true,
+      "unicode": true
+    },
+    {
+      "font": "LXCZHN+LinBiolinumT",
+      "embedded": true,
+      "unicode": true
+    },
+    {
+      "font": "OFKVFP+LibertineMathMI7",
+      "embedded": true,
+      "unicode": true
+    },
+    {
+      "font": "UZJQXT+txmiaX",
+      "embedded": true,
+      "unicode": true
+    },
+    {
+      "font": "FYYEKV+txexs",
+      "embedded": true,
+      "unicode": true
+    },
+    {
+      "font": "ONLWHO+LinLibertineT",
+      "embedded": true,
+      "unicode": true
+    },
+    {
+      "font": "ZMKHJD+NewTXMI",
+      "embedded": true,
+      "unicode": true
+    },
+    {
+      "font": "HYCJII+LinLibertineTB",
+      "embedded": true,
+      "unicode": true
+    },
+    {
+      "font": "OFKVFP+LibertineMathMI7",
+      "embedded": true,
+      "unicode": true
+    },
+    {
+      "font": "IDWUXW+Inconsolatazi4-Regular",
+      "embedded": true,
+      "unicode": true
+    },
+    {
+      "font": "UZJQXT+txmiaX",
+      "embedded": true,
+      "unicode": true
+    },
+    {
+      "font": "UWKJRU+txsys",
+      "embedded": true,
+      "unicode": true
+    },
+    {
+      "font": "ONLWHO+LinLibertineT",
+      "embedded": true,
+      "unicode": true
+    },
+    {
+      "font": "ONLWHO+LinLibertineT",
+      "embedded": true,
+      "unicode": true
+    },
+    {
+      "font": "LXCZHN+LinBiolinumT",
+      "embedded": true,
+      "unicode": true
+    },
+    {
+      "font": "VNWMVK+LibertineMathMI5",
+      "embedded": true,
+      "unicode": true
+    },
+    {
+      "font": "CJKYSE+LinLibertineTZ",
+      "embedded": true,
+      "unicode": true
+    },
+    {
+      "font": "OGTABY+LibertineMathRM",
+      "embedded": true,
+      "unicode": true
+    },
+    {
+      "font": "UMVOPX+txsym",
+      "embedded": true,
+      "unicode": true
+    },
+    {
+      "font": "KSAHAN+LibertineMathMI",
+      "embedded": true,
+      "unicode": true
+    },
+    {
+      "font": "OFKVFP+LibertineMathMI7",
+      "embedded": true,
+      "unicode": true
+    },
+    {
+      "font": "UWKJRU+txsys",
+      "embedded": true,
+      "unicode": true
+    },
+    {
+      "font": "ONLWHO+LinLibertineT",
+      "embedded": true,
+      "unicode": true
+    },
+    {
+      "font": "ONLWHO+LinLibertineT",
+      "embedded": true,
+      "unicode": true
+    },
+    {
+      "font": "HYCJII+LinLibertineTB",
+      "embedded": true,
+      "unicode": true
+    },
+    {
+      "font": "VNWMVK+LibertineMathMI5",
+      "embedded": true,
+      "unicode": true
+    },
+    {
+      "font": "UZJQXT+txmiaX",
+      "embedded": true,
+      "unicode": true
+    },
+    {
+      "font": "HYCJII+LinLibertineTB",
+      "embedded": true,
+      "unicode": true
+    },
+    {
+      "font": "ONLWHO+LinLibertineT",
+      "embedded": true,
+      "unicode": true
+    },
+    {
+      "font": "OFKVFP+LibertineMathMI7",
+      "embedded": true,
+      "unicode": true
+    },
+    {
+      "font": "ONLWHO+LinLibertineT",
+      "embedded": true,
+      "unicode": true
+    },
+    {
+      "font": "VNWMVK+LibertineMathMI5",
+      "embedded": true,
+      "unicode": true
+    },
+    {
+      "font": "UWKJRU+txsys",
+      "embedded": true,
+      "unicode": true
+    },
+    {
+      "font": "LXCZHN+LinBiolinumT",
+      "embedded": true,
+      "unicode": true
+    },
+    {
+      "font": "UZJQXT+txmiaX",
+      "embedded": true,
+      "unicode": true
+    },
+    {
+      "font": "HYCJII+LinLibertineTB",
+      "embedded": true,
+      "unicode": true
+    },
+    {
+      "font": "ONLWHO+LinLibertineT",
+      "embedded": true,
+      "unicode": true
+    },
+    {
+      "font": "OFKVFP+LibertineMathMI7",
+      "embedded": true,
+      "unicode": true
+    },
+    {
+      "font": "UZJQXT+txmiaX",
+      "embedded": true,
+      "unicode": true
+    },
+    {
+      "font": "LXCZHN+LinBiolinumT",
+      "embedded": true,
+      "unicode": true
+    },
+    {
+      "font": "UWKJRU+txsys",
+      "embedded": true,
+      "unicode": true
+    },
+    {
+      "font": "ONLWHO+LinLibertineT",
+      "embedded": true,
+      "unicode": true
+    },
+    {
+      "font": "ONLWHO+LinLibertineT",
+      "embedded": true,
+      "unicode": true
+    },
+    {
+      "font": "HYCJII+LinLibertineTB",
+      "embedded": true,
+      "unicode": true
+    },
+    {
+      "font": "OFKVFP+LibertineMathMI7",
+      "embedded": true,
+      "unicode": true
+    },
+    {
+      "font": "ONLWHO+LinLibertineT",
+      "embedded": true,
+      "unicode": true
+    },
+    {
+      "font": "ONLWHO+LinLibertineT",
+      "embedded": true,
+      "unicode": true
+    },
+    {
+      "font": "HYCJII+LinLibertineTB",
+      "embedded": true,
+      "unicode": true
+    },
+    {
+      "font": "UWKJRU+txsys",
+      "embedded": true,
+      "unicode": true
+    },
+    {
+      "font": "OFKVFP+LibertineMathMI7",
+      "embedded": true,
+      "unicode": true
+    },
+    {
+      "font": "IDWUXW+Inconsolatazi4-Regular",
+      "embedded": true,
+      "unicode": true
+    }
+  ],
+  "pdf_sha256": "929f923cb1c4b71134f2966f62848a2205d235041673a30156a40bc544f8d0fd",
+  "page_size_points": [
+    0.0,
+    0.0,
+    486.0,
+    720.0
+  ],
+  "last_real_text_y1": 545.0123291015625,
+  "overfull_or_undefined_lines": [],
+  "bibtex_warning_count": 0,
+  "author_order": [
+    "Haoyi Zhang",
+    "Yi Yang",
+    "Md Maruf Hasan"
+  ],
+  "source_kind": "editable evidence-grounded reconstruction already present in the supplied source package",
+  "review_mode": "acmsmall,screen,review,nonacm; nonacm suppresses unassigned publication metadata without changing journal geometry",
+  "scope": "Mechanical check of this source/PDF pair; not a journal-policy clearance, peer review, or universal scientific correctness certificate."
+}

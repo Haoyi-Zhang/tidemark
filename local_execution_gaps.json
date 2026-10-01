@@ -1,19 +1,9 @@
 {
-  "schema": "local-execution-gaps",
-  "gaps": [
-    {
-      "component": "Coq kernel recompilation",
-      "status": "environmentally unavailable",
-      "attempted": true,
-      "evidence": "No coqc executable is installed in the final execution environment.",
-      "scope": "The retained Coq source was inspected for admitted results and added axioms but was not recompiled here. Human proofs and executable checks remain separate evidence."
-    },
-    {
-      "component": "Command-line Z3 rerun",
-      "status": "environmentally unavailable",
-      "attempted": true,
-      "evidence": "No z3 executable or Python binding is installed in the final execution environment.",
-      "scope": "No theorem or research design is delegated to this gap; the rerunnable release relies on the unit, differential, mutation, interval, frame, and external checks described in the artifact."
-    }
-  ]
+  "schema": "tidemark-current-environment-gaps-1",
+  "entries": [
+    {"tool": "coqc", "attempt": "executable lookup in current environment", "available": false, "consequence": "retained Coq source not kernel-rechecked; paper does not claim current Mode-4 implementation refinement"},
+    {"tool": "z3", "attempt": "executable and Python binding lookup in current environment", "available": false, "consequence": "finite algebra is explicitly Python enumeration, not a solver proof"}
+  ],
+  "historical_missing_assets": "unrecoverable-assets.json",
+  "conceptual_proofs_deferred_to_tools": false
 }

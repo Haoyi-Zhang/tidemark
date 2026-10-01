@@ -1,0 +1,218 @@
+{
+  "Boolean_domain": [
+    false,
+    true
+  ],
+  "audit_status": "NEW_MODE4_MEASUREMENT_NOT_LEGACY_RECOVERY",
+  "claim_boundary": "This bounded executable audit checks the declared finite domains. It neither reconstructs the missing legacy audit nor replaces the unbounded paper proofs.",
+  "countermodels": [
+    {
+      "found": true,
+      "name": "subtraction is not commutative",
+      "witness": {
+        "forward": 1,
+        "left": 2,
+        "reverse": -1,
+        "right": 1
+      }
+    },
+    {
+      "found": true,
+      "name": "write and read on one region do not commute",
+      "witness": {
+        "read_then_write": [
+          {
+            "read-r": 5,
+            "write-r-zero": null
+          },
+          {
+            "r": 0,
+            "s": 0
+          },
+          []
+        ],
+        "store": {
+          "r": 5,
+          "s": 0
+        },
+        "write_then_read": [
+          {
+            "read-r": 0,
+            "write-r-zero": null
+          },
+          {
+            "r": 0,
+            "s": 0
+          },
+          []
+        ]
+      }
+    },
+    {
+      "found": true,
+      "name": "ordered emissions do not commute",
+      "witness": {
+        "emit_one_then_zero": [
+          1,
+          0
+        ],
+        "emit_zero_then_one": [
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "found": true,
+      "name": "normalization collapse destroys a two-valued decoder",
+      "witness": {
+        "normal_form0": "copy x",
+        "normal_form1": "copy x",
+        "orientation0": "copy x",
+        "orientation1": "x + 0"
+      }
+    }
+  ],
+  "countermodels_expected": 4,
+  "countermodels_found": 4,
+  "failure_samples": [],
+  "integer_domain": [
+    -8,
+    -7,
+    -6,
+    -5,
+    -4,
+    -3,
+    -2,
+    -1,
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "legacy_7453_explanation": "The uploaded package did not contain the legacy 7,453-case input record or an executable that reproduced that exact count. The current audit uses declared domains and produces its own count without padding to the legacy number.",
+  "legacy_7453_status": "NOT_RECOVERED",
+  "mode": "tidemark-mode-4",
+  "obligations": [
+    {
+      "cases": 289,
+      "failures": 0,
+      "name": "integer addition commutes"
+    },
+    {
+      "cases": 289,
+      "failures": 0,
+      "name": "integer multiplication commutes"
+    },
+    {
+      "cases": 289,
+      "failures": 0,
+      "name": "integer equality commutes"
+    },
+    {
+      "cases": 4,
+      "failures": 0,
+      "name": "Boolean equality commutes"
+    },
+    {
+      "cases": 17,
+      "failures": 0,
+      "name": "integer identity expansion"
+    },
+    {
+      "cases": 2,
+      "failures": 0,
+      "name": "Boolean identity expansion"
+    },
+    {
+      "cases": 289,
+      "failures": 0,
+      "name": "operand commutation under context return"
+    },
+    {
+      "cases": 17,
+      "failures": 0,
+      "name": "integer identity under context return"
+    },
+    {
+      "cases": 289,
+      "failures": 0,
+      "name": "operand commutation under context add-three"
+    },
+    {
+      "cases": 17,
+      "failures": 0,
+      "name": "integer identity under context add-three"
+    },
+    {
+      "cases": 289,
+      "failures": 0,
+      "name": "operand commutation under context multiply-minus-two"
+    },
+    {
+      "cases": 17,
+      "failures": 0,
+      "name": "integer identity under context multiply-minus-two"
+    },
+    {
+      "cases": 289,
+      "failures": 0,
+      "name": "operand commutation under context equal-zero"
+    },
+    {
+      "cases": 17,
+      "failures": 0,
+      "name": "integer identity under context equal-zero"
+    },
+    {
+      "cases": 289,
+      "failures": 0,
+      "name": "operand commutation under context less-than-five"
+    },
+    {
+      "cases": 17,
+      "failures": 0,
+      "name": "integer identity under context less-than-five"
+    },
+    {
+      "cases": 289,
+      "failures": 0,
+      "name": "operand commutation under context conditional"
+    },
+    {
+      "cases": 17,
+      "failures": 0,
+      "name": "integer identity under context conditional"
+    },
+    {
+      "cases": 4096,
+      "failures": 0,
+      "name": "effect commutation symmetry"
+    },
+    {
+      "cases": 3,
+      "failures": 0,
+      "name": "write-read conflicts reject"
+    },
+    {
+      "cases": 3,
+      "failures": 0,
+      "name": "write-write conflicts reject"
+    },
+    {
+      "cases": 475,
+      "failures": 0,
+      "name": "independent command order preserves results, store, and trace"
+    }
+  ],
+  "raw_cases": "data/raw/mode4/finite-algebra-cases.jsonl",
+  "schema": "tidemark-finite-algebra-mode4",
+  "source_sha256": "82fbe76c2f9f0a6d8ec7f898a3ae494ea0c882ce21cdc1a728d9cf6bfbb22b69",
+  "total_cases": 7303,
+  "total_failures": 0
+}

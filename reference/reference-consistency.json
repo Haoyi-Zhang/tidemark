@@ -1,0 +1,17 @@
+{
+  "schema": "tidemark-current-reference-consistency-1",
+  "bib_sha256": "a13bfc1ff9dde678920d9a111ffce664d085f7ab00093158d59142a84fd5f482",
+  "bibliography_entries": 75,
+  "minimum_requested": 60,
+  "meets_reference_floor": true,
+  "unique_dois": 75,
+  "missing_dois": [],
+  "undefined_citations": [],
+  "uncited_entries": [],
+  "citation_occurrences": 86,
+  "unique_cited_keys": 75,
+  "multi_key_citations": [],
+  "online_checks_executed_by_this_script": false,
+  "full_text_research_correctness_certified": false,
+  "all_local_checks_passed": true
+}

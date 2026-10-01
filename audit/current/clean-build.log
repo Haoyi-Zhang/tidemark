@@ -1,0 +1,1395 @@
+Exported 79 bound values
+compiled 6 figures
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./main.tex
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-01-18>
+(./acmart.cls
+Document Class: acmart 2024/12/28 v2.12 Typesetting articles for the Associatio
+n for Computing Machinery
+(/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/keyval.tex))))
+(/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.sty
+(/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/amscls/amsart.cls
+Document Class: amsart 2020/05/29 v2.20.6
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.sty
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype-pdftex.def)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.cfg))
+(/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
+(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/totpages/totpages.sty
+(/usr/share/texlive/texmf-dist/tex/latex/everyshi/everyshi.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/environ/environ.sty
+(/usr/share/texlive/texmf-dist/tex/latex/trimspaces/trimspaces.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/share/texlive/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+(/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty)))
+(/usr/share/texlive/texmf-dist/tex/generic/stringenc/stringenc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/base/atbegshi-ltx.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/usr/share/texlive/texmf-dist/tex/latex/base/atveryend-ltx.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+(/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/hyperxmp/hyperxmp.sty
+(/usr/share/texlive/texmf-dist/tex/latex/ifmtarg/ifmtarg.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/ifdraft.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifluatex.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def)))
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/ncctools/manyfoot.sty
+(/usr/share/texlive/texmf-dist/tex/latex/ncctools/nccfoots.sty))
+(/usr/share/texlive/texmf-dist/tex/generic/pdftex/glyphtounicode.tex)
+(/usr/share/texlive/texmf-dist/tex/latex/cmap/cmap.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty<<t1.cmap>>)
+(/usr/share/texlive/texmf-dist/tex/latex/libertine/libertine.sty
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifxetex.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/fontaxes/fontaxes.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/libertine/LinLibertine_I.tex))
+(/usr/share/texlive/texmf-dist/tex/latex/inconsolata/zi4.sty
+`inconsolata-zi4' v1.12, 2019/05/17 Text macros for Inconsolata (msharpe))
+(/usr/share/texlive/texmf-dist/tex/latex/newtx/newtxmath.sty
+`newtxmath' v1.754, 2024/09/22 Math macros based originally on txfonts (msharpe
+) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/centernot.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/kastrup/binhex.tex)
+amsthm NOT loaded
+) (/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption-ams-smf.sto)))
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/comment/comment.sty
+Excluding comment 'comment') Excluding comment 'CCSXML'
+(/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty)
+Special comment 'acks'
+(/usr/share/texlive/texmf-dist/tex/latex/libertine/T1LinuxLibertineT-TLF.fd))
+(/usr/share/texlive/texmf-dist/tex/latex/mathtools/mathtools.sty
+(/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/mathtools/mhsetup.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/tabularx.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/siunitx/siunitx.sty
+(/usr/share/texlive/texmf-dist/tex/latex/translations/translations.sty))
+
+Package amsthm Warning: Unknown theoremstyle `acmremark' on input line 41.
+
+(./data-macros.tex) Include comment 'screenonly' Excluding comment 'printonly'
+Include comment 'anonsuppress'
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def)
+No file main.aux.
+(/usr/share/texlive/texmf-dist/tex/latex/newtx/omlnxlmi.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/newtx/untxexa.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/newtx/lmsntxsy.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/newtx/lmxntxexx.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/libertine/OT1LinuxLibertineT-TLF.fd)<<
+ot1.cmap>><<oml.cmap>>
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/newtx/untxmia.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/newtx/untxsym.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/newtx/untxsyc.fd)
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+(/usr/share/texlive/texmf-dist/tex/latex/upquote/upquote.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/translations/translations-basic-dictio
+nary-english.trsl)
+(/usr/share/texlive/texmf-dist/tex/latex/libertine/T1LinuxBiolinumT-TLF.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/libertine/TS1LinuxLibertineT-TLF.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg)
+(./sections/01-introduction.tex
+
+Package natbib Warning: Citation `r18' on page 1 undefined on input line 4.
+
+
+Package natbib Warning: Citation `r22' on page 1 undefined on input line 4.
+
+
+[1.1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texm
+f-dist/fonts/enc/dvips/libertine/lbtn_76gpa5.enc}{/usr/share/texlive/texmf-dist
+/fonts/enc/dvips/libertine/lbtn_25tcsq.enc}{/usr/share/texlive/texmf-dist/fonts
+/enc/dvips/libertine/lbtn_ncsllp.enc}{/usr/share/texlive/texmf-dist/fonts/enc/d
+vips/libertine/lbtn_naooyc.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/l
+ibertine/lbtn_nh77jq.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/liberti
+ne/lbtn_7grukw.enc}]
+(/usr/share/texlive/texmf-dist/tex/latex/libertine/OT1LinuxBiolinumT-TLF.fd)
+
+LaTeX Warning: Reference `eq:two-obligations' on page 2 undefined on input line
+ 13.
+
+
+[2.2{/usr/share/texlive/texmf-dist/fonts/enc/dvips/libertine/lbtn_edcawa.enc}{/
+usr/share/texlive/texmf-dist/fonts/enc/dvips/libertine/lbtn_oexx6f.enc}]
+
+LaTeX Warning: Reference `eq:intro-frame' on page 3 undefined on input line 45.
+
+
+
+LaTeX Warning: Reference `fig:overview' on page 3 undefined on input line 47.
+
+
+LaTeX Warning: Reference `eq:two-obligations' on page 3 undefined on input line
+ 57.
+
+
+Package natbib Warning: Citation `r63' on page 3 undefined on input line 59.
+
+
+[3.3 <./figures/figure-01.pdf>]
+
+Package natbib Warning: Citation `r47' on page 4 undefined on input line 79.
+
+
+Package natbib Warning: Citation `r46' on page 4 undefined on input line 79.
+
+
+Package natbib Warning: Citation `r34' on page 4 undefined on input line 79.
+
+
+Underfull \vbox (badness 5504) has occurred while \output is active
+[4.4]
+
+LaTeX Warning: Reference `sec:language' on page 5 undefined on input line 81.
+
+
+LaTeX Warning: Reference `sec:mode4' on page 5 undefined on input line 81.
+
+
+LaTeX Warning: Reference `sec:metatheory' on page 5 undefined on input line 81.
+
+
+
+LaTeX Warning: Reference `sec:realization' on page 5 undefined on input line 81
+.
+
+
+LaTeX Warning: Reference `sec:evaluation' on page 5 undefined on input line 81.
+
+
+
+LaTeX Warning: Reference `sec:related' on page 5 undefined on input line 81.
+
+
+LaTeX Warning: Reference `sec:conclusion' on page 5 undefined on input line 81.
+
+
+) (./sections/02-language.tex
+[5.5{/usr/share/texlive/texmf-dist/fonts/enc/dvips/libertine/lbtn_fygcup.enc}]
+
+Package natbib Warning: Citation `r42' on page 6 undefined on input line 51.
+
+
+Package natbib Warning: Citation `r37' on page 6 undefined on input line 82.
+
+
+Package natbib Warning: Citation `r62' on page 6 undefined on input line 82.
+
+
+Package natbib Warning: Citation `r40' on page 6 undefined on input line 82.
+
+
+LaTeX Warning: Reference `eq:effect-commute' on page 6 undefined on input line 
+90.
+
+
+[6.6]) (./sections/03-mode4.tex
+[7.7]
+[8.8]
+[9.9 <./figures/figure-02.pdf>]
+
+LaTeX Warning: Reference `tab:mode4-boundary' on page 10 undefined on input lin
+e 96.
+
+
+Underfull \hbox (badness 3884) in paragraph at lines 118--118
+[]|\T1/LinuxLibertineT-TLF/m/n/9 (+20) expanded form; iden-tity prece-dence sup
+-
+
+[10.10]
+
+LaTeX Warning: Reference `sec:introduction' on page 11 undefined on input line 
+149.
+
+
+LaTeX Warning: Reference `eq:intro-frame' on page 11 undefined on input line 14
+9.
+
+
+[11.11 <./figures/figure-03.pdf>]
+
+LaTeX Warning: Reference `sec:metatheory' on page 12 undefined on input line 20
+4.
+
+
+[12.12]) (./sections/04-metatheory.tex
+[13.13 <./figures/figure-04.pdf>]
+
+LaTeX Warning: Reference `eq:effect-commute' on page 14 undefined on input line
+ 34.
+
+
+[14.14]
+[15.15]
+[16.16]
+
+LaTeX Warning: Reference `sec:language' on page 17 undefined on input line 172.
+
+
+
+LaTeX Warning: Reference `sec:mode4' on page 17 undefined on input line 173.
+
+
+[17.17]
+Underfull \hbox (badness 10000) in paragraph at lines 225--225
+[]|\T1/LinuxLibertineT-TLF/m/n/9 (+20) abstract ex-trac-tion still fol-lows; on
+ly an
+
+Underfull \hbox (badness 10000) in paragraph at lines 225--225
+[]|\T1/LinuxLibertineT-TLF/m/n/9 (+20) effect/dependence
+) (./sections/05-realization.tex
+
+LaTeX Warning: Reference `eq:selector-order' on page 18 undefined on input line
+ 15.
+
+
+[18.18]
+
+LaTeX Warning: Reference `sec:mode4' on page 19 undefined on input line 54.
+
+
+[19.19]
+
+LaTeX Warning: Reference `sec:metatheory' on page 20 undefined on input line 73
+.
+
+
+[20.20]) (./sections/06-evaluation.tex
+[21.21]
+Underfull \hbox (badness 2103) in paragraph at lines 39--39
+[]|\T1/LinuxLibertineT-TLF/m/n/9 (+20) complete source--target ex-e-cu-
+
+Underfull \hbox (badness 2165) in paragraph at lines 39--39
+[]|\T1/LinuxLibertineT-TLF/m/n/9 (+20) production/reference eval-u-a-tor
+
+Underfull \hbox (badness 1418) in paragraph at lines 39--39
+[]|\T1/LinuxLibertineT-TLF/m/n/9 (+20) structural record ver-i-
+
+Underfull \hbox (badness 3849) in paragraph at lines 39--39
+[]|\T1/LinuxLibertineT-TLF/m/n/9 (+20) independent dynamic-
+
+LaTeX Warning: Reference `sec:mode4' on page 22 undefined on input line 44.
+
+
+LaTeX Warning: Reference `tab:family-capacity' on page 22 undefined on input li
+ne 50.
+
+
+Underfull \vbox (badness 6332) has occurred while \output is active
+[22.22]
+[23.23 <./figures/figure-05.pdf>] (./tables/carrier-ablation-rows.tex)
+
+LaTeX Warning: Reference `tab:length-groups' on page 24 undefined on input line
+ 102.
+
+
+LaTeX Warning: Reference `tab:timing' on page 24 undefined on input line 122.
+
+
+[24.24]
+[25.25 <./figures/figure-06.pdf>]) (./sections/06b-evidence-detail.tex
+[26.26] (/usr/share/texlive/texmf-dist/tex/latex/inconsolata/t1zi4.fd)
+[27.27{/usr/share/texlive/texmf-dist/fonts/enc/dvips/inconsolata/i4-t1-4.enc}])
+(./sections/07-related.tex
+
+Package natbib Warning: Citation `r18' on page 28 undefined on input line 8.
+
+
+Package natbib Warning: Citation `r19' on page 28 undefined on input line 8.
+
+
+Package natbib Warning: Citation `r45' on page 28 undefined on input line 8.
+
+
+Package natbib Warning: Citation `r23' on page 28 undefined on input line 8.
+
+
+Package natbib Warning: Citation `r73' on page 28 undefined on input line 10.
+
+
+Package natbib Warning: Citation `r74' on page 28 undefined on input line 10.
+
+
+Package natbib Warning: Citation `r27' on page 28 undefined on input line 12.
+
+
+Package natbib Warning: Citation `r11' on page 28 undefined on input line 12.
+
+
+Package natbib Warning: Citation `r03' on page 28 undefined on input line 12.
+
+
+Package natbib Warning: Citation `r59' on page 28 undefined on input line 12.
+
+
+Package natbib Warning: Citation `r67' on page 28 undefined on input line 16.
+
+
+Package natbib Warning: Citation `r56' on page 28 undefined on input line 16.
+
+
+Package natbib Warning: Citation `r55' on page 28 undefined on input line 16.
+
+
+Package natbib Warning: Citation `r15' on page 28 undefined on input line 16.
+
+
+Package natbib Warning: Citation `r14' on page 28 undefined on input line 16.
+
+
+Package natbib Warning: Citation `r21' on page 28 undefined on input line 16.
+
+
+Underfull \vbox (badness 1895) has occurred while \output is active
+[28.28]
+
+Package natbib Warning: Citation `r13' on page 29 undefined on input line 18.
+
+
+Package natbib Warning: Citation `r51' on page 29 undefined on input line 18.
+
+
+Package natbib Warning: Citation `r44' on page 29 undefined on input line 18.
+
+
+Package natbib Warning: Citation `r68' on page 29 undefined on input line 18.
+
+
+Package natbib Warning: Citation `r43' on page 29 undefined on input line 18.
+
+
+Package natbib Warning: Citation `r17' on page 29 undefined on input line 18.
+
+
+Package natbib Warning: Citation `r39' on page 29 undefined on input line 18.
+
+
+Package natbib Warning: Citation `r38' on page 29 undefined on input line 18.
+
+
+Package natbib Warning: Citation `r52' on page 29 undefined on input line 18.
+
+
+Package natbib Warning: Citation `r41' on page 29 undefined on input line 20.
+
+
+Package natbib Warning: Citation `r49' on page 29 undefined on input line 20.
+
+
+Package natbib Warning: Citation `r16' on page 29 undefined on input line 20.
+
+
+Package natbib Warning: Citation `r20' on page 29 undefined on input line 20.
+
+
+Package natbib Warning: Citation `r22' on page 29 undefined on input line 26.
+
+
+Package natbib Warning: Citation `r53' on page 29 undefined on input line 26.
+
+
+Package natbib Warning: Citation `r54' on page 29 undefined on input line 26.
+
+
+Package natbib Warning: Citation `r09' on page 29 undefined on input line 26.
+
+
+Package natbib Warning: Citation `r42' on page 29 undefined on input line 32.
+
+
+Package natbib Warning: Citation `r62' on page 29 undefined on input line 32.
+
+
+Package natbib Warning: Citation `r37' on page 29 undefined on input line 32.
+
+
+Package natbib Warning: Citation `r40' on page 29 undefined on input line 32.
+
+
+Package natbib Warning: Citation `r24' on page 29 undefined on input line 32.
+
+
+Package natbib Warning: Citation `r05' on page 29 undefined on input line 32.
+
+
+Package natbib Warning: Citation `r64' on page 29 undefined on input line 32.
+
+
+Package natbib Warning: Citation `r60' on page 29 undefined on input line 32.
+
+
+[29.29]
+
+Package natbib Warning: Citation `r58' on page 30 undefined on input line 34.
+
+
+Package natbib Warning: Citation `r57' on page 30 undefined on input line 34.
+
+
+Package natbib Warning: Citation `r08' on page 30 undefined on input line 34.
+
+
+Package natbib Warning: Citation `r07' on page 30 undefined on input line 34.
+
+
+Package natbib Warning: Citation `r04' on page 30 undefined on input line 34.
+
+
+Package natbib Warning: Citation `r46' on page 30 undefined on input line 40.
+
+
+Package natbib Warning: Citation `r01' on page 30 undefined on input line 40.
+
+
+Package natbib Warning: Citation `r25' on page 30 undefined on input line 40.
+
+
+Package natbib Warning: Citation `r48' on page 30 undefined on input line 40.
+
+
+Package natbib Warning: Citation `r12' on page 30 undefined on input line 40.
+
+
+Package natbib Warning: Citation `r47' on page 30 undefined on input line 46.
+
+
+Package natbib Warning: Citation `r50' on page 30 undefined on input line 46.
+
+
+Package natbib Warning: Citation `r66' on page 30 undefined on input line 46.
+
+
+Package natbib Warning: Citation `r70' on page 30 undefined on input line 46.
+
+
+Package natbib Warning: Citation `r65' on page 30 undefined on input line 46.
+
+
+Package natbib Warning: Citation `r29' on page 30 undefined on input line 46.
+
+
+Package natbib Warning: Citation `r02' on page 30 undefined on input line 46.
+
+
+Package natbib Warning: Citation `r32' on page 30 undefined on input line 48.
+
+
+Package natbib Warning: Citation `r36' on page 30 undefined on input line 48.
+
+
+Package natbib Warning: Citation `r35' on page 30 undefined on input line 48.
+
+
+Package natbib Warning: Citation `r30' on page 30 undefined on input line 48.
+
+
+Package natbib Warning: Citation `r31' on page 30 undefined on input line 48.
+
+
+Package natbib Warning: Citation `r28' on page 30 undefined on input line 48.
+
+
+Package natbib Warning: Citation `r33' on page 30 undefined on input line 54.
+
+
+Package natbib Warning: Citation `r34' on page 30 undefined on input line 54.
+
+
+Package natbib Warning: Citation `r06' on page 30 undefined on input line 54.
+
+
+Package natbib Warning: Citation `r10' on page 30 undefined on input line 54.
+
+
+Package natbib Warning: Citation `r28' on page 30 undefined on input line 54.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active
+[30.30]
+
+Package natbib Warning: Citation `r71' on page 31 undefined on input line 56.
+
+
+Package natbib Warning: Citation `r72' on page 31 undefined on input line 56.
+
+
+Package natbib Warning: Citation `r75' on page 31 undefined on input line 56.
+
+
+Package natbib Warning: Citation `r26' on page 31 undefined on input line 56.
+
+
+Package natbib Warning: Citation `r69' on page 31 undefined on input line 56.
+
+
+Package natbib Warning: Citation `r63' on page 31 undefined on input line 62.
+
+
+Package natbib Warning: Citation `r61' on page 31 undefined on input line 64.
+
+
+Underfull \vbox (badness 1881) has occurred while \output is active
+[31.31]) (./sections/08-conclusion.tex
+[32.32])
+No file main.bbl.
+
+Package natbib Warning: There were undefined citations.
+
+
+[33.33] (/usr/share/texlive/texmf-dist/tex/generic/stringenc/se-pdfdoc.def)
+(/usr/share/texlive/texmf-dist/tex/generic/stringenc/se-utf8.def) [34.33]
+(./main.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+LaTeX Warning: Temporary extra page added at the end. Rerun to get it removed.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+ )
+(see the transcript file for additional information)</usr/share/texlive/texmf-d
+ist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/newtx/LibertineMathMI.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/newtx/LibertineMathMI5.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/newtx/LibertineMathMI7.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/newtx/LibertineMathRM.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/libertine/LinBiolinumT.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/libertine/LinBiolinumTB.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/libertine/LinLibertineT.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/libertine/LinLibertineTB.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/libertine/LinLibertineTI.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/libertine/LinLibertineTZ.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/newtx/NewTXMI.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/newtx/txexs.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/txmia
+X.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/txsym.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/newtx/txsys.pfb>
+Output written on main.pdf (34 pages, 758056 bytes).
+Transcript written on main.log.
+The 8-bit codepage and sorting file: 88591lat.csf
+The top-level auxiliary file: main.aux
+The style file: ACM-Reference-Format.bst
+Database file #1: references.bib
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./main.tex
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-01-18>
+(./acmart.cls
+Document Class: acmart 2024/12/28 v2.12 Typesetting articles for the Associatio
+n for Computing Machinery
+(/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/keyval.tex))))
+(/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.sty
+(/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/amscls/amsart.cls
+Document Class: amsart 2020/05/29 v2.20.6
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.sty
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype-pdftex.def)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.cfg))
+(/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
+(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/totpages/totpages.sty
+(/usr/share/texlive/texmf-dist/tex/latex/everyshi/everyshi.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/environ/environ.sty
+(/usr/share/texlive/texmf-dist/tex/latex/trimspaces/trimspaces.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/share/texlive/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+(/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty)))
+(/usr/share/texlive/texmf-dist/tex/generic/stringenc/stringenc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/base/atbegshi-ltx.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/usr/share/texlive/texmf-dist/tex/latex/base/atveryend-ltx.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+(/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/hyperxmp/hyperxmp.sty
+(/usr/share/texlive/texmf-dist/tex/latex/ifmtarg/ifmtarg.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/ifdraft.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifluatex.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def)))
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/ncctools/manyfoot.sty
+(/usr/share/texlive/texmf-dist/tex/latex/ncctools/nccfoots.sty))
+(/usr/share/texlive/texmf-dist/tex/generic/pdftex/glyphtounicode.tex)
+(/usr/share/texlive/texmf-dist/tex/latex/cmap/cmap.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty<<t1.cmap>>)
+(/usr/share/texlive/texmf-dist/tex/latex/libertine/libertine.sty
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifxetex.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/fontaxes/fontaxes.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/libertine/LinLibertine_I.tex))
+(/usr/share/texlive/texmf-dist/tex/latex/inconsolata/zi4.sty
+`inconsolata-zi4' v1.12, 2019/05/17 Text macros for Inconsolata (msharpe))
+(/usr/share/texlive/texmf-dist/tex/latex/newtx/newtxmath.sty
+`newtxmath' v1.754, 2024/09/22 Math macros based originally on txfonts (msharpe
+) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/centernot.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/kastrup/binhex.tex)
+amsthm NOT loaded
+) (/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption-ams-smf.sto)))
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/comment/comment.sty
+Excluding comment 'comment') Excluding comment 'CCSXML'
+(/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty)
+Special comment 'acks'
+(/usr/share/texlive/texmf-dist/tex/latex/libertine/T1LinuxLibertineT-TLF.fd))
+(/usr/share/texlive/texmf-dist/tex/latex/mathtools/mathtools.sty
+(/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/mathtools/mhsetup.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/tabularx.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/siunitx/siunitx.sty
+(/usr/share/texlive/texmf-dist/tex/latex/translations/translations.sty))
+
+Package amsthm Warning: Unknown theoremstyle `acmremark' on input line 41.
+
+(./data-macros.tex) Include comment 'screenonly' Excluding comment 'printonly'
+Include comment 'anonsuppress'
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def)
+(./main.aux) (/usr/share/texlive/texmf-dist/tex/latex/newtx/omlnxlmi.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/newtx/untxexa.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/newtx/lmsntxsy.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/newtx/lmxntxexx.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/libertine/OT1LinuxLibertineT-TLF.fd)<<
+ot1.cmap>><<oml.cmap>>
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/newtx/untxmia.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/newtx/untxsym.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/newtx/untxsyc.fd) (./main.out)
+(./main.out) (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+(/usr/share/texlive/texmf-dist/tex/latex/upquote/upquote.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/translations/translations-basic-dictio
+nary-english.trsl)
+(/usr/share/texlive/texmf-dist/tex/latex/libertine/T1LinuxBiolinumT-TLF.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/libertine/TS1LinuxLibertineT-TLF.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg)
+(./sections/01-introduction.tex
+
+Package natbib Warning: Citation `r18' on page 1 undefined on input line 4.
+
+
+Package natbib Warning: Citation `r22' on page 1 undefined on input line 4.
+
+
+[1.1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texm
+f-dist/fonts/enc/dvips/libertine/lbtn_76gpa5.enc}{/usr/share/texlive/texmf-dist
+/fonts/enc/dvips/libertine/lbtn_25tcsq.enc}{/usr/share/texlive/texmf-dist/fonts
+/enc/dvips/libertine/lbtn_ncsllp.enc}{/usr/share/texlive/texmf-dist/fonts/enc/d
+vips/libertine/lbtn_naooyc.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/l
+ibertine/lbtn_nh77jq.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/liberti
+ne/lbtn_7grukw.enc}]
+(/usr/share/texlive/texmf-dist/tex/latex/libertine/OT1LinuxBiolinumT-TLF.fd)
+[2.2{/usr/share/texlive/texmf-dist/fonts/enc/dvips/libertine/lbtn_edcawa.enc}{/
+usr/share/texlive/texmf-dist/fonts/enc/dvips/libertine/lbtn_oexx6f.enc}]
+
+Package natbib Warning: Citation `r63' on page 3 undefined on input line 59.
+
+
+[3.3 <./figures/figure-01.pdf>]
+
+Package natbib Warning: Citation `r47' on page 4 undefined on input line 79.
+
+
+Package natbib Warning: Citation `r46' on page 4 undefined on input line 79.
+
+
+Package natbib Warning: Citation `r34' on page 4 undefined on input line 79.
+
+
+Underfull \vbox (badness 5504) has occurred while \output is active
+[4.4]) (./sections/02-language.tex
+[5.5{/usr/share/texlive/texmf-dist/fonts/enc/dvips/libertine/lbtn_fygcup.enc}]
+
+Package natbib Warning: Citation `r42' on page 6 undefined on input line 51.
+
+
+Package natbib Warning: Citation `r37' on page 6 undefined on input line 82.
+
+
+Package natbib Warning: Citation `r62' on page 6 undefined on input line 82.
+
+
+Package natbib Warning: Citation `r40' on page 6 undefined on input line 82.
+
+
+[6.6]) (./sections/03-mode4.tex
+[7.7]
+[8.8]
+[9.9 <./figures/figure-02.pdf>]
+Underfull \hbox (badness 3884) in paragraph at lines 118--118
+[]|\T1/LinuxLibertineT-TLF/m/n/9 (+20) expanded form; iden-tity prece-dence sup
+-
+
+[10.10]
+[11.11 <./figures/figure-03.pdf>]
+[12.12]) (./sections/04-metatheory.tex
+[13.13 <./figures/figure-04.pdf>]
+[14.14]
+[15.15]
+[16.16]
+[17.17]
+Underfull \hbox (badness 10000) in paragraph at lines 225--225
+[]|\T1/LinuxLibertineT-TLF/m/n/9 (+20) abstract ex-trac-tion still fol-lows; on
+ly an
+
+Underfull \hbox (badness 10000) in paragraph at lines 225--225
+[]|\T1/LinuxLibertineT-TLF/m/n/9 (+20) effect/dependence
+) (./sections/05-realization.tex
+[18.18]
+[19.19]
+[20.20]) (./sections/06-evaluation.tex
+[21.21]
+Underfull \hbox (badness 2103) in paragraph at lines 39--39
+[]|\T1/LinuxLibertineT-TLF/m/n/9 (+20) complete source--target ex-e-cu-
+
+Underfull \hbox (badness 2165) in paragraph at lines 39--39
+[]|\T1/LinuxLibertineT-TLF/m/n/9 (+20) production/reference eval-u-a-tor
+
+Underfull \hbox (badness 1418) in paragraph at lines 39--39
+[]|\T1/LinuxLibertineT-TLF/m/n/9 (+20) structural record ver-i-
+
+Underfull \hbox (badness 3849) in paragraph at lines 39--39
+[]|\T1/LinuxLibertineT-TLF/m/n/9 (+20) independent dynamic-
+
+Underfull \vbox (badness 6332) has occurred while \output is active
+[22.22]
+[23.23 <./figures/figure-05.pdf>] (./tables/carrier-ablation-rows.tex)
+[24.24]
+[25.25 <./figures/figure-06.pdf>]) (./sections/06b-evidence-detail.tex
+[26.26] (/usr/share/texlive/texmf-dist/tex/latex/inconsolata/t1zi4.fd)
+[27.27{/usr/share/texlive/texmf-dist/fonts/enc/dvips/inconsolata/i4-t1-4.enc}])
+(./sections/07-related.tex
+
+Package natbib Warning: Citation `r18' on page 28 undefined on input line 8.
+
+
+Package natbib Warning: Citation `r19' on page 28 undefined on input line 8.
+
+
+Package natbib Warning: Citation `r45' on page 28 undefined on input line 8.
+
+
+Package natbib Warning: Citation `r23' on page 28 undefined on input line 8.
+
+
+Package natbib Warning: Citation `r73' on page 28 undefined on input line 10.
+
+
+Package natbib Warning: Citation `r74' on page 28 undefined on input line 10.
+
+
+Package natbib Warning: Citation `r27' on page 28 undefined on input line 12.
+
+
+Package natbib Warning: Citation `r11' on page 28 undefined on input line 12.
+
+
+Package natbib Warning: Citation `r03' on page 28 undefined on input line 12.
+
+
+Package natbib Warning: Citation `r59' on page 28 undefined on input line 12.
+
+
+Package natbib Warning: Citation `r67' on page 28 undefined on input line 16.
+
+
+Package natbib Warning: Citation `r56' on page 28 undefined on input line 16.
+
+
+Package natbib Warning: Citation `r55' on page 28 undefined on input line 16.
+
+
+Package natbib Warning: Citation `r15' on page 28 undefined on input line 16.
+
+
+Package natbib Warning: Citation `r14' on page 28 undefined on input line 16.
+
+
+Package natbib Warning: Citation `r21' on page 28 undefined on input line 16.
+
+
+Underfull \vbox (badness 1895) has occurred while \output is active
+[28.28]
+
+Package natbib Warning: Citation `r13' on page 29 undefined on input line 18.
+
+
+Package natbib Warning: Citation `r51' on page 29 undefined on input line 18.
+
+
+Package natbib Warning: Citation `r44' on page 29 undefined on input line 18.
+
+
+Package natbib Warning: Citation `r68' on page 29 undefined on input line 18.
+
+
+Package natbib Warning: Citation `r43' on page 29 undefined on input line 18.
+
+
+Package natbib Warning: Citation `r17' on page 29 undefined on input line 18.
+
+
+Package natbib Warning: Citation `r39' on page 29 undefined on input line 18.
+
+
+Package natbib Warning: Citation `r38' on page 29 undefined on input line 18.
+
+
+Package natbib Warning: Citation `r52' on page 29 undefined on input line 18.
+
+
+Package natbib Warning: Citation `r41' on page 29 undefined on input line 20.
+
+
+Package natbib Warning: Citation `r49' on page 29 undefined on input line 20.
+
+
+Package natbib Warning: Citation `r16' on page 29 undefined on input line 20.
+
+
+Package natbib Warning: Citation `r20' on page 29 undefined on input line 20.
+
+
+Package natbib Warning: Citation `r22' on page 29 undefined on input line 26.
+
+
+Package natbib Warning: Citation `r53' on page 29 undefined on input line 26.
+
+
+Package natbib Warning: Citation `r54' on page 29 undefined on input line 26.
+
+
+Package natbib Warning: Citation `r09' on page 29 undefined on input line 26.
+
+
+Package natbib Warning: Citation `r42' on page 29 undefined on input line 32.
+
+
+Package natbib Warning: Citation `r62' on page 29 undefined on input line 32.
+
+
+Package natbib Warning: Citation `r37' on page 29 undefined on input line 32.
+
+
+Package natbib Warning: Citation `r40' on page 29 undefined on input line 32.
+
+
+Package natbib Warning: Citation `r24' on page 29 undefined on input line 32.
+
+
+Package natbib Warning: Citation `r05' on page 29 undefined on input line 32.
+
+
+Package natbib Warning: Citation `r64' on page 29 undefined on input line 32.
+
+
+Package natbib Warning: Citation `r60' on page 29 undefined on input line 32.
+
+
+[29.29]
+
+Package natbib Warning: Citation `r58' on page 30 undefined on input line 34.
+
+
+Package natbib Warning: Citation `r57' on page 30 undefined on input line 34.
+
+
+Package natbib Warning: Citation `r08' on page 30 undefined on input line 34.
+
+
+Package natbib Warning: Citation `r07' on page 30 undefined on input line 34.
+
+
+Package natbib Warning: Citation `r04' on page 30 undefined on input line 34.
+
+
+Package natbib Warning: Citation `r46' on page 30 undefined on input line 40.
+
+
+Package natbib Warning: Citation `r01' on page 30 undefined on input line 40.
+
+
+Package natbib Warning: Citation `r25' on page 30 undefined on input line 40.
+
+
+Package natbib Warning: Citation `r48' on page 30 undefined on input line 40.
+
+
+Package natbib Warning: Citation `r12' on page 30 undefined on input line 40.
+
+
+Package natbib Warning: Citation `r47' on page 30 undefined on input line 46.
+
+
+Package natbib Warning: Citation `r50' on page 30 undefined on input line 46.
+
+
+Package natbib Warning: Citation `r66' on page 30 undefined on input line 46.
+
+
+Package natbib Warning: Citation `r70' on page 30 undefined on input line 46.
+
+
+Package natbib Warning: Citation `r65' on page 30 undefined on input line 46.
+
+
+Package natbib Warning: Citation `r29' on page 30 undefined on input line 46.
+
+
+Package natbib Warning: Citation `r02' on page 30 undefined on input line 46.
+
+
+Package natbib Warning: Citation `r32' on page 30 undefined on input line 48.
+
+
+Package natbib Warning: Citation `r36' on page 30 undefined on input line 48.
+
+
+Package natbib Warning: Citation `r35' on page 30 undefined on input line 48.
+
+
+Package natbib Warning: Citation `r30' on page 30 undefined on input line 48.
+
+
+Package natbib Warning: Citation `r31' on page 30 undefined on input line 48.
+
+
+Package natbib Warning: Citation `r28' on page 30 undefined on input line 48.
+
+
+Package natbib Warning: Citation `r33' on page 30 undefined on input line 54.
+
+
+Package natbib Warning: Citation `r34' on page 30 undefined on input line 54.
+
+
+Package natbib Warning: Citation `r06' on page 30 undefined on input line 54.
+
+
+Package natbib Warning: Citation `r10' on page 30 undefined on input line 54.
+
+
+Package natbib Warning: Citation `r28' on page 30 undefined on input line 54.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active
+[30.30]
+
+Package natbib Warning: Citation `r71' on page 31 undefined on input line 56.
+
+
+Package natbib Warning: Citation `r72' on page 31 undefined on input line 56.
+
+
+Package natbib Warning: Citation `r75' on page 31 undefined on input line 56.
+
+
+Package natbib Warning: Citation `r26' on page 31 undefined on input line 56.
+
+
+Package natbib Warning: Citation `r69' on page 31 undefined on input line 56.
+
+
+Package natbib Warning: Citation `r63' on page 31 undefined on input line 62.
+
+
+Package natbib Warning: Citation `r61' on page 31 undefined on input line 64.
+
+
+Underfull \vbox (badness 1881) has occurred while \output is active
+[31.31]) (./sections/08-conclusion.tex
+[32.32]) (./main.bbl
+Underfull \vbox (badness 10000) has occurred while \output is active
+(/usr/share/texlive/texmf-dist/tex/generic/stringenc/se-pdfdoc.def)
+(/usr/share/texlive/texmf-dist/tex/generic/stringenc/se-utf8.def) [33.33]
+Underfull \vbox (badness 6396) has occurred while \output is active
+[34.34]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[35.35])
+
+Package natbib Warning: There were undefined citations.
+
+
+[36.36]
+
+LaTeX Warning: Hook 'shipout/lastpage' executed on wrong page (33 not 36).
+               Rerun to correct this.
+
+(./main.aux
+
+Package natbib Warning: Citation(s) may have changed.
+(natbib)                Rerun to get citations correct.
+
+)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+ )
+(see the transcript file for additional information)</usr/share/texlive/texmf-d
+ist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/newtx/LibertineMathMI.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/newtx/LibertineMathMI5.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/newtx/LibertineMathMI7.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/newtx/LibertineMathRM.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/libertine/LinBiolinumT.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/libertine/LinBiolinumTB.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/libertine/LinLibertineT.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/libertine/LinLibertineTB.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/libertine/LinLibertineTI.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/libertine/LinLibertineTZ.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/newtx/NewTXMI.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/newtx/txexs.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/txmia
+X.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/txsym.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/newtx/txsys.pfb>
+Output written on main.pdf (36 pages, 790299 bytes).
+Transcript written on main.log.
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./main.tex
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-01-18>
+(./acmart.cls
+Document Class: acmart 2024/12/28 v2.12 Typesetting articles for the Associatio
+n for Computing Machinery
+(/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/keyval.tex))))
+(/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.sty
+(/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/amscls/amsart.cls
+Document Class: amsart 2020/05/29 v2.20.6
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.sty
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype-pdftex.def)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.cfg))
+(/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
+(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/totpages/totpages.sty
+(/usr/share/texlive/texmf-dist/tex/latex/everyshi/everyshi.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/environ/environ.sty
+(/usr/share/texlive/texmf-dist/tex/latex/trimspaces/trimspaces.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/share/texlive/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+(/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty)))
+(/usr/share/texlive/texmf-dist/tex/generic/stringenc/stringenc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/base/atbegshi-ltx.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/usr/share/texlive/texmf-dist/tex/latex/base/atveryend-ltx.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+(/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/hyperxmp/hyperxmp.sty
+(/usr/share/texlive/texmf-dist/tex/latex/ifmtarg/ifmtarg.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/ifdraft.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifluatex.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def)))
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/ncctools/manyfoot.sty
+(/usr/share/texlive/texmf-dist/tex/latex/ncctools/nccfoots.sty))
+(/usr/share/texlive/texmf-dist/tex/generic/pdftex/glyphtounicode.tex)
+(/usr/share/texlive/texmf-dist/tex/latex/cmap/cmap.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty<<t1.cmap>>)
+(/usr/share/texlive/texmf-dist/tex/latex/libertine/libertine.sty
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifxetex.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/fontaxes/fontaxes.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/libertine/LinLibertine_I.tex))
+(/usr/share/texlive/texmf-dist/tex/latex/inconsolata/zi4.sty
+`inconsolata-zi4' v1.12, 2019/05/17 Text macros for Inconsolata (msharpe))
+(/usr/share/texlive/texmf-dist/tex/latex/newtx/newtxmath.sty
+`newtxmath' v1.754, 2024/09/22 Math macros based originally on txfonts (msharpe
+) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/centernot.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/kastrup/binhex.tex)
+amsthm NOT loaded
+) (/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption-ams-smf.sto)))
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/comment/comment.sty
+Excluding comment 'comment') Excluding comment 'CCSXML'
+(/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty)
+Special comment 'acks'
+(/usr/share/texlive/texmf-dist/tex/latex/libertine/T1LinuxLibertineT-TLF.fd))
+(/usr/share/texlive/texmf-dist/tex/latex/mathtools/mathtools.sty
+(/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/mathtools/mhsetup.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/tabularx.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/siunitx/siunitx.sty
+(/usr/share/texlive/texmf-dist/tex/latex/translations/translations.sty))
+
+Package amsthm Warning: Unknown theoremstyle `acmremark' on input line 41.
+
+(./data-macros.tex) Include comment 'screenonly' Excluding comment 'printonly'
+Include comment 'anonsuppress'
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def)
+(./main.aux) (/usr/share/texlive/texmf-dist/tex/latex/newtx/omlnxlmi.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/newtx/untxexa.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/newtx/lmsntxsy.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/newtx/lmxntxexx.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/libertine/OT1LinuxLibertineT-TLF.fd)<<
+ot1.cmap>><<oml.cmap>>
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/newtx/untxmia.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/newtx/untxsym.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/newtx/untxsyc.fd) (./main.out)
+(./main.out) (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+(/usr/share/texlive/texmf-dist/tex/latex/upquote/upquote.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/translations/translations-basic-dictio
+nary-english.trsl)
+(/usr/share/texlive/texmf-dist/tex/latex/libertine/T1LinuxBiolinumT-TLF.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/libertine/TS1LinuxLibertineT-TLF.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg)
+(./sections/01-introduction.tex
+[1.1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texm
+f-dist/fonts/enc/dvips/libertine/lbtn_76gpa5.enc}{/usr/share/texlive/texmf-dist
+/fonts/enc/dvips/libertine/lbtn_25tcsq.enc}{/usr/share/texlive/texmf-dist/fonts
+/enc/dvips/libertine/lbtn_ncsllp.enc}{/usr/share/texlive/texmf-dist/fonts/enc/d
+vips/libertine/lbtn_naooyc.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/l
+ibertine/lbtn_nh77jq.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/liberti
+ne/lbtn_7grukw.enc}]
+(/usr/share/texlive/texmf-dist/tex/latex/libertine/OT1LinuxBiolinumT-TLF.fd)
+[2.2{/usr/share/texlive/texmf-dist/fonts/enc/dvips/libertine/lbtn_edcawa.enc}{/
+usr/share/texlive/texmf-dist/fonts/enc/dvips/libertine/lbtn_oexx6f.enc}]
+[3.3 <./figures/figure-01.pdf>]
+[4.4]) (./sections/02-language.tex
+[5.5{/usr/share/texlive/texmf-dist/fonts/enc/dvips/libertine/lbtn_fygcup.enc}]
+[6.6]) (./sections/03-mode4.tex
+[7.7]
+[8.8]
+[9.9 <./figures/figure-02.pdf>]
+Underfull \hbox (badness 3884) in paragraph at lines 118--118
+[]|\T1/LinuxLibertineT-TLF/m/n/9 (+20) expanded form; iden-tity prece-dence sup
+-
+
+[10.10]
+[11.11 <./figures/figure-03.pdf>]
+[12.12]) (./sections/04-metatheory.tex
+[13.13 <./figures/figure-04.pdf>]
+[14.14]
+[15.15]
+[16.16]
+[17.17]
+Underfull \hbox (badness 10000) in paragraph at lines 225--225
+[]|\T1/LinuxLibertineT-TLF/m/n/9 (+20) abstract ex-trac-tion still fol-lows; on
+ly an
+
+Underfull \hbox (badness 10000) in paragraph at lines 225--225
+[]|\T1/LinuxLibertineT-TLF/m/n/9 (+20) effect/dependence
+) (./sections/05-realization.tex
+[18.18]
+[19.19]
+[20.20]) (./sections/06-evaluation.tex
+[21.21]
+Underfull \hbox (badness 2103) in paragraph at lines 39--39
+[]|\T1/LinuxLibertineT-TLF/m/n/9 (+20) complete source--target ex-e-cu-
+
+Underfull \hbox (badness 2165) in paragraph at lines 39--39
+[]|\T1/LinuxLibertineT-TLF/m/n/9 (+20) production/reference eval-u-a-tor
+
+Underfull \hbox (badness 1418) in paragraph at lines 39--39
+[]|\T1/LinuxLibertineT-TLF/m/n/9 (+20) structural record ver-i-
+
+Underfull \hbox (badness 3849) in paragraph at lines 39--39
+[]|\T1/LinuxLibertineT-TLF/m/n/9 (+20) independent dynamic-
+
+Underfull \vbox (badness 6332) has occurred while \output is active
+[22.22]
+[23.23 <./figures/figure-05.pdf>] (./tables/carrier-ablation-rows.tex)
+[24.24]
+[25.25 <./figures/figure-06.pdf>]) (./sections/06b-evidence-detail.tex
+[26.26] (/usr/share/texlive/texmf-dist/tex/latex/inconsolata/t1zi4.fd)
+[27.27{/usr/share/texlive/texmf-dist/fonts/enc/dvips/inconsolata/i4-t1-4.enc}])
+(./sections/07-related.tex
+Underfull \vbox (badness 1895) has occurred while \output is active
+[28.28]
+Underfull \vbox (badness 7397) has occurred while \output is active
+[29.29]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[30.30]
+Underfull \vbox (badness 1881) has occurred while \output is active
+[31.31]) (./sections/08-conclusion.tex
+[32.32]) (./main.bbl
+Underfull \vbox (badness 10000) has occurred while \output is active
+[33.33]
+Underfull \vbox (badness 6396) has occurred while \output is active
+[34.34]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[35.35])
+(/usr/share/texlive/texmf-dist/tex/generic/stringenc/se-pdfdoc.def)
+(/usr/share/texlive/texmf-dist/tex/generic/stringenc/se-utf8.def) [36.36]
+(./main.aux) )
+(see the transcript file for additional information)</usr/share/texlive/texmf-d
+ist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/newtx/LibertineMathMI.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/newtx/LibertineMathMI5.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/newtx/LibertineMathMI7.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/newtx/LibertineMathRM.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/libertine/LinBiolinumT.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/libertine/LinBiolinumTB.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/libertine/LinLibertineT.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/libertine/LinLibertineTB.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/libertine/LinLibertineTI.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/libertine/LinLibertineTZ.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/newtx/NewTXMI.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/newtx/txexs.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/txmia
+X.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/txsym.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/newtx/txsys.pfb>
+Output written on main.pdf (36 pages, 793088 bytes).
+Transcript written on main.log.

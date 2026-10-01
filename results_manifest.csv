@@ -1,46 +1,32 @@
-metric,value,unit,evidence,scope
-programs,400,programs,artifact/data/derived/evaluation-summary.json,fixed internal corpus
-bindings,13464,bindings,artifact/data/derived/evaluation-summary.json,fixed internal corpus
-selected,5782,sites,artifact/data/derived/evaluation-summary.json,fixed internal corpus
-header_bits,1321,bits,artifact/data/derived/evaluation-summary.json,fixed internal corpus
-payload_bits,4461,bits,artifact/data/derived/evaluation-summary.json,fixed internal corpus
-full_executions,3200,executions,artifact/data/derived/evaluation-summary.json,fixed internal corpus
-local_carrier_cases,809,comparisons,artifact/data/derived/evaluation-summary.json,fixed internal corpus
-certificate_mutations,2000,mutations,artifact/data/derived/evaluation-summary.json,fixed internal corpus
-proof_mutations,3000,mutations,artifact/data/derived/evaluation-summary.json,fixed internal corpus
-interval_instances,65536,instances,artifact/data/derived/evaluation-summary.json,fixed internal corpus
-frame_cases,12309,messages,artifact/data/derived/evaluation-summary.json,fixed internal corpus
-derivations,800,derivations,artifact/data/derived/evaluation-summary.json,fixed internal corpus
-full_semantic_differences,0,count,artifact/data/derived/evaluation-summary.json,observed finite audit outcome
-local_carrier_differences,0,count,artifact/data/derived/evaluation-summary.json,observed finite audit outcome
-reference_acceptance_differences,0,count,artifact/data/derived/evaluation-summary.json,observed finite audit outcome
-reference_evaluator_differences,0,count,artifact/data/derived/evaluation-summary.json,observed finite audit outcome
-reference_selection_differences,0,count,artifact/data/derived/evaluation-summary.json,observed finite audit outcome
-reference_target_differences,0,count,artifact/data/derived/evaluation-summary.json,observed finite audit outcome
-accepted_mutations,0,count,artifact/data/derived/evaluation-summary.json,observed finite audit outcome
-accepted_proof_mutations,0,count,artifact/data/derived/evaluation-summary.json,observed finite audit outcome
-selector_differences,0,count,artifact/data/derived/evaluation-summary.json,observed finite audit outcome
-frame_failures,0,count,artifact/data/derived/evaluation-summary.json,observed finite audit outcome
-derivation_failures,0,count,artifact/data/derived/evaluation-summary.json,observed finite audit outcome
-derivation_producer_differences,0,count,artifact/data/derived/evaluation-summary.json,observed finite audit outcome
-llvm_O0_successful_modules,78,count,artifact/data/derived/llvm-projection.json,read-only textual opportunity projection
-llvm_O0_failed_modules,54,count,artifact/data/derived/llvm-projection.json,read-only textual opportunity projection
-llvm_O0_instructions,3592,count,artifact/data/derived/llvm-projection.json,read-only textual opportunity projection
-llvm_O0_selected_sites,92,count,artifact/data/derived/llvm-projection.json,read-only textual opportunity projection
-llvm_O0_payload_bits,40,count,artifact/data/derived/llvm-projection.json,read-only textual opportunity projection
-llvm_O0_operand_only_payload_bits,31,count,artifact/data/derived/llvm-projection.json,read-only textual opportunity projection
-llvm_O0_adjacent_only_payload_bits,2,count,artifact/data/derived/llvm-projection.json,read-only textual opportunity projection
-llvm_O1_successful_modules,78,count,artifact/data/derived/llvm-projection.json,read-only textual opportunity projection
-llvm_O1_failed_modules,54,count,artifact/data/derived/llvm-projection.json,read-only textual opportunity projection
-llvm_O1_instructions,2342,count,artifact/data/derived/llvm-projection.json,read-only textual opportunity projection
-llvm_O1_selected_sites,160,count,artifact/data/derived/llvm-projection.json,read-only textual opportunity projection
-llvm_O1_payload_bits,90,count,artifact/data/derived/llvm-projection.json,read-only textual opportunity projection
-llvm_O1_operand_only_payload_bits,61,count,artifact/data/derived/llvm-projection.json,read-only textual opportunity projection
-llvm_O1_adjacent_only_payload_bits,19,count,artifact/data/derived/llvm-projection.json,read-only textual opportunity projection
-llvm_O2_successful_modules,78,count,artifact/data/derived/llvm-projection.json,read-only textual opportunity projection
-llvm_O2_failed_modules,54,count,artifact/data/derived/llvm-projection.json,read-only textual opportunity projection
-llvm_O2_instructions,2428,count,artifact/data/derived/llvm-projection.json,read-only textual opportunity projection
-llvm_O2_selected_sites,172,count,artifact/data/derived/llvm-projection.json,read-only textual opportunity projection
-llvm_O2_payload_bits,99,count,artifact/data/derived/llvm-projection.json,read-only textual opportunity projection
-llvm_O2_operand_only_payload_bits,67,count,artifact/data/derived/llvm-projection.json,read-only textual opportunity projection
-llvm_O2_adjacent_only_payload_bits,23,count,artifact/data/derived/llvm-projection.json,read-only textual opportunity projection
+metric,value,source_file,source_key,source_sha256
+programs,400,Artifacts/data/derived/evaluation-summary-mode4.json,programs,4a1f90ea827958a6107833c3a0b1b43e8c895048efa8883ccfbb275a546fe466
+bindings,13464,Artifacts/data/derived/evaluation-summary-mode4.json,bindings,4a1f90ea827958a6107833c3a0b1b43e8c895048efa8883ccfbb275a546fe466
+selected,5782,Artifacts/data/derived/evaluation-summary-mode4.json,selected,4a1f90ea827958a6107833c3a0b1b43e8c895048efa8883ccfbb275a546fe466
+header_bits,1321,Artifacts/data/derived/evaluation-summary-mode4.json,header_bits,4a1f90ea827958a6107833c3a0b1b43e8c895048efa8883ccfbb275a546fe466
+payload_bits,4461,Artifacts/data/derived/evaluation-summary-mode4.json,payload_bits,4a1f90ea827958a6107833c3a0b1b43e8c895048efa8883ccfbb275a546fe466
+full_executions,3200,Artifacts/data/derived/evaluation-summary-mode4.json,full_executions,4a1f90ea827958a6107833c3a0b1b43e8c895048efa8883ccfbb275a546fe466
+reference_evaluator_pairs,3200,Artifacts/data/derived/evaluation-summary-mode4.json,reference_evaluator_pairs,4a1f90ea827958a6107833c3a0b1b43e8c895048efa8883ccfbb275a546fe466
+reference_evaluator_calls,6400,Artifacts/data/derived/evaluation-summary-mode4.json,reference_evaluator_calls,4a1f90ea827958a6107833c3a0b1b43e8c895048efa8883ccfbb275a546fe466
+local_carrier_cases,46256,Artifacts/data/derived/evaluation-summary-mode4.json,local_carrier_cases,4a1f90ea827958a6107833c3a0b1b43e8c895048efa8883ccfbb275a546fe466
+certificate_mutations,2000,Artifacts/data/derived/evaluation-summary-mode4.json,certificate_mutations,4a1f90ea827958a6107833c3a0b1b43e8c895048efa8883ccfbb275a546fe466
+proof_mutations,3280,Artifacts/data/derived/evaluation-summary-mode4.json,proof_mutations,4a1f90ea827958a6107833c3a0b1b43e8c895048efa8883ccfbb275a546fe466
+derivation_mutations_not_applicable,720,Artifacts/data/derived/evaluation-summary-mode4.json,derivation_mutations_not_applicable,4a1f90ea827958a6107833c3a0b1b43e8c895048efa8883ccfbb275a546fe466
+derivations,800,Artifacts/data/derived/evaluation-summary-mode4.json,derivations,4a1f90ea827958a6107833c3a0b1b43e8c895048efa8883ccfbb275a546fe466
+interval_instances,65536,Artifacts/data/derived/evaluation-summary-mode4.json,interval_instances,4a1f90ea827958a6107833c3a0b1b43e8c895048efa8883ccfbb275a546fe466
+frame_vectors,131071,Artifacts/data/derived/evaluation-summary-mode4.json,frame_vectors,4a1f90ea827958a6107833c3a0b1b43e8c895048efa8883ccfbb275a546fe466
+legal_frames,12309,Artifacts/data/derived/evaluation-summary-mode4.json,legal_frames,4a1f90ea827958a6107833c3a0b1b43e8c895048efa8883ccfbb275a546fe466
+source_bytes,845239,Artifacts/data/derived/evaluation-summary-mode4.json,source_bytes,4a1f90ea827958a6107833c3a0b1b43e8c895048efa8883ccfbb275a546fe466
+target_bytes,844903,Artifacts/data/derived/evaluation-summary-mode4.json,target_bytes,4a1f90ea827958a6107833c3a0b1b43e8c895048efa8883ccfbb275a546fe466
+certificate_bytes,112461,Artifacts/data/derived/evaluation-summary-mode4.json,certificate_bytes,4a1f90ea827958a6107833c3a0b1b43e8c895048efa8883ccfbb275a546fe466
+peak_rss_kb,98728,Artifacts/data/derived/evaluation-summary-mode4.json,peak_rss_kb,4a1f90ea827958a6107833c3a0b1b43e8c895048efa8883ccfbb275a546fe466
+total_cases,7303,Artifacts/data/derived/finite-algebra-mode4.json,total_cases,44b73fd96a735d476ae56575cfc7bdfa78f929fbd26d24d46345b6512183f34a
+countermodels_found,4,Artifacts/data/derived/finite-algebra-mode4.json,countermodels_found,44b73fd96a735d476ae56575cfc7bdfa78f929fbd26d24d46345b6512183f34a
+O0.successful_modules,78,Artifacts/data/derived/llvm-projection-mode4.json,stages.O0.successful_modules,932dc9e48f650ec4dd78f10fc7055c032dcac2389f0eb5fb3bd186731bcfe6f5
+O0.payload_bits,40,Artifacts/data/derived/llvm-projection-mode4.json,stages.O0.payload_bits,932dc9e48f650ec4dd78f10fc7055c032dcac2389f0eb5fb3bd186731bcfe6f5
+O0.adjacent_only_payload_bits,2,Artifacts/data/derived/llvm-projection-mode4.json,stages.O0.adjacent_only_payload_bits,932dc9e48f650ec4dd78f10fc7055c032dcac2389f0eb5fb3bd186731bcfe6f5
+O1.successful_modules,78,Artifacts/data/derived/llvm-projection-mode4.json,stages.O1.successful_modules,932dc9e48f650ec4dd78f10fc7055c032dcac2389f0eb5fb3bd186731bcfe6f5
+O1.payload_bits,89,Artifacts/data/derived/llvm-projection-mode4.json,stages.O1.payload_bits,932dc9e48f650ec4dd78f10fc7055c032dcac2389f0eb5fb3bd186731bcfe6f5
+O1.adjacent_only_payload_bits,18,Artifacts/data/derived/llvm-projection-mode4.json,stages.O1.adjacent_only_payload_bits,932dc9e48f650ec4dd78f10fc7055c032dcac2389f0eb5fb3bd186731bcfe6f5
+O2.successful_modules,78,Artifacts/data/derived/llvm-projection-mode4.json,stages.O2.successful_modules,932dc9e48f650ec4dd78f10fc7055c032dcac2389f0eb5fb3bd186731bcfe6f5
+O2.payload_bits,99,Artifacts/data/derived/llvm-projection-mode4.json,stages.O2.payload_bits,932dc9e48f650ec4dd78f10fc7055c032dcac2389f0eb5fb3bd186731bcfe6f5
+O2.adjacent_only_payload_bits,22,Artifacts/data/derived/llvm-projection-mode4.json,stages.O2.adjacent_only_payload_bits,932dc9e48f650ec4dd78f10fc7055c032dcac2389f0eb5fb3bd186731bcfe6f5

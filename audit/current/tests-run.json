@@ -1,0 +1,17 @@
+{
+  "component": "tests",
+  "cwd": "Artifacts",
+  "command": [
+    "python3",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-v"
+  ],
+  "exit_code": 0,
+  "wall_seconds": 2.6445386279999923,
+  "log": "Artifacts/audit/current/tests.log",
+  "log_sha256": "da5c6d8e57652bd74862eebf02a73b1377803d863f169ebf3eb3dbd7b0ef5acf"
+}

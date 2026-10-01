@@ -1,0 +1,91 @@
+{
+  "schema": "tidemark-from-source-clean-build-1",
+  "exit_code": 0,
+  "generated_files_deleted_before_build": [
+    "paper/main.pdf",
+    "paper/data-macros.tex",
+    "paper/data-macros.json",
+    "paper/tables/carrier-ablation-rows.tex",
+    "paper/figures/figure-02.pdf",
+    "paper/figures/figure-01.pdf",
+    "paper/figures/figure-04.pdf",
+    "paper/figures/figure-05.pdf",
+    "paper/figures/figure-03.pdf",
+    "paper/figures/figure-06.pdf"
+  ],
+  "macro_bytes_equal": true,
+  "comparisons": [
+    {
+      "file": "paper/main.pdf",
+      "pages": 36,
+      "rebuilt_pages": 36,
+      "text_equal": true,
+      "render_equal_at_108dpi": true,
+      "byte_equal": true,
+      "delivered_sha256": "929f923cb1c4b71134f2966f62848a2205d235041673a30156a40bc544f8d0fd",
+      "rebuilt_sha256": "929f923cb1c4b71134f2966f62848a2205d235041673a30156a40bc544f8d0fd"
+    },
+    {
+      "file": "paper/figures/figure-01.pdf",
+      "pages": 1,
+      "rebuilt_pages": 1,
+      "text_equal": true,
+      "render_equal_at_108dpi": true,
+      "byte_equal": true,
+      "delivered_sha256": "cb34feaafb0c5ab1974dd678b44946cda8a176ddb50b20c1961316529dba0532",
+      "rebuilt_sha256": "cb34feaafb0c5ab1974dd678b44946cda8a176ddb50b20c1961316529dba0532"
+    },
+    {
+      "file": "paper/figures/figure-02.pdf",
+      "pages": 1,
+      "rebuilt_pages": 1,
+      "text_equal": true,
+      "render_equal_at_108dpi": true,
+      "byte_equal": true,
+      "delivered_sha256": "2464823d66686054b53458d5cc890e7eefb1ce42f5903e9531a55f388ee2cf74",
+      "rebuilt_sha256": "2464823d66686054b53458d5cc890e7eefb1ce42f5903e9531a55f388ee2cf74"
+    },
+    {
+      "file": "paper/figures/figure-03.pdf",
+      "pages": 1,
+      "rebuilt_pages": 1,
+      "text_equal": true,
+      "render_equal_at_108dpi": true,
+      "byte_equal": true,
+      "delivered_sha256": "3f965aa2b660531fc389133cbb648d95a3bc2893be520d484cd056a725345068",
+      "rebuilt_sha256": "3f965aa2b660531fc389133cbb648d95a3bc2893be520d484cd056a725345068"
+    },
+    {
+      "file": "paper/figures/figure-04.pdf",
+      "pages": 1,
+      "rebuilt_pages": 1,
+      "text_equal": true,
+      "render_equal_at_108dpi": true,
+      "byte_equal": true,
+      "delivered_sha256": "80de16a358d43da406ea63c07663f00ee495b544df538a3333369cbcb812cec4",
+      "rebuilt_sha256": "80de16a358d43da406ea63c07663f00ee495b544df538a3333369cbcb812cec4"
+    },
+    {
+      "file": "paper/figures/figure-05.pdf",
+      "pages": 1,
+      "rebuilt_pages": 1,
+      "text_equal": true,
+      "render_equal_at_108dpi": true,
+      "byte_equal": true,
+      "delivered_sha256": "b7575b262d2ef15593a80d66a6fec212474659a3b2bbffb54b4203779e5cc943",
+      "rebuilt_sha256": "b7575b262d2ef15593a80d66a6fec212474659a3b2bbffb54b4203779e5cc943"
+    },
+    {
+      "file": "paper/figures/figure-06.pdf",
+      "pages": 1,
+      "rebuilt_pages": 1,
+      "text_equal": true,
+      "render_equal_at_108dpi": true,
+      "byte_equal": true,
+      "delivered_sha256": "8bf8cb4d90a278133209833f8bb6f2356e0bb9f9bd246b13dd51a4ed59f49bd0",
+      "rebuilt_sha256": "8bf8cb4d90a278133209833f8bb6f2356e0bb9f9bd246b13dd51a4ed59f49bd0"
+    }
+  ],
+  "passed": true,
+  "note": "Byte differences, when present, are reported rather than hidden. Acceptance requires identical text and rendered pages from the included current sources and frozen results."
+}
