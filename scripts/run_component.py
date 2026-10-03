@@ -7,5 +7,5 @@ name=sys.argv[1];cmd=[sys.executable,*commands[name]];t=time.perf_counter()
 e=dict(os.environ,PYTHONPATH=str(A/'src'),PYTHONDONTWRITEBYTECODE='1')
 p=subprocess.run(cmd,cwd=A,env=e,stdout=subprocess.PIPE,stderr=subprocess.STDOUT,text=True)
 s=p.stdout.replace(str(R),'.');(L/(name+'.log')).write_text(s)
-r={'component':name,'cwd':'Artifacts','command':['python3',*commands[name]],'exit_code':p.returncode,'wall_seconds':time.perf_counter()-t,'log':f'artifact/audit/current/{name}.log','log_sha256':hashlib.sha256(s.encode()).hexdigest()}
+r={'component':name,'cwd':'artifact' if (R/'paper').is_dir() else '.','command':['python3',*commands[name]],'exit_code':p.returncode,'wall_seconds':time.perf_counter()-t,'log':f'artifact/audit/current/{name}.log' if (R/'paper').is_dir() else f'audit/current/{name}.log','log_sha256':hashlib.sha256(s.encode()).hexdigest()}
 (L/(name+'-run.json')).write_text(json.dumps(r,indent=2)+'\n');print(json.dumps(r));print(s[-500:]);sys.exit(p.returncode)

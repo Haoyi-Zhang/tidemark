@@ -3,7 +3,9 @@
 from pathlib import Path
 import shutil,tempfile,subprocess,json,hashlib,os
 import fitz
-R=Path(__file__).resolve().parents[2];O=R/'artifact/audit/current';O.mkdir(exist_ok=True,parents=True)
+A=Path(__file__).resolve().parents[1];R=A.parent
+if not (R/'paper').is_dir():raise SystemExit('Full-project input required: clean manuscript rebuilding needs the sibling paper tree.')
+O=A/'audit/current';O.mkdir(exist_ok=True,parents=True)
 sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
 with tempfile.TemporaryDirectory(prefix='tidemark-clean-build-') as temp:
  T=Path(temp)/'TOPLAS-20';shutil.copytree(R,T,ignore=shutil.ignore_patterns('__pycache__','*.pyc'))

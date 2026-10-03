@@ -2,7 +2,8 @@
 """Export exact current result paths to alphabetic LaTeX commands. No expected-output search."""
 from pathlib import Path
 import json,hashlib
-R=Path(__file__).resolve().parents[2];D=R/'artifact/data/derived';P=R/'paper'
+A=Path(__file__).resolve().parents[1];R=A.parent;D=A/'data/derived';P=R/'paper'
+if not P.is_dir():raise SystemExit('Full-project input required: paper data export needs the sibling paper tree.')
 files={'eval':D/'evaluation-summary-mode4.json','llvm':D/'llvm-projection-mode4.json','algebra':D/'finite-algebra-mode4.json'}
 x={k:json.loads(p.read_text()) for k,p in files.items()};v={};paths={}
 def put(name,which,path):

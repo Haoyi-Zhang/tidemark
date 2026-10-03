@@ -7,7 +7,9 @@ sources and its limited scope are recorded separately in reference-review.md.
 from pathlib import Path
 import re,json,csv,hashlib
 from bibliography_tools import parse_bib
-R=Path(__file__).resolve().parents[2];P=R/'paper';O=R/'artifact/reference';O.mkdir(exist_ok=True)
+A=Path(__file__).resolve().parents[1];R=A.parent;P=R/'paper';O=A/'reference'
+if not P.is_dir():raise SystemExit('Full-project input required: manuscript citation auditing needs the sibling paper tree.')
+O.mkdir(exist_ok=True)
 B=P/'references.bib';E=parse_bib(B.read_text());K={e['key']:e for e in E};rows=[];multi=[]
 for p in [P/'main.tex',*sorted((P/'sections').glob('*.tex'))]:
  s=p.read_text()

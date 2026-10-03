@@ -15,8 +15,12 @@ python3 scripts/verify_evidence.py
 python3 scripts/verify_all.py
 ```
 
-The default matrix checks saved raw/derived evidence, runs tests and boundary
-regressions, builds all figures and the paper, and checks citations/PDF assets.
+The default matrix checks saved raw/derived evidence and runs tests and boundary
+regressions. In a complete project checkout with a sibling `paper/` tree it
+also builds the figures and paper and checks citations/PDF assets. A standalone
+code checkout reports those manuscript components as unavailable, not passed.
+Use `python3 scripts/verify_all.py --include-paper` to explicitly require the
+full-project manuscript checks.
 A new complete CPU run, with new genuine timing measurements, is:
 
 ```sh

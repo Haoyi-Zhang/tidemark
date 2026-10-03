@@ -7,7 +7,8 @@ No page count is invented or enforced by selecting extra paragraphs.
 from pathlib import Path
 import json,re,subprocess,hashlib
 import fitz
-R=Path(__file__).resolve().parents[2];P=R/'paper';A=R/'Artifacts';O=A/'audit/current'
+A=Path(__file__).resolve().parents[1];R=A.parent;P=R/'paper';O=A/'audit/current'
+if not P.is_dir():raise SystemExit('Full-project input required: PDF/source auditing needs the sibling paper tree.')
 O.mkdir(parents=True,exist_ok=True);issues=[]
 sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
 required=[P/'main.tex',P/'main.pdf',P/'data-macros.tex',P/'data-macros.json',P/'references.bib',P/'figures/preamble.tex',P/'build.sh',P/'Makefile']
