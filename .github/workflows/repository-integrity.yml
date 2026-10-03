@@ -18,3 +18,5 @@ jobs:
           python-version: '3.12'
       - name: Validate supplied materials and source/configuration syntax
         run: python .github/scripts/check_repository.py
+      - name: Check TideMark core tests, boundary regressions and retained evidence
+        run: python scripts/verify_all.py
