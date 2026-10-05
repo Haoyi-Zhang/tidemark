@@ -110,7 +110,7 @@ class Command:
 
     @staticmethod
     def from_obj(obj: Any) -> "Command":
-        if not isinstance(obj, list) or len(obj) != 3 or obj[0] != "let" or not isinstance(obj[1], str):
+        if not isinstance(obj, list) or len(obj) != 3 or obj[0] != "let" or not isinstance(obj[1], str) or not obj[1]:
             raise TideMarkError("command must be ['let', name, expression]")
         return Command(obj[1], Expr.from_obj(obj[2]))
 
@@ -141,7 +141,7 @@ class Program:
             out: list[tuple[str, Type]] = []
             seen: set[str] = set()
             for row in xs:
-                if not isinstance(row, list) or len(row) != 2 or not isinstance(row[0], str): raise TideMarkError("malformed binding")
+                if not isinstance(row, list) or len(row) != 2 or not isinstance(row[0], str) or not row[0]: raise TideMarkError("malformed binding")
                 if row[0] in seen: raise TideMarkError("duplicate binding")
                 try: typ = Type(row[1])
                 except Exception as exc: raise TideMarkError("unknown type") from exc
@@ -150,7 +150,7 @@ class Program:
         params = bindings(obj["params"]); regions = bindings(obj["regions"])
         if not isinstance(obj["commands"], list): raise TideMarkError("commands must be a list")
         commands = tuple(Command.from_obj(x) for x in obj["commands"])
-        if not isinstance(obj["result"], str): raise TideMarkError("result must be a string")
+        if not isinstance(obj["result"], str) or not obj["result"]: raise TideMarkError("result must be a nonempty string")
         return Program(params, regions, commands, obj["result"])
 
 

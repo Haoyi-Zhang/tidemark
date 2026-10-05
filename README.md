@@ -44,9 +44,8 @@ Linux; Python 3.11 or newer (standard library for the core); the included Go
 needs pdfTeX, BibTeX or bibtex8, the bundled acmart class and bibliography style,
 TikZ, PGFPlots, Libertine, NewTX, and Inconsolata TeX packages. PDF auditing needs
 Poppler and PyMuPDF. The recorded visual review additionally used PDFium.
-No GPU, LLM API, author contact, network service, or human-subject experiment is
-needed. Coq and Z3 are not available in the audited environment; no successful
-kernel or SMT recheck is claimed.
+The reproduction workflow uses offline inputs. The recorded run did not include
+a Coq-kernel or SMT recheck.
 
 ## Scientific interpretation
 
@@ -63,6 +62,11 @@ classification, frame vector, and interval instance precedes aggregation. The
 external runner retains failed compilation diagnostics as well as hashes.
 `data/derived/verification-matrix-current.json` records real component exits;
 `audit/current/` contains current logs and consistency/build/PDF audits.
+
+The saved runs predate the parser and structural-record round-trip corrections.
+They remain observations of that source version, not test results for the
+corrected implementation; the current source and added regressions need a
+fresh run before making that claim.
 
 The 75-entry bibliography and every current citation are indexed in
 `reference/`. Read `reference-review.md` for the distinction between metadata

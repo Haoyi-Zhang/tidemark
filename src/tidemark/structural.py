@@ -163,7 +163,7 @@ def verify_derivation_detailed(
         if len(derivation.steps) != len(sites):
             return False, "step_count"
         for ordinal, (row, site, bit) in enumerate(zip(derivation.steps, sites, bits)):
-            if not isinstance(row, dict) or tuple(row.keys()) != STEP_FIELDS:
+            if not isinstance(row, dict) or set(row) != set(STEP_FIELDS):
                 return False, f"step[{ordinal}].schema"
             expected = _reference_step(source_obj, site, bit)
             for field in STEP_FIELDS:
