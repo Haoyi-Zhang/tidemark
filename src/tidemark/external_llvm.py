@@ -1,9 +1,11 @@
 """Conservative read-only LLVM opportunity projection for TideMark mode 4.
 
 The adapter is not an LLVM semantic refinement.  It recognizes a deliberately
-small textual subset after removing metadata attachments.  It excludes explicit
-``poison`` and ``undef`` operands, memory, calls, terminators, PHIs, exceptional
-control flow, vectors, floating point, and unsupported instruction flags.
+small textual subset after removing metadata attachments.  Both paths exclude
+explicit ``poison`` and ``undef``. Identity/operand sites require scalar integers;
+adjacency uses the broader opcode whitelist below without a general type/flag
+analysis. Memory, calls, terminators, PHIs and exceptional control flow are not
+adjacency opportunities. None of these filters certifies LLVM semantics.
 """
 from __future__ import annotations
 

@@ -10,9 +10,9 @@ Set Asymmetric Patterns.
       - a legal adjacent command pair commutes semantically; and
       - orienting one carrier establishes its bit and frames disjoint carriers.
 
-    Those local premises are discharged for the concrete prototype by the paper's
-    separate human and SMT arguments; this file does not claim a refinement proof
-    for either Python implementation. *)
+    The paper supplies local arguments for the concrete prototype; bounded
+    Python checks supplement them without constituting an SMT or kernel verdict.
+    This file does not claim a refinement proof for either Python implementation. *)
 
 Definition Id := nat.
 Definition Pair := (Id * Id)%type.
@@ -600,7 +600,10 @@ Print Assumptions ConcreteWitness.witness_exact_extraction.
 
 
 
-(** Concrete command-level effect adequacy for the production Tide IR. *)
+(** Concrete command-level effect adequacy for an atom-valued command subset.
+    This is not the production parser/type checker: it also admits CAUnit,
+    equality of unit values and emitting unit. No full-grammar refinement is
+    claimed from this reusable model. *)
 Module ConcreteEffectAdequacy.
 
   Inductive CType : Type :=

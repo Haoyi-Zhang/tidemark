@@ -10,6 +10,7 @@ replay trace consumed for each measured instance.
 from __future__ import annotations
 
 import hashlib
+import copy
 from dataclasses import dataclass
 from typing import Any, Sequence
 
@@ -42,7 +43,8 @@ class Derivation:
             "target_hash": self.target_hash,
             "selected": [list(item) for item in self.selected],
             "framed_bits": list(self.framed_bits),
-            "steps": list(self.steps),
+            # Mutation campaigns need an independent object for each case.
+            "steps": copy.deepcopy(list(self.steps)),
         }
 
     def to_bytes(self) -> bytes:
@@ -61,7 +63,7 @@ class Derivation:
             obj["target_hash"],
             tuple(tuple(item) for item in obj["selected"]),
             tuple(obj["framed_bits"]),
-            tuple(obj["steps"]),
+            tuple(copy.deepcopy(obj["steps"])),
         )
 
 
@@ -156,9 +158,11 @@ def verify_derivation_detailed(
         sites = reference.select(reference.candidates(source_obj))
         bits = tuple(reference.frame(list(payload), len(sites)))
         selected = tuple((site[0], site[1], site[2]) for site in sites)
-        if derivation.selected != selected:
+        # JSON distinguishes integer coordinates/bits from Boolean and float
+        # values; Python equality alone treats False == 0 == 0.0.
+        if reference.canon(derivation.selected) != reference.canon(selected):
             return False, "selected"
-        if derivation.framed_bits != bits:
+        if reference.canon(derivation.framed_bits) != reference.canon(bits):
             return False, "framed_bits"
         if len(derivation.steps) != len(sites):
             return False, "step_count"
@@ -167,7 +171,7 @@ def verify_derivation_detailed(
                 return False, f"step[{ordinal}].schema"
             expected = _reference_step(source_obj, site, bit)
             for field in STEP_FIELDS:
-                if row.get(field) != expected[field]:
+                if reference.canon(row.get(field)) != reference.canon(expected[field]):
                     return False, f"step[{ordinal}].{field}"
         expected_target = reference.replay(source_obj, sites, list(bits))
         if reference.canon(expected_target) != target_bytes:

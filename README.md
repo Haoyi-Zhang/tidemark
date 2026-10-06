@@ -56,17 +56,39 @@ checker does not import production semantics. The structural-record verifier
 reuses reference semantics and is therefore not an independent proof kernel.
 Its five fields per step are record values, not independently proven premises.
 
-The current complete raw evidence is under `data/raw/mode4/`. Each program,
+The retained Linux raw evidence is under `data/raw/mode4/`. Each program,
 execution, selected site, certificate mutation, record mutation, adjacent-pair
 classification, frame vector, and interval instance precedes aggregation. The
 external runner retains failed compilation diagnostics as well as hashes.
-`data/derived/verification-matrix-current.json` records real component exits;
-`audit/current/` contains current logs and consistency/build/PDF audits.
+`data/derived/verification-matrix-current.json` records that archived run's
+component exits; `audit/current/` retains its logs and consistency/build/PDF
+audits. Their names do not make them validations of later source edits.
 
-The saved runs predate the parser and structural-record round-trip corrections.
-They remain observations of that source version, not test results for the
-corrected implementation; the current source and added regressions need a
-fresh run before making that claim.
+The saved Linux runs predate the parser and structural-record corrections.
+Their structural mutation rows include accumulated changes because exporting
+step dictionaries previously aliased the producer record. These rejected rows
+do not establish isolated per-field rejection. Import/export now copy nested
+steps, and canonical comparisons distinguish integer bits/coordinates from
+Boolean and floating-point aliases. The saved Linux timings and LLVM results
+remain historical; they have not been replaced by corrected-source measurements.
+
+For separate fresh offline outputs without overwriting the saved run, use:
+
+```sh
+python3 -B -m unittest discover -s tests -v
+python3 -B scripts/run_static_risk_regressions.py --output-dir /path/to/new-run/boundaries
+python3 -B formal/check_finite_algebra_mode4.py --output-dir /path/to/new-run/finite
+# The full evaluation uses Linux resource/RSS semantics.
+python3 -B scripts/run_evaluation.py --output-dir /path/to/new-run/evaluation
+```
+
+The evaluation entry point fails on measured discrepancy/acceptance counters or
+wrong frozen counts, after preserving raw outputs. The prepared
+`.github/workflows/scientific-checks.yml` uses the flat artifact-repository root,
+Ubuntu 24.04, a whole-run deadline and resource limits, and always attempts to
+upload raw outputs and logs. It runs only owned IR/finite cases: no external
+compiler campaign, TeX build, API, or third-party application. It has not been
+executed on GitHub as part of the local checks.
 
 The 75-entry bibliography and every current citation are indexed in
 `reference/`. Read `reference-review.md` for the distinction between metadata

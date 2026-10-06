@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import ast
+import argparse
 import hashlib
 import json
 import pathlib
@@ -44,6 +45,12 @@ def exception_result(call: Callable[[], Any]) -> dict[str, Any]:
 
 
 def main() -> int:
+    global OUT
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--output-dir', type=pathlib.Path)
+    args = parser.parse_args()
+    if args.output_dir:
+        OUT = args.output_dir.resolve() / 'static-risk-regressions-mode4.json'
     cases: list[dict[str, Any]] = []
 
     # F8: a well-typed but effectful base is outside both singleton carriers.

@@ -1,0 +1,42 @@
+name: Scientific checks
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  owned-models:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    env:
+      PYTHONPATH: src
+      PYTHONDONTWRITEBYTECODE: '1'
+      PYTHONUTF8: '1'
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12'
+      - name: Bounded offline checks of owned IR and finite models
+        shell: bash
+        run: |
+          mkdir -p scientific-output
+          ulimit -v 2097152
+          ulimit -t 480
+          ulimit -f 262144
+          timeout --signal=TERM --kill-after=10s 540s bash -euo pipefail <<'CHECKS'
+          python -B -m unittest discover -s tests -v 2>&1 | tee scientific-output/unit-tests.log
+          python -B scripts/run_static_risk_regressions.py --output-dir scientific-output/boundaries 2>&1 | tee scientific-output/boundaries.log
+          python -B formal/check_finite_algebra_mode4.py --output-dir scientific-output/finite 2>&1 | tee scientific-output/finite.log
+          python -B scripts/run_evaluation.py --output-dir scientific-output/evaluation 2>&1 | tee scientific-output/evaluation.log
+          CHECKS
+      - name: Upload raw attempts and logs even on failure
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: scientific-output
+          path: scientific-output/
+          if-no-files-found: warn

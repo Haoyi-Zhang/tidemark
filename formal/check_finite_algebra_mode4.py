@@ -8,6 +8,7 @@ exactly 7,303 checked cases and four intended countermodels.
 from __future__ import annotations
 
 import hashlib
+import argparse
 import itertools
 import json
 from pathlib import Path
@@ -35,6 +36,14 @@ def write_jsonl(handle: Any, value: Any) -> None:
 
 
 def main() -> int:
+    global RAW, DERIVED
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--output-dir', type=Path)
+    args = parser.parse_args()
+    if args.output_dir:
+        output = args.output_dir.resolve()
+        RAW = output / 'raw' / 'finite-algebra-cases.jsonl'
+        DERIVED = output / 'derived' / 'finite-algebra-mode4.json'
     RAW.parent.mkdir(parents=True, exist_ok=True)
     DERIVED.parent.mkdir(parents=True, exist_ok=True)
     integers = tuple(range(-8, 9))
@@ -206,7 +215,8 @@ def main() -> int:
         "countermodels": countermodels,
         "countermodels_expected": 4,
         "countermodels_found": sum(bool(row["found"]) for row in countermodels),
-        "raw_cases": RAW.relative_to(ROOT).as_posix(),
+        "raw_cases": (RAW.relative_to(ROOT).as_posix() if RAW.is_relative_to(ROOT)
+                      else str(RAW)),
         "claim_boundary": "This bounded executable audit checks the declared finite domains. It neither reconstructs the missing legacy audit nor replaces the unbounded paper proofs.",
     }
     result["source_sha256"] = hashlib.sha256(Path(__file__).read_bytes()).hexdigest()
