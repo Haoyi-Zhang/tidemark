@@ -37,6 +37,15 @@ To prove that generated assets are not hidden dependencies:
 python3 scripts/check_clean_build.py
 ```
 
+The current owned-IR Linux execution is retained in `results/current/`.
+It passes 111 tests, twelve boundary cases, and 7,303 finite algebra cases,
+including all four expected countermodels. The full 400-program evaluation
+checks 3,200 executions, 46,256 local cases and 2,000 certificate mutations
+with no semantic discrepancy or accepted mutation; it takes 39.408 seconds
+and 26,288 KiB peak RSS on that host. Large raw JSONL/CSV outputs use `.gz`
+and decompress to their original bytes. This run is separate from the earlier
+phase-timing table and does not execute LLVM or mechanize the proofs.
+
 ## Dependencies
 
 Linux; Python 3.11 or newer (standard library for the core); the included Go

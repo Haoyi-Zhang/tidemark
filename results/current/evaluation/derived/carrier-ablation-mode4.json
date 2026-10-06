@@ -1,0 +1,44 @@
+{
+  "adjacent": {
+    "payload_bits": 1096,
+    "programs": 400,
+    "selected_sites": 2012,
+    "zero_capacity_programs": 146
+  },
+  "identity": {
+    "payload_bits": 569,
+    "programs": 400,
+    "selected_sites": 1290,
+    "zero_capacity_programs": 192
+  },
+  "identity+adjacent": {
+    "payload_bits": 2158,
+    "programs": 400,
+    "selected_sites": 3302,
+    "zero_capacity_programs": 120
+  },
+  "identity+operand": {
+    "payload_bits": 2600,
+    "programs": 400,
+    "selected_sites": 3770,
+    "zero_capacity_programs": 120
+  },
+  "identity+operand+adjacent": {
+    "payload_bits": 4461,
+    "programs": 400,
+    "selected_sites": 5782,
+    "zero_capacity_programs": 120
+  },
+  "operand": {
+    "payload_bits": 1496,
+    "programs": 400,
+    "selected_sites": 2480,
+    "zero_capacity_programs": 129
+  },
+  "operand+adjacent": {
+    "payload_bits": 3219,
+    "programs": 400,
+    "selected_sites": 4492,
+    "zero_capacity_programs": 120
+  }
+}

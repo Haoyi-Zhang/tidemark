@@ -1,0 +1,408 @@
+{
+  "accepted_mutations": 0,
+  "accepted_proof_mutations": 0,
+  "adjacent": 2012,
+  "adjacent_legal_pairs": 2012,
+  "adjacent_pairs": 13064,
+  "adjacent_reason_forward_dependency": 10252,
+  "adjacent_reason_legal": 2012,
+  "adjacent_reason_state_conflict": 400,
+  "adjacent_reason_trace_conflict": 400,
+  "aggregate_certificate_source_percent": 13.305230828203621,
+  "aggregate_descriptor_rich_source_percent": 162.90114393680366,
+  "aggregate_target_growth_percent": -0.039752070124543515,
+  "bindings": 13464,
+  "carrier_ablation": {
+    "adjacent": {
+      "payload_bits": 1096,
+      "programs": 400,
+      "selected_sites": 2012,
+      "zero_capacity_programs": 146
+    },
+    "identity": {
+      "payload_bits": 569,
+      "programs": 400,
+      "selected_sites": 1290,
+      "zero_capacity_programs": 192
+    },
+    "identity+adjacent": {
+      "payload_bits": 2158,
+      "programs": 400,
+      "selected_sites": 3302,
+      "zero_capacity_programs": 120
+    },
+    "identity+operand": {
+      "payload_bits": 2600,
+      "programs": 400,
+      "selected_sites": 3770,
+      "zero_capacity_programs": 120
+    },
+    "identity+operand+adjacent": {
+      "payload_bits": 4461,
+      "programs": 400,
+      "selected_sites": 5782,
+      "zero_capacity_programs": 120
+    },
+    "operand": {
+      "payload_bits": 1496,
+      "programs": 400,
+      "selected_sites": 2480,
+      "zero_capacity_programs": 129
+    },
+    "operand+adjacent": {
+      "payload_bits": 3219,
+      "programs": 400,
+      "selected_sites": 4492,
+      "zero_capacity_programs": 120
+    }
+  },
+  "certificate_bytes": 112461,
+  "certificate_mutation_categories": {
+    "noncanonical_certificate": 200,
+    "payload": 200,
+    "source_digest": 200,
+    "source_rehashed_malformed": 200,
+    "target_digest": 200,
+    "target_rehashed_nonreplay": 200,
+    "unknown_field": 200,
+    "unsupported_checker": 200,
+    "unsupported_mode": 200,
+    "unsupported_schema": 200
+  },
+  "certificate_mutations": 2000,
+  "certificate_schema": "tidemark-certificate-4",
+  "checker": "tidemark-checker-4",
+  "claim_boundary": "Finite mode-4 execution and differential checks validate this implementation on a quota-constructed suite. They do not measure a natural program distribution, prove the metatheory, refine LLVM semantics, or establish post-optimization persistence.",
+  "corpus_design": "quota-constructed proof-stress suite; family totals and aggregate bindings are design inputs",
+  "corpus_digest": "b33357bff0d0395e4ced5ea8fb29efb2429d4842bb0af86db17264f05b056a0d",
+  "corpus_digest_algorithm": "SHA-256 over 8-byte big-endian length followed by canonical program bytes for each program in corpus order",
+  "correlations": {
+    "bindings_check_ms_spearman": 0.9366742455830199,
+    "bindings_embed_ms_spearman": 0.9444988645957038,
+    "bindings_selected_spearman": 0.4273135546123581
+  },
+  "derivation_failures": 0,
+  "derivation_mutation_applicable_by_category": {
+    "after_sha256": 280,
+    "before_sha256": 280,
+    "bit": 280,
+    "delete_step": 280,
+    "family": 280,
+    "framed_bits": 400,
+    "interval": 280,
+    "selected": 400,
+    "source_hash": 400,
+    "target_hash": 400
+  },
+  "derivation_mutation_rows_by_category": {
+    "after_sha256": 400,
+    "before_sha256": 400,
+    "bit": 400,
+    "delete_step": 400,
+    "family": 400,
+    "framed_bits": 400,
+    "interval": 400,
+    "selected": 400,
+    "source_hash": 400,
+    "target_hash": 400
+  },
+  "derivation_mutations_not_applicable": 720,
+  "derivation_producer_differences": 0,
+  "derivation_step_fields": [
+    "family",
+    "interval",
+    "bit",
+    "before_sha256",
+    "after_sha256"
+  ],
+  "derivation_step_fields_per_producer": 28910,
+  "derivation_target_differences": 0,
+  "derivations": 800,
+  "descriptor_rich_bytes": 1376904,
+  "descriptor_rich_to_compact_ratio": 12.243391042227973,
+  "elapsed_seconds": 39.40830713499999,
+  "family_summary": {
+    "branches": {
+      "adjacent": 375,
+      "bindings": 1895,
+      "certificate_bytes": 11398,
+      "descriptor_rich_bytes": 183101,
+      "header_bits": 187,
+      "identity": 217,
+      "operand": 193,
+      "payload_bits": 598,
+      "programs": 40,
+      "selected": 785,
+      "source_bytes": 123606,
+      "target_bytes": 123726
+    },
+    "dependence-heavy": {
+      "adjacent": 221,
+      "bindings": 1652,
+      "certificate_bytes": 11441,
+      "descriptor_rich_bytes": 193123,
+      "header_bits": 191,
+      "identity": 211,
+      "operand": 400,
+      "payload_bits": 641,
+      "programs": 40,
+      "selected": 832,
+      "source_bytes": 103701,
+      "target_bytes": 103317
+    },
+    "mixed": {
+      "adjacent": 396,
+      "bindings": 1869,
+      "certificate_bytes": 11339,
+      "descriptor_rich_bytes": 168104,
+      "header_bits": 178,
+      "identity": 63,
+      "operand": 258,
+      "payload_bits": 539,
+      "programs": 40,
+      "selected": 717,
+      "source_bytes": 117058,
+      "target_bytes": 117130
+    },
+    "ordered-trace": {
+      "adjacent": 225,
+      "bindings": 1714,
+      "certificate_bytes": 11510,
+      "descriptor_rich_bytes": 208896,
+      "header_bits": 194,
+      "identity": 249,
+      "operand": 430,
+      "payload_bits": 710,
+      "programs": 40,
+      "selected": 904,
+      "source_bytes": 106055,
+      "target_bytes": 105863
+    },
+    "pure-arithmetic": {
+      "adjacent": 125,
+      "bindings": 1741,
+      "certificate_bytes": 11680,
+      "descriptor_rich_bytes": 249655,
+      "header_bits": 211,
+      "identity": 272,
+      "operand": 694,
+      "payload_bits": 880,
+      "programs": 40,
+      "selected": 1091,
+      "source_bytes": 107360,
+      "target_bytes": 107456
+    },
+    "random": {
+      "adjacent": 370,
+      "bindings": 1820,
+      "certificate_bytes": 11342,
+      "descriptor_rich_bytes": 168721,
+      "header_bits": 178,
+      "identity": 77,
+      "operand": 273,
+      "payload_bits": 542,
+      "programs": 40,
+      "selected": 720,
+      "source_bytes": 116429,
+      "target_bytes": 116621
+    },
+    "region-state": {
+      "adjacent": 300,
+      "bindings": 1693,
+      "certificate_bytes": 11351,
+      "descriptor_rich_bytes": 171584,
+      "header_bits": 182,
+      "identity": 201,
+      "operand": 232,
+      "payload_bits": 551,
+      "programs": 40,
+      "selected": 733,
+      "source_bytes": 105030,
+      "target_bytes": 104790
+    },
+    "state-conflict-control": {
+      "adjacent": 0,
+      "bindings": 360,
+      "certificate_bytes": 10800,
+      "descriptor_rich_bytes": 11240,
+      "header_bits": 0,
+      "identity": 0,
+      "operand": 0,
+      "payload_bits": 0,
+      "programs": 40,
+      "selected": 0,
+      "source_bytes": 20320,
+      "target_bytes": 20320
+    },
+    "subtraction-control": {
+      "adjacent": 0,
+      "bindings": 360,
+      "certificate_bytes": 10800,
+      "descriptor_rich_bytes": 11240,
+      "header_bits": 0,
+      "identity": 0,
+      "operand": 0,
+      "payload_bits": 0,
+      "programs": 40,
+      "selected": 0,
+      "source_bytes": 26440,
+      "target_bytes": 26440
+    },
+    "trace-order-control": {
+      "adjacent": 0,
+      "bindings": 360,
+      "certificate_bytes": 10800,
+      "descriptor_rich_bytes": 11240,
+      "header_bits": 0,
+      "identity": 0,
+      "operand": 0,
+      "payload_bits": 0,
+      "programs": 40,
+      "selected": 0,
+      "source_bytes": 19240,
+      "target_bytes": 19240
+    }
+  },
+  "frame_failures": 0,
+  "frame_vectors": 131071,
+  "full_executions": 3200,
+  "full_semantic_differences": 0,
+  "header_bits": 1321,
+  "identity": 1290,
+  "interval_instances": 65536,
+  "legal_frames": 12309,
+  "length_groups": [
+    {
+      "check_ms_median": null,
+      "embed_ms_median": null,
+      "programs": 0,
+      "range": "12-20",
+      "selected_median": null
+    },
+    {
+      "check_ms_median": 2.197116,
+      "embed_ms_median": 1.091617,
+      "programs": 1,
+      "range": "21-28",
+      "selected_median": 15
+    },
+    {
+      "check_ms_median": 3.031259,
+      "embed_ms_median": 1.384457,
+      "programs": 105,
+      "range": "29-40",
+      "selected_median": 15
+    },
+    {
+      "check_ms_median": 3.597819,
+      "embed_ms_median": 1.687693,
+      "programs": 79,
+      "range": "41-48",
+      "selected_median": 22
+    },
+    {
+      "check_ms_median": 4.14501,
+      "embed_ms_median": 1.957147,
+      "programs": 95,
+      "range": "49+",
+      "selected_median": 22
+    }
+  ],
+  "local_carrier_cases": 46256,
+  "local_carrier_differences": 0,
+  "mode": "tidemark-mode-4",
+  "mutation_decision_differences": 0,
+  "operand": 2480,
+  "payload_bits": 4461,
+  "peak_rss_kb": 26288,
+  "programs": 400,
+  "proof_mutation_semantics": "proof_mutations counts applicable mutations; derivation_mutations_not_applicable counts zero-site records that were retained with an explicit no_steps reason",
+  "proof_mutations": 3280,
+  "raw_files": [
+    "programs.jsonl",
+    "instances.jsonl",
+    "program-results.csv",
+    "full-executions.csv",
+    "local-carrier-checks.csv",
+    "certificate-mutations.jsonl",
+    "derivations.jsonl",
+    "derivation-mutations.jsonl",
+    "carrier-ablation.csv",
+    "adjacent-pairs.jsonl",
+    "interval-audit.csv",
+    "frame-audit.csv"
+  ],
+  "reference_acceptance_differences": 0,
+  "reference_accepted_mutations": 0,
+  "reference_evaluator_calls": 6400,
+  "reference_evaluator_differences": 0,
+  "reference_evaluator_pairs": 3200,
+  "reference_evaluator_semantics": "reference_evaluator_pairs counts source/target pairs; reference_evaluator_calls is twice that value",
+  "reference_selection_differences": 0,
+  "reference_target_differences": 0,
+  "schema": "tidemark-evaluation-mode4",
+  "seed": "tidemark-fixed-seed",
+  "selected": 5782,
+  "selector_differences": 0,
+  "source_bytes": 845239,
+  "structural_dependency": "trace verifier reuses tidemark.reference for analysis, discovery, selection, framing, replay, and extraction; not an independent proof kernel",
+  "target_bytes": 844903,
+  "timing_summary": {
+    "analysis_ms": {
+      "maximum": 0.327141,
+      "median": 0.1633955,
+      "minimum": 0.035984,
+      "p75": 0.20371275,
+      "p95": 0.26492299999999996
+    },
+    "check_ms": {
+      "maximum": 5.752361,
+      "median": 3.2179345,
+      "minimum": 0.350606,
+      "p75": 3.814431,
+      "p95": 4.551903899999999
+    },
+    "derivation_ms": {
+      "maximum": 19.663011,
+      "median": 9.862661,
+      "minimum": 0.80629,
+      "p75": 12.41264525,
+      "p95": 14.6777836
+    },
+    "discovery_ms": {
+      "maximum": 1.683686,
+      "median": 0.748503,
+      "minimum": 0.04652,
+      "p75": 0.9283475,
+      "p95": 1.0983506999999997
+    },
+    "embed_ms": {
+      "maximum": 5.613071,
+      "median": 1.476435,
+      "minimum": 0.164647,
+      "p75": 1.8010972499999998,
+      "p95": 2.138610199999998
+    },
+    "evaluation_ms": {
+      "maximum": 7.946766,
+      "median": 4.4737935,
+      "minimum": 1.213591,
+      "p75": 5.607257,
+      "p95": 7.0025892999999995
+    },
+    "reference_check_ms": {
+      "maximum": 4.834278,
+      "median": 2.2254035,
+      "minimum": 0.187802,
+      "p75": 2.79031675,
+      "p95": 3.4409555499999995
+    },
+    "selection_ms": {
+      "maximum": 0.442374,
+      "median": 0.19236350000000002,
+      "minimum": 0.001042,
+      "p75": 0.2507215,
+      "p95": 0.2890781499999999
+    }
+  }
+}

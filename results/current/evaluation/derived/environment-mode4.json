@@ -1,0 +1,19 @@
+{
+  "certificate_schema": "tidemark-certificate-4",
+  "checker": "tidemark-checker-4",
+  "correlation": "Spearman with average ranks for ties",
+  "logical_cpu_count": 2,
+  "machine": "x86_64",
+  "mode": "tidemark-mode-4",
+  "peak_rss_kb": 26160,
+  "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+  "processor": "x86_64",
+  "python": "3.12.14",
+  "python_implementation": "CPython",
+  "quantile_method": "R-7 linear interpolation: position=(n-1)*p",
+  "release": "6.17.0-1022-azure",
+  "rss_measure": "resource.getrusage(RUSAGE_SELF).ru_maxrss",
+  "rss_unit": "KiB on Linux",
+  "system": "Linux",
+  "timer": "time.perf_counter_ns"
+}
