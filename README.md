@@ -56,6 +56,23 @@ Poppler and PyMuPDF. The recorded visual review additionally used PDFium.
 The reproduction workflow uses offline inputs. The recorded run did not include
 a Coq-kernel or SMT recheck.
 
+## Portable overlap regression
+
+`tests/test_analysis_reuse.py` runs under the existing test discovery command,
+or alone with
+`python3 -B -m unittest discover -s tests -p test_analysis_reuse.py -v`.
+It uses 24 owned sources of at most eight commands, including discarded
+identity/operand/adjacent overlaps and state/trace conflicts, all legal payloads
+for their schedules, and six typed input/store states. Complete descriptors,
+orientations, targets, certificates, extraction, records and observations are
+checked against the raw-tree reference; a test-local Cartesian-subset oracle
+checks the maximum canonical schedule. These tests supplement the quota corpus,
+not its counts or retained measurements.
+
+Embedding and extraction reuse only their call-local source analysis. Public
+discovery still validates, extraction validates the target before discovery,
+and replay and the checker's extractor check remain in place.
+
 ## Scientific interpretation
 
 The 400 programs are quota constructed: family capacities, carrier totals, and

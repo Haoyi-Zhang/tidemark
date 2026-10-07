@@ -426,6 +426,11 @@ def discover_candidates(program: Program) -> tuple[Site, ...]:
     That precedence does not suppress a separately legal adjacent interval.
     """
     analysis = typecheck_program(program)
+    return _discover_candidates_analyzed(program, analysis)
+
+
+def _discover_candidates_analyzed(program: Program, analysis: Analysis) -> tuple[Site, ...]:
+    """Discover using the analysis of this same source within one API call."""
     regions = dict(program.regions)
     sites: list[Site] = []
     for index, command in enumerate(program.commands):
@@ -513,8 +518,8 @@ def decode_site(site: Site, target: Program) -> int:
 
 def extract_payload(source: Program, target: Program, mode: str = MODE_VERSION) -> tuple[int, ...]:
     if mode != MODE_VERSION: raise TideMarkError("unsupported mode")
-    typecheck_program(source); typecheck_program(target)
-    sites = select_sites(discover_candidates(source))
+    analysis = typecheck_program(source); typecheck_program(target)
+    sites = select_sites(_discover_candidates_analyzed(source, analysis))
     if len(source.commands) != len(target.commands): raise TideMarkError("target length mismatch")
     bits = tuple(decode_site(site, target) for site in sites)
     return unframe_bits(bits)
@@ -557,8 +562,8 @@ class Certificate:
 
 def embed(source: Program, payload: Sequence[int], mode: str = MODE_VERSION) -> tuple[Program, Certificate]:
     if mode != MODE_VERSION: raise TideMarkError("unsupported mode")
-    typecheck_program(source)
-    sites = select_sites(discover_candidates(source)); bits = frame_bits(payload, len(sites)); target = replay(source, sites, bits)
+    analysis = typecheck_program(source)
+    sites = select_sites(_discover_candidates_analyzed(source, analysis)); bits = frame_bits(payload, len(sites)); target = replay(source, sites, bits)
     source_bytes = serialize_program(source); target_bytes = serialize_program(target)
     cert = Certificate(mode, CHECKER_VERSION, digest_bytes(source_bytes), digest_bytes(target_bytes), tuple(payload))
     return target, cert
