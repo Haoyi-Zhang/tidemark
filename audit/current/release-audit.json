@@ -20,13 +20,6 @@
   "clean_generated_asset_rebuild_passed": true,
   "observed_visual_defects": [],
   "scope": "Finite typed IR; Mode-4 embed-time only; quota suite; reference-dependent structural records; LLVM textual opportunities, not certification.",
-  "not_claimed": [
-    "independent peer review or scientific endorsement",
-    "zero possible bugs",
-    "Best Paper or acceptance",
-    "fulltext methodological validation of all cited research",
-    "proof-assistant validation of the deployed checker"
-  ],
   "environment_gaps": "Artifacts/local_execution_gaps.json",
   "review_report": "Artifacts/REVIEW-REPORT-ZH.md"
 }
