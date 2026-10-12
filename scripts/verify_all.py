@@ -15,6 +15,7 @@ components=[('unit-tests',[sys.executable,'-m','unittest','discover','-s','tests
 if args.rerun:
  components += [('evaluation',[sys.executable,'scripts/run_evaluation.py'],A),('finite-algebra',[sys.executable,'formal/check_finite_algebra_mode4.py'],A),('external-llvm',[sys.executable,'scripts/run_external_llvm.py'],A)]
 components += [('raw-derived-evidence',[sys.executable,'scripts/verify_evidence.py'],A)]
+components += [('owned-overlap-evidence',[sys.executable,'-B','scripts/run_overlap_comparison.py','--verify-saved'],A)]
 paper_components=[('paper-build',['bash','build.sh'],P),('reference-consistency',[sys.executable,'scripts/audit_references.py'],A),('pdf-source-audit',[sys.executable,'scripts/audit_final_pdf.py'],A)]
 if P.is_dir():components += paper_components
 for name,cmd,cwd in components:

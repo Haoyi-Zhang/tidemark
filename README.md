@@ -73,6 +73,44 @@ Embedding and extraction reuse only their call-local source analysis. Public
 discovery still validates, extraction validates the target before discovery,
 and replay and the checker's extractor check remain in place.
 
+## Overlap-bearing same-goal comparison
+
+`python3 -B scripts/run_overlap_comparison.py` writes a separate run under
+`results/current/overlap/` and refuses to overwrite an existing run. To recheck
+the included raw sources, complete candidate descriptors/orientations,
+policy-specific targets, observations and isolated mutations without writes:
+
+```sh
+python3 -B scripts/run_overlap_comparison.py --verify-saved
+# New measurements go to a new directory; no historical data are replaced.
+python3 -B scripts/run_overlap_comparison.py --output-dir /path/to/new-overlap-run
+```
+
+The study crosses four grammar families, four body sizes and twelve fixed
+variants, producing 192 owned IR sources. All have overlaps; no target capacity
+quota or seed search is used. Every non-unit value feeds a dependent output
+suffix, and store/trace effects remain observable. Mode 4 uses the actual core
+embed/check/extract APIs. Source-first (longer interval at equal start),
+singleton-first (singletons before gap-filling adjacent sites), and adjacent-only
+are source-only baselines with checked replay, canonical bytes, digests, framing
+and extraction. Their separately tagged schema is not a Mode-4 certificate.
+The wrappers reuse legal carrier primitives; raw-tree policy implementations and
+evaluators are differential evidence, not a complete independent proof kernel.
+
+The empty and fixed-eight-bit requests compare identical goals per source.
+Saturation compares each policy's capacity and uses different message lengths.
+All attempts and capacity failures are retained. Mode 4 and singleton-first tie
+at 4,336 sites/3,376 user bits and 120/192 fixed-message successes; source-first
+has 2,930 sites/2,066 bits and adjacent-only 2,880 sites/2,016 bits, both with
+96/192 fixed-message successes. The 1,968 feasible embeddings undergo 11,808
+complete-observation comparisons, with no difference, and both checkers reject
+3,936 isolated payload or rehashed-return mutations. Both orientations of each
+family are reached. This remains a constructed terminating-language evaluation,
+not LLVM validation, a natural-software sample, a timing comparison, or proof
+closure. `summary.json` binds the exact executable sources; verification rejects
+a source-version mismatch. The paper exporter derives its separate macros and
+table from these raw records, with count/failure gates.
+
 ## Scientific interpretation
 
 The 400 programs are quota constructed: family capacities, carrier totals, and

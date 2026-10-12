@@ -32,6 +32,7 @@ jobs:
           python -B scripts/run_static_risk_regressions.py --output-dir scientific-output/boundaries 2>&1 | tee scientific-output/boundaries.log
           python -B formal/check_finite_algebra_mode4.py --output-dir scientific-output/finite 2>&1 | tee scientific-output/finite.log
           python -B scripts/run_evaluation.py --output-dir scientific-output/evaluation 2>&1 | tee scientific-output/evaluation.log
+          python -B scripts/run_overlap_comparison.py --output-dir scientific-output/overlap 2>&1 | tee scientific-output/overlap.log
           CHECKS
       - name: Upload raw attempts and logs even on failure
         if: always()

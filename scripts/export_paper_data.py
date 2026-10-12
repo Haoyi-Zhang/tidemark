@@ -52,3 +52,8 @@ for name,y in sorted(v.items()):
 (P/'data-macros.tex').write_text('\n'.join(lines)+'\n')
 (P/'data-macros.json').write_text(json.dumps({'values':v,'sources':paths,'input_sha256':{p.relative_to(R).as_posix():hashlib.sha256(p.read_bytes()).hexdigest() for p in files.values()}},indent=2)+'\n')
 print('Exported',len(v),'bound values')
+
+# The overlap experiment has separate raw data and source-version bindings;
+# exporting it never changes the historical quota or LLVM aggregates above.
+from export_overlap_data import export as export_overlap
+export_overlap()

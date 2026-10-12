@@ -1,0 +1,243 @@
+{
+  "counts": {
+    "accepted_mutations": 0,
+    "attempts": 2304,
+    "bindings": 10980,
+    "candidate_adjacent": 4634,
+    "candidate_differences": 0,
+    "candidate_identity": 1620,
+    "candidate_operand": 1620,
+    "candidates": 7874,
+    "capacity_rejections": 336,
+    "check_failures": 0,
+    "conflict_pairs": 8680,
+    "embeddings": 1968,
+    "extraction_failures": 0,
+    "full_comparisons": 11808,
+    "mutations": 3936,
+    "optimum_differences": 0,
+    "oriented_adjacent_0": 17474,
+    "oriented_adjacent_1": 5276,
+    "oriented_identity_0": 7101,
+    "oriented_identity_1": 1927,
+    "oriented_operand_0": 7442,
+    "oriented_operand_1": 2074,
+    "overlap_programs": 192,
+    "programs": 192,
+    "reference_accepted_mutations": 0,
+    "reference_evaluator_differences": 0,
+    "schedule_differences": 0,
+    "semantic_differences": 0,
+    "target_differences": 0,
+    "unexpected_rejections": 0
+  },
+  "environment": {
+    "elapsed_seconds": 35.21512060000009,
+    "executable": "D:\\CodexProjects\\2026-07-13\\new-chat-4\\completion_workspace\\library_review\\pdf-env\\Scripts\\python.exe",
+    "platform": "Windows-11-10.0.28000-SP0",
+    "python": "3.12.14"
+  },
+  "families": {
+    "adjacent-chain": {
+      "adjacent-only_capacity": 504,
+      "adjacent-only_sites": 720,
+      "mode4_capacity": 504,
+      "mode4_sites": 720,
+      "singleton-first_capacity": 504,
+      "singleton-first_sites": 720,
+      "source-first_capacity": 504,
+      "source-first_sites": 720
+    },
+    "identity-run": {
+      "adjacent-only_capacity": 504,
+      "adjacent-only_sites": 720,
+      "mode4_capacity": 1176,
+      "mode4_sites": 1440,
+      "singleton-first_capacity": 1176,
+      "singleton-first_sites": 1440,
+      "source-first_capacity": 526,
+      "source-first_sites": 742
+    },
+    "operand-run": {
+      "adjacent-only_capacity": 504,
+      "adjacent-only_sites": 720,
+      "mode4_capacity": 1176,
+      "mode4_sites": 1440,
+      "singleton-first_capacity": 1176,
+      "singleton-first_sites": 1440,
+      "source-first_capacity": 528,
+      "source-first_sites": 744
+    },
+    "state-trace": {
+      "adjacent-only_capacity": 504,
+      "adjacent-only_sites": 720,
+      "mode4_capacity": 520,
+      "mode4_sites": 736,
+      "singleton-first_capacity": 520,
+      "singleton-first_sites": 736,
+      "source-first_capacity": 508,
+      "source-first_sites": 724
+    }
+  },
+  "policies": {
+    "adjacent-only": {
+      "discarded_candidates": 4994,
+      "empty_embeddings": 192,
+      "fixed8_capacity_rejections": 96,
+      "fixed8_embeddings": 96,
+      "optimal_programs": 80,
+      "programs": 192,
+      "saturation_embeddings": 192,
+      "selected_sites": 2880,
+      "site_deficit": 1456,
+      "user_capacity_bits": 2016
+    },
+    "mode4": {
+      "discarded_candidates": 3538,
+      "empty_embeddings": 192,
+      "fixed8_capacity_rejections": 72,
+      "fixed8_embeddings": 120,
+      "optimal_programs": 192,
+      "programs": 192,
+      "saturation_embeddings": 192,
+      "selected_sites": 4336,
+      "site_deficit": 0,
+      "user_capacity_bits": 3376
+    },
+    "singleton-first": {
+      "discarded_candidates": 3538,
+      "empty_embeddings": 192,
+      "fixed8_capacity_rejections": 72,
+      "fixed8_embeddings": 120,
+      "optimal_programs": 192,
+      "programs": 192,
+      "saturation_embeddings": 192,
+      "selected_sites": 4336,
+      "site_deficit": 0,
+      "user_capacity_bits": 3376
+    },
+    "source-first": {
+      "discarded_candidates": 4944,
+      "empty_embeddings": 192,
+      "fixed8_capacity_rejections": 96,
+      "fixed8_embeddings": 96,
+      "optimal_programs": 84,
+      "programs": 192,
+      "saturation_embeddings": 192,
+      "selected_sites": 2930,
+      "site_deficit": 1406,
+      "user_capacity_bits": 2066
+    }
+  },
+  "protocol": {
+    "body_sizes": [
+      8,
+      16,
+      32,
+      64
+    ],
+    "families": [
+      "identity-run",
+      "operand-run",
+      "adjacent-chain",
+      "state-trace"
+    ],
+    "fixed_request_bits": 8,
+    "goals": [
+      "empty",
+      "fixed8",
+      "saturation"
+    ],
+    "states": [
+      [
+        {
+          "a": -3,
+          "b": 2,
+          "flag": false
+        },
+        {
+          "r": -1,
+          "s": 4
+        }
+      ],
+      [
+        {
+          "a": 0,
+          "b": 0,
+          "flag": true
+        },
+        {
+          "r": 0,
+          "s": 0
+        }
+      ],
+      [
+        {
+          "a": 2,
+          "b": -5,
+          "flag": false
+        },
+        {
+          "r": 7,
+          "s": -2
+        }
+      ],
+      [
+        {
+          "a": 9,
+          "b": 3,
+          "flag": true
+        },
+        {
+          "r": -8,
+          "s": 6
+        }
+      ],
+      [
+        {
+          "a": -11,
+          "b": -1,
+          "flag": true
+        },
+        {
+          "r": 4,
+          "s": 4
+        }
+      ],
+      [
+        {
+          "a": 1,
+          "b": 8,
+          "flag": false
+        },
+        {
+          "r": 3,
+          "s": -7
+        }
+      ]
+    ],
+    "variants": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ]
+  },
+  "schema": "tidemark-owned-overlap-evaluation-1",
+  "scientific_failure_gates": [],
+  "scope": "Constructed owned terminating IR, no LLVM execution or natural software distribution; baseline code shares carrier primitives, not an independent proof kernel.",
+  "source_versions_sha256": {
+    "scripts/run_overlap_comparison.py": "6085dea4756b8b2526dae1be26dee71c3b7253fc25cacc767a81458d2bd8aa49",
+    "src/tidemark/core.py": "1e36db95edbb92de2517a1a86ca1a23926cace72a40447a77a32c1f95c3e9269",
+    "src/tidemark/overlap.py": "d9f061e1594b44c5c258e043db0cd1e8656d71add2165ff6368ecbb44a1b8ff4",
+    "src/tidemark/reference.py": "d9877916989b4e4afd5eea3d41a65f8c1baf711a49fea8820ac9987af7131dcb"
+  }
+}

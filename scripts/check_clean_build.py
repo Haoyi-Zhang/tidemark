@@ -9,7 +9,7 @@ O=A/'audit/current';O.mkdir(exist_ok=True,parents=True)
 sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
 with tempfile.TemporaryDirectory(prefix='tidemark-clean-build-') as temp:
  T=Path(temp)/'TOPLAS-20';shutil.copytree(R,T,ignore=shutil.ignore_patterns('__pycache__','*.pyc'))
- P=T/'paper';to_delete=[P/'main.pdf',P/'data-macros.tex',P/'data-macros.json',P/'tables/carrier-ablation-rows.tex']+list((P/'figures').glob('figure-*.pdf'))
+ P=T/'paper';to_delete=[P/'main.pdf',P/'data-macros.tex',P/'data-macros.json',P/'tables/carrier-ablation-rows.tex',P/'overlap-data.tex',P/'tables/overlap-comparison.tex']+list((P/'figures').glob('figure-*.pdf'))
  for f in to_delete:f.unlink(missing_ok=True)
  for ext in ['*.aux','*.bbl','*.blg','*.log','*.out','*.fls','*.fdb_latexmk']:
   for f in P.glob(ext):f.unlink()
@@ -24,5 +24,6 @@ with tempfile.TemporaryDirectory(prefix='tidemark-clean-build-') as temp:
   pixels=same_pages and all(x.get_pixmap(matrix=fitz.Matrix(1.5,1.5),alpha=False).samples==y.get_pixmap(matrix=fitz.Matrix(1.5,1.5),alpha=False).samples for x,y in zip(a,b))
   results.append({'file':rel,'pages':len(a),'rebuilt_pages':len(b),'text_equal':texts,'render_equal_at_108dpi':pixels,'byte_equal':sha(R/rel)==sha(T/rel),'delivered_sha256':sha(R/rel),'rebuilt_sha256':sha(T/rel)})
  macros_same=(R/'paper/data-macros.tex').read_bytes()==(P/'data-macros.tex').read_bytes()
+ macros_same = macros_same and all((R/rel).read_bytes()==(T/rel).read_bytes() for rel in ['paper/overlap-data.tex','paper/tables/overlap-comparison.tex'])
  result={'schema':'tidemark-from-source-clean-build-1','exit_code':cp.returncode,'generated_files_deleted_before_build':[f.relative_to(T).as_posix() for f in to_delete],'macro_bytes_equal':macros_same,'comparisons':results,'passed':macros_same and all(r['text_equal'] and r['render_equal_at_108dpi'] for r in results),'note':'Byte differences, when present, are reported rather than hidden. Acceptance requires identical text and rendered pages from the included current sources and frozen results.'}
  (O/'clean-build.json').write_text(json.dumps(result,indent=2)+'\n');print(json.dumps(result,indent=2));raise SystemExit(0 if result['passed'] else 1)
