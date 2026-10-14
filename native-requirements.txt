@@ -1,0 +1,2 @@
+# Optional native study only; the core remains standard-library-only.
+llvmlite==0.46.0

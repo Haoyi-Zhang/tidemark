@@ -1,0 +1,102 @@
+{
+  "counts": {
+    "sources": 96,
+    "candidates": 3372,
+    "conflicting_pairs": 4440,
+    "overlap_sources": 96,
+    "native_source_calls": 9408,
+    "attempts": 1152,
+    "embeddings": 984,
+    "native_target_calls": 192864,
+    "mutations": 1968,
+    "accepted_mutations": 0,
+    "semantic_differences": 0,
+    "object_bytes": 1622368,
+    "optimized_object_bytes": 617280,
+    "orientation_identity_0": 2460,
+    "capacity_rejections": 168,
+    "orientation_identity_1": 708,
+    "orientation_adjacent_0": 6336,
+    "orientation_adjacent_1": 2040,
+    "orientation_operand_0": 3072,
+    "orientation_operand_1": 912,
+    "optimized_distinct_message_collision_pairs": 592
+  },
+  "policies": {
+    "mode4": {
+      "sites": 1644,
+      "user_bits": 1254,
+      "optimum_sources": 96,
+      "embeddings": 252,
+      "fixed8_success": 60,
+      "rejected": 36
+    },
+    "source-first": {
+      "sites": 1080,
+      "user_bits": 744,
+      "optimum_sources": 24,
+      "embeddings": 240,
+      "fixed8_success": 48,
+      "rejected": 48
+    },
+    "singleton-first": {
+      "sites": 1644,
+      "user_bits": 1254,
+      "optimum_sources": 96,
+      "embeddings": 252,
+      "fixed8_success": 60,
+      "rejected": 36
+    },
+    "adjacent-only": {
+      "sites": 1080,
+      "user_bits": 744,
+      "optimum_sources": 24,
+      "embeddings": 240,
+      "fixed8_success": 48,
+      "rejected": 48
+    }
+  },
+  "source_versions": {
+    "src/tidemark/core.py": "1e36db95edbb92de2517a1a86ca1a23926cace72a40447a77a32c1f95c3e9269",
+    "src/tidemark/reference.py": "d9877916989b4e4afd5eea3d41a65f8c1baf711a49fea8820ac9987af7131dcb",
+    "src/tidemark/overlap.py": "d9f061e1594b44c5c258e043db0cd1e8656d71add2165ff6368ecbb44a1b8ff4",
+    "src/tidemark/native.py": "0a8358dee766acad6f4b085c654da40173efae617b853f29e875d27e33bc8a68",
+    "src/tidemark/native_jit.py": "22241431e5dbb09c8631ae1520f35d34756967044141c06e5c0e12cad07f3f17",
+    "scripts/run_native_study.py": "0bf0d190baa39052e12052d86c4d6fe408aec2f172860bc903340fefb9a7edfc"
+  },
+  "small": false,
+  "elapsed_seconds": 112.04550909998943,
+  "environment": {
+    "python": "3.12.14",
+    "executable": "D:\\CodexProjects\\2026-07-13\\new-chat-4\\completion_workspace\\library_review\\pdf-env\\Scripts\\python.exe",
+    "platform": "Windows-11-10.0.28000-SP0",
+    "llvmlite": "0.46.0",
+    "llvm": [
+      20,
+      1,
+      8
+    ],
+    "triple": "x86_64-pc-windows-msvc",
+    "clocks": {
+      "perf_counter": {
+        "implementation": "QueryPerformanceCounter()",
+        "monotonic": true,
+        "adjustable": false,
+        "resolution": 1e-07
+      },
+      "process_time": {
+        "implementation": "GetProcessTimes()",
+        "monotonic": true,
+        "adjustable": false,
+        "resolution": 1e-07
+      },
+      "time": {
+        "implementation": "GetSystemTimeAsFileTime()",
+        "monotonic": false,
+        "adjustable": true,
+        "resolution": 0.015625
+      }
+    }
+  },
+  "scope": "Owned pure scalar generated IR; source indices/decoder PRE-optimization only; trusted LLVM/ABI; no external LLVM, general IR validation, object extraction, persistence or deployment benefit."
+}

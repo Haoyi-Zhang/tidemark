@@ -4,6 +4,50 @@ This artifact implements the finite typed IR and embed-time relation in the
 adjacent paper. It does not certify LLVM, persistence after optimization,
 robustness, secrecy, ownership, or deployment security.
 
+The optional pure native module below supplies a separate range-admitted
+connection for generated scalar LLVM IR. It is not general LLVM certification,
+and does not change the retained core/overlap/opportunity measurements.
+
+## Optional owned pure native extension
+
+Install native-requirements.txt in an isolated local environment. The native
+test folder is outside default test discovery, so the core's standard-library
+dependency contract stays unchanged. Run from this artifact directory:
+
+~~~sh
+python3 -B -m unittest discover -s native_tests -v
+python3 -B scripts/run_native_study.py --small --out /path/to/fresh-small
+python3 -B scripts/run_native_study.py --out /path/to/fresh-controlled
+python3 -B scripts/run_native_study.py --verify-saved --out results/native-20261014-small-001
+python3 -B scripts/run_native_study.py --verify-saved --out results/native-20261014-full-001
+~~~
+
+The native verifier reconstructs the fixed owned cohort and each authorized
+module before reexecution. It does not execute arbitrary saved LLVM. New run
+directories are mandatory; these commands never overwrite old results.
+formal/native-connection.md states the pure subset, all-intermediate range
+condition, command-slot transport, exact IR decoding theorem and compiler/ABI
+assumptions. No current Coq compilation or general LLVM refinement is claimed.
+
+The separate raw campaigns contain four all-message sources and 96 controlled
+sources. Each uses all 98 states of the declared input box and four identical-
+information selector policies. The controlled campaign retains 1,152 attempts,
+984 targets, 168 capacity failures, 202,272 native calls, 1,968 rejected
+rehashed IR changes and 592 distinct-message optimized-IR collision pairs.
+Mode 4 ties singleton-first at 1,254 bits and 60/96 fixed-eight-bit successes;
+source-first and adjacent-only each have 744 bits and 48/96. Saturation is
+each policy's own quota, not a common-message comparison. Raw JSONL.gz retains
+sources, complete candidates/schedules, ranges, input states, targets,
+certificates, pre-/post-pass IR, outputs, generated COFF objects and mutations.
+
+LLVM 20.1.8 / llvmlite 0.46.0 MCJIT actually ran on native Windows x86-64.
+The default speed-level-2 IR pipeline and backend-opt0 are recorded separately;
+this is not a Clang O2 campaign. Objects are experiment evidence, not deployment
+memory/lifecycle cost. Pre-optimization IR is the extraction channel. The
+retained external-source adapter is still opportunity-only. LLVM/ABI is trusted;
+stateful native code, foreign IR, post-pass/object recovery and a complete
+Python/Coq refinement are unvalidated.
+
 ## Reproduce from this directory
 
 ```sh

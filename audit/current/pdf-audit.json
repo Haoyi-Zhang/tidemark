@@ -319,11 +319,6 @@
   "last_real_text_y1": 545.0123291015625,
   "overfull_or_undefined_lines": [],
   "bibtex_warning_count": 0,
-  "author_order": [
-    "Haoyi Zhang",
-    "Yi Yang",
-    "Md Maruf Hasan"
-  ],
   "source_kind": "editable evidence-grounded reconstruction already present in the supplied source package",
   "review_mode": "acmsmall,screen,review,nonacm; nonacm suppresses unassigned publication metadata without changing journal geometry",
   "scope": "Mechanical check of this source/PDF pair; not a journal-policy clearance, peer review, or universal scientific correctness certificate."

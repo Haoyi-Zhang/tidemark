@@ -1,0 +1,29 @@
+{
+  "queried_utc": "2026-10-13T22:52:34.0851184Z",
+  "cpu": [
+    {
+      "Name": "12th Gen Intel(R) Core(TM) i7-12700KF",
+      "NumberOfCores": 12,
+      "NumberOfLogicalProcessors": 20
+    }
+  ],
+  "os": {
+    "Caption": "Microsoft Windows 11 专业版",
+    "Version": "10.0.28000",
+    "BuildNumber": "28000",
+    "OSArchitecture": "64 位",
+    "TotalVisibleMemorySize": 33388720
+  },
+  "disk": {
+    "DeviceID": "D:",
+    "FileSystem": "NTFS",
+    "DriveType": 3
+  },
+  "unknown": [
+    "virtualization",
+    "storage medium/model",
+    "affinity pinning",
+    "allocation limits",
+    "external workload"
+  ]
+}

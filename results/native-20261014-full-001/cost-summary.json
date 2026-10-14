@@ -1,0 +1,55 @@
+{
+  "saved_counts": {
+    "sources": 96,
+    "candidates": 3372,
+    "conflicting_pairs": 4440,
+    "overlap_sources": 96,
+    "native_source_calls": 9408,
+    "attempts": 1152,
+    "embeddings": 984,
+    "native_target_calls": 192864,
+    "mutations": 1968,
+    "accepted_mutations": 0,
+    "semantic_differences": 0,
+    "object_bytes": 1622368,
+    "optimized_object_bytes": 617280,
+    "orientation_identity_0": 2460,
+    "capacity_rejections": 168,
+    "orientation_identity_1": 708,
+    "orientation_adjacent_0": 6336,
+    "orientation_adjacent_1": 2040,
+    "orientation_operand_0": 3072,
+    "orientation_operand_1": 912,
+    "optimized_distinct_message_collision_pairs": 592
+  },
+  "policy_cost_sums": {
+    "mode4": {
+      "pre_jit_seconds": 18.841623399814125,
+      "whole_case_seconds": 27.229030399845215,
+      "whole_case_process_seconds": 26.71875,
+      "feasible_cases": 252
+    },
+    "source-first": {
+      "pre_jit_seconds": 18.329273799958173,
+      "whole_case_seconds": 26.789072199957445,
+      "whole_case_process_seconds": 26.453125,
+      "feasible_cases": 240
+    },
+    "singleton-first": {
+      "pre_jit_seconds": 18.053037800069433,
+      "whole_case_seconds": 26.573809699795675,
+      "whole_case_process_seconds": 26.3125,
+      "feasible_cases": 252
+    },
+    "adjacent-only": {
+      "pre_jit_seconds": 18.050512900197646,
+      "whole_case_seconds": 26.294606200273847,
+      "whole_case_process_seconds": 25.96875,
+      "feasible_cases": 240
+    }
+  },
+  "raw_rows": 1248,
+  "raw_gzip_bytes": 2408967,
+  "timing_scope": "Whole feasible case: embed/range admission/replay/check/extract, two interpreters over all 98 states, LLVM verification/object emission/MCJIT at backend-opt0 and IR-pipeline-O2, 196 target calls, and two rehashed module checks. Excludes source generation/admission/98 native source calls, compression/writing, capacity rejects, and summary aggregation. Case CPU is process CPU; no pinned/isolated claim. Pre-JIT includes interpreter checks; not an embedding-only timer.",
+  "scope": "Object byte sums are experiment artifacts, not deployment, DB, WAL, runtime memory or lifecycle footprint."
+}

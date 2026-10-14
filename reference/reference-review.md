@@ -1,4 +1,11 @@
-# Current reference review
+# Retained reference review and added primary bindings
+
+The metadata/citation records below describe the supplied manuscript version.
+Their saved section hashes and numeric map are not current bindings after the
+native extension. The added comparison is bound separately in native-sources.md:
+three complete primary papers were read, not all 75 full texts. Existing
+metadata corrections and historical records are retained without claiming a
+new universal citation certification.
 
 Scope: the 75 scholarly entries in `paper/references.bib`, and the exact nearby
 claims enumerated in `citation-support.csv`. These files bind to the current

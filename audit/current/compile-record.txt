@@ -1360,8 +1360,6 @@ Underfull \hbox (badness 3849) in paragraph at lines 39--39
 
 Underfull \vbox (badness 6332) has occurred while \output is active []
 
-
-
 [22.22]
 <figures/figure-05.pdf, id=655, 372.76968pt x 162.69783pt>
 File: figures/figure-05.pdf Graphic file (type pdf)
@@ -1400,22 +1398,14 @@ Package microtype Info: Loading generic protrusion settings for font family
 (./sections/07-related.tex
 Underfull \vbox (badness 1895) has occurred while \output is active []
 
-
-
 [28.28]
 Underfull \vbox (badness 7397) has occurred while \output is active []
-
-
 
 [29.29]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-
 [30.30]
 Underfull \vbox (badness 1881) has occurred while \output is active []
-
-
 
 [31.31]) (./sections/08-conclusion.tex
 
@@ -1433,17 +1423,11 @@ LaTeX Font Info:    Font shape `OT1/LinuxBiolinumT-TLF/m/n' will be
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-
 [33.33]
 Underfull \vbox (badness 6396) has occurred while \output is active []
 
-
-
 [34.34]
 Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 
 [35.35])
 
