@@ -18,11 +18,11 @@ with tempfile.TemporaryDirectory(prefix='tidemark-clean-build-') as temp:
  if cp.returncode:raise SystemExit('clean build failed '+str(cp.returncode))
  results=[]
  for rel in ['paper/main.pdf']+[f'paper/figures/figure-{i:02}.pdf' for i in range(1,7)]:
-  a=fitz.open(R/rel);b=fitz.open(T/rel)
-  same_pages=len(a)==len(b)
-  texts=same_pages and all(x.get_text()==y.get_text() for x,y in zip(a,b))
-  pixels=same_pages and all(x.get_pixmap(matrix=fitz.Matrix(1.5,1.5),alpha=False).samples==y.get_pixmap(matrix=fitz.Matrix(1.5,1.5),alpha=False).samples for x,y in zip(a,b))
-  results.append({'file':rel,'pages':len(a),'rebuilt_pages':len(b),'text_equal':texts,'render_equal_at_108dpi':pixels,'byte_equal':sha(R/rel)==sha(T/rel),'delivered_sha256':sha(R/rel),'rebuilt_sha256':sha(T/rel)})
+  with fitz.open(R/rel) as a,fitz.open(T/rel) as b:
+   same_pages=len(a)==len(b)
+   texts=same_pages and all(x.get_text()==y.get_text() for x,y in zip(a,b))
+   pixels=same_pages and all(x.get_pixmap(matrix=fitz.Matrix(1.5,1.5),alpha=False).samples==y.get_pixmap(matrix=fitz.Matrix(1.5,1.5),alpha=False).samples for x,y in zip(a,b))
+   results.append({'file':rel,'pages':len(a),'rebuilt_pages':len(b),'text_equal':texts,'render_equal_at_108dpi':pixels,'byte_equal':sha(R/rel)==sha(T/rel),'delivered_sha256':sha(R/rel),'rebuilt_sha256':sha(T/rel)})
  macros_same=(R/'paper/data-macros.tex').read_bytes()==(P/'data-macros.tex').read_bytes()
  macros_same = macros_same and all((R/rel).read_bytes()==(T/rel).read_bytes() for rel in ['paper/overlap-data.tex','paper/tables/overlap-comparison.tex'])
  result={'schema':'tidemark-from-source-clean-build-1','exit_code':cp.returncode,'generated_files_deleted_before_build':[f.relative_to(T).as_posix() for f in to_delete],'macro_bytes_equal':macros_same,'comparisons':results,'passed':macros_same and all(r['text_equal'] and r['render_equal_at_108dpi'] for r in results),'note':'Byte differences, when present, are reported rather than hidden. Acceptance requires identical text and rendered pages from the included current sources and frozen results.'}

@@ -216,3 +216,21 @@ executed on GitHub as part of the local checks.
 The 75-entry bibliography and every current citation are indexed in
 `reference/`. Read `reference-review.md` for the distinction between metadata
 corroboration, local citation fit, full-text review, and scientific correctness.
+
+In a complete project, `scripts/audit_references.py` distinguishes the active
+TeX citation keys, any explicit `nocite` entries, the actual BBL/AUX presentation,
+and unpresented database reserves. Currently 74 keys are cited and printed;
+`r09` is retained only as an unpresented database record, not a missing citation.
+The 60-reference floor applies to printed entries. Missing/duplicate keys,
+DOIs, wrong AUX numbering and BBL/database identity mismatches still fail.
+The checker replays BibTeX with the bundled style in a temporary directory and
+compares the BBL, including ordered authors, titles, years and DOI mapping;
+renderer-specific name formatting is not treated as a spelling correction.
+This is local consistency, not certification of the original publications or
+their support for a manuscript claim. Existing `reference/` outputs remain
+historical until a new check is actually run on the intended project copy.
+
+`scripts/check_clean_build.py` closes both PDFs after every comparison, also
+when opening or reading a PDF fails, before removing its temporary project.
+All seven text/render comparisons and macro-byte checks remain required;
+build, comparison and temporary-cleanup errors are not suppressed.
