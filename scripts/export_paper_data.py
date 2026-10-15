@@ -43,14 +43,14 @@ Library & Selected sites & User bits & Zero-capacity programs\\
 '''+ '\n'.join(rows)+r'''
 \bottomrule
 \end{tabular}
-''')
+''',encoding='utf-8',newline='\n')
 lines=['% Generated from exact current result paths. Do not edit values by hand.']
 for name,y in sorted(v.items()):
  if not name.isalpha():raise ValueError(name)
  text=f'{y:.3f}'.rstrip('0').rstrip('.') if isinstance(y,float) else str(y)
  lines.append(r'\newcommand{\TM'+name+'}{'+text+'}')
-(P/'data-macros.tex').write_text('\n'.join(lines)+'\n')
-(P/'data-macros.json').write_text(json.dumps({'values':v,'sources':paths,'input_sha256':{p.relative_to(R).as_posix():hashlib.sha256(p.read_bytes()).hexdigest() for p in files.values()}},indent=2)+'\n')
+(P/'data-macros.tex').write_text('\n'.join(lines)+'\n',encoding='utf-8',newline='\n')
+(P/'data-macros.json').write_text(json.dumps({'values':v,'sources':paths,'input_sha256':{p.relative_to(R).as_posix():hashlib.sha256(p.read_bytes()).hexdigest() for p in files.values()}},indent=2)+'\n',encoding='utf-8',newline='\n')
 print('Exported',len(v),'bound values')
 
 # The overlap experiment has separate raw data and source-version bindings;

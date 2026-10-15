@@ -3,4 +3,6 @@
 PyMuPDF>=1.24
 pypdfium2>=4.0
 Pillow>=10.0
+reportlab>=4.0
+matplotlib>=3.8
 # System dependencies are listed separately in README.md; no pip package replaces TeX or Clang.

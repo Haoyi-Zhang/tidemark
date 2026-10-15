@@ -98,9 +98,9 @@ phase-timing table and does not execute LLVM or mechanize the proofs.
 
 Linux; Python 3.11 or newer (standard library for the core); the included Go
 1.23.2 source snapshot; Clang 17 for the textual projection. Paper building also
-needs XeLaTeX (main manuscript), pdfTeX (standalone retained figures), BibTeX or
-bibtex8, the bundled acmart class and bibliography style,
-TikZ, PGFPlots, Libertine, NewTX, and Inconsolata TeX packages. PDF auditing needs
+needs XeLaTeX, BibTeX or bibtex8, the bundled acmart class and bibliography
+style, Libertine, NewTX, and Inconsolata TeX packages. Python draws every
+figure using Matplotlib and ReportLab; no figure TeX engine is invoked. PDF auditing needs
 Poppler and PyMuPDF. The recorded visual review additionally used PDFium.
 The reproduction workflow uses offline inputs. The recorded run did not include
 a Coq-kernel or SMT recheck.
@@ -181,7 +181,7 @@ In particular, the retained `pdf-audit.json`, `pdf-source-audit.log`,
 `clean-build.json`, `release-audit.json` and related logs include an earlier
 36-page PDF identity (`929f923cb1c4b71134f2966f62848a2205d235041673a30156a40bc544f8d0fd`).
 They are historical build/generation records, not audits of the current
-42-page manuscript. The archived matrix and PDF audit may contain 48-page
+41-page manuscript. The archived matrix and PDF audit may contain 48-page
 packaging-goal fields; those fields have no scientific role and are not emitted
 by the current scripts. Historical records and measurement bytes are retained
 unchanged. A new verification run writes only what it actually executes; it
@@ -232,5 +232,16 @@ historical until a new check is actually run on the intended project copy.
 
 `scripts/check_clean_build.py` closes both PDFs after every comparison, also
 when opening or reading a PDF fails, before removing its temporary project.
-All seven text/render comparisons and macro-byte checks remain required;
+All eight text/render comparisons (main manuscript and seven figures) and macro-byte checks remain required;
 build, comparison and temporary-cleanup errors are not suppressed.
+
+### Editable Python schematics
+
+`figures/draw_schematics.py` generates the five structural diagrams as
+font-embedded vector PDFs. In the complete package,
+`python3 ../paper/figures/build_figures.py --outdir OUTPUT` regenerates all
+seven figures, including the native connection and the two retained-data plots.
+The manuscript contains inclusion wrappers rather than TeX drawing code.
+The clean-build and PDF audits include the native connection. Paper drawing
+dependencies are listed in `requirements.txt`; core checking remains
+standard-library-only.

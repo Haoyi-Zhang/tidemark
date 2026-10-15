@@ -12,14 +12,16 @@ if not P.is_dir():raise SystemExit('Full-project input required: PDF/source audi
 O.mkdir(parents=True,exist_ok=True);issues=[]
 sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
 required=[P/'main.tex',P/'main.pdf',P/'data-macros.tex',P/'data-macros.json',P/'references.bib',P/'figures/preamble.tex',P/'build.sh',P/'Makefile']
-for n in range(1,7):required.extend([P/f'figures/figure-{n:02}.tex',P/f'figures/figure-{n:02}.pdf'])
+figure_names=[f'figure-{n:02}' for n in range(1,7)]+['native-connection']
+for name in figure_names:required.extend([P/'figures'/(name+'.tex'),P/'figures'/(name+'.pdf')])
+required.append(A/'figures/draw_schematics.py')
 for f in required:
  if not f.is_file():issues.append('missing '+str(f.relative_to(R)))
 if issues:raise SystemExit(json.dumps(issues))
 D=fitz.open(P/'main.pdf');text='\n'.join(pg.get_text() for pg in D);captions={}
 for i,pg in enumerate(D,1):
  t=' '.join(pg.get_text().split())
- for n in range(1,7):
+ for n in range(1,8):
   if re.search(r'(?:Figure|Fig\.) '+str(n)+r'\.',t):captions[str(n)]=i
 font_rows=[]
 if shutil.which('pdffonts'):
@@ -43,13 +45,13 @@ log=(P/'main.log').read_text(errors='replace');blg=(P/'main.blg').read_text(erro
 errors=[line for line in log.splitlines() if re.search(r'Overfull|Undefined control sequence|Citation .* undefined|Reference .* undefined|^! ',line)]
 if errors:issues.append('LaTeX errors or overfull boxes')
 if 'Warning--' in blg:issues.append('BibTeX warning')
-if len(captions)!=6:issues.append('not all six captions located')
+if len(captions)!=7:issues.append('not all seven captions located')
 source=(P/'main.tex').read_text()
 class_options=re.search(r'\\documentclass\[([^\]]+)\]\{acmart\}',source)
 review_mode=class_options.group(1) if class_options else 'class options not found'
-for n in range(1,7):
- fd=fitz.open(P/f'figures/figure-{n:02}.pdf')
- if len(fd)!=1:issues.append('standalone figure page count')
+for name in figure_names:
+ with fitz.open(P/'figures'/(name+'.pdf')) as fd:
+  if len(fd)!=1:issues.append('standalone figure page count: '+name)
 record=json.loads((P/'data-macros.json').read_text())
 for rel,digest in record['input_sha256'].items():
  if sha(R/rel)!=digest:issues.append('data source changed after export: '+rel)

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Delete all seven PDFs and generated data in a copy; rebuild and compare."""
+"""Delete the manuscript, all seven figures and generated data; rebuild and compare."""
 from pathlib import Path
 import shutil,tempfile,subprocess,json,hashlib,os
 import fitz
@@ -9,7 +9,7 @@ O=A/'audit/current';O.mkdir(exist_ok=True,parents=True)
 sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
 with tempfile.TemporaryDirectory(prefix='tidemark-clean-build-') as temp:
  T=Path(temp)/'TOPLAS-20';shutil.copytree(R,T,ignore=shutil.ignore_patterns('__pycache__','*.pyc'))
- P=T/'paper';to_delete=[P/'main.pdf',P/'data-macros.tex',P/'data-macros.json',P/'tables/carrier-ablation-rows.tex',P/'overlap-data.tex',P/'tables/overlap-comparison.tex']+list((P/'figures').glob('figure-*.pdf'))
+ P=T/'paper';figure_names=[f'figure-{i:02}' for i in range(1,7)]+['native-connection'];to_delete=[P/'main.pdf',P/'data-macros.tex',P/'data-macros.json',P/'tables/carrier-ablation-rows.tex',P/'overlap-data.tex',P/'tables/overlap-comparison.tex']+[P/'figures'/(name+'.pdf') for name in figure_names]+[P/'figures/evaluation-capacity.pdf',P/'figures/evaluation-cost.pdf']
  for f in to_delete:f.unlink(missing_ok=True)
  for ext in ['*.aux','*.bbl','*.blg','*.log','*.out','*.fls','*.fdb_latexmk']:
   for f in P.glob(ext):f.unlink()
@@ -17,7 +17,7 @@ with tempfile.TemporaryDirectory(prefix='tidemark-clean-build-') as temp:
  (O/'clean-build.log').write_text(cp.stdout.replace(str(T),'.'))
  if cp.returncode:raise SystemExit('clean build failed '+str(cp.returncode))
  results=[]
- for rel in ['paper/main.pdf']+[f'paper/figures/figure-{i:02}.pdf' for i in range(1,7)]:
+ for rel in ['paper/main.pdf']+['paper/figures/'+name+'.pdf' for name in figure_names]:
   with fitz.open(R/rel) as a,fitz.open(T/rel) as b:
    same_pages=len(a)==len(b)
    texts=same_pages and all(x.get_text()==y.get_text() for x,y in zip(a,b))
