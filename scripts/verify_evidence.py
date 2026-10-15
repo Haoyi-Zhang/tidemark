@@ -24,11 +24,11 @@ for r in rows:
  family[r['family']]['programs']+=1
 for name,counts in family.items():
  for key,value in counts.items():check('family '+name+' '+key,value,S['family_summary'][name][key])
-h=hashlib.sha256();program_count=0;source_keys=[]
+h=hashlib.sha256();program_count=0
 for r in json_rows('programs.jsonl'):
  obj=r.get('program',r.get('source'))
  if obj is None:raise RuntimeError('unrecognized raw program record')
- data=serialize_program(Program.from_obj(obj));h.update(len(data).to_bytes(8,'big'));h.update(data);source_keys.append(hashlib.sha256(data).hexdigest());program_count+=1
+ data=serialize_program(Program.from_obj(obj));h.update(len(data).to_bytes(8,'big'));h.update(data);program_count+=1
 check('corpus size',program_count,S['programs']);check('corpus hash',h.hexdigest(),S['corpus_digest'])
 for name,key in [('full-executions.csv','full_executions'),('local-carrier-checks.csv','local_carrier_cases'),('interval-audit.csv','interval_instances'),('adjacent-pairs.jsonl','adjacent_pairs'),('derivations.jsonl','derivations')]:
  n=sum(1 for _ in (json_rows(name) if name.endswith('.jsonl') else csv_rows(name)));check('raw '+name,n,S[key])
