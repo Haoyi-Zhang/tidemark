@@ -181,7 +181,7 @@ In particular, the retained `pdf-audit.json`, `pdf-source-audit.log`,
 `clean-build.json`, `release-audit.json` and related logs include an earlier
 36-page PDF identity (`929f923cb1c4b71134f2966f62848a2205d235041673a30156a40bc544f8d0fd`).
 They are historical build/generation records, not audits of the current
-41-page manuscript. The archived matrix and PDF audit may contain 48-page
+manuscript. The archived matrix and PDF audit may contain 48-page
 packaging-goal fields; those fields have no scientific role and are not emitted
 by the current scripts. Historical records and measurement bytes are retained
 unchanged. A new verification run writes only what it actually executes; it
