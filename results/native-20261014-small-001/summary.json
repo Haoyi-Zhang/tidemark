@@ -63,7 +63,7 @@
   "elapsed_seconds": 1.9980879000213463,
   "environment": {
     "python": "3.12.14",
-    "executable": "D:\\CodexProjects\\2026-07-13\\new-chat-4\\completion_workspace\\library_review\\pdf-env\\Scripts\\python.exe",
+    "executable": "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\library_review\\pdf-env\\Scripts\\python.exe",
     "platform": "Windows-11-10.0.28000-SP0",
     "llvmlite": "0.46.0",
     "llvm": [

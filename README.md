@@ -245,3 +245,7 @@ The manuscript contains inclusion wrappers rather than TeX drawing code.
 The clean-build and PDF audits include the native connection. Paper drawing
 dependencies are listed in `requirements.txt`; core checking remains
 standard-library-only.
+
+## Portable path notation
+
+Published execution records use `<PYTHON_ROOT>`, `<NODE_ROOT>`, `<RUNTIME_ROOT>` and `<PROJECTS_ROOT>` for machine-local installation and workspace prefixes. These are path aliases, not literal directories; substitute the corresponding local roots when replaying a command. Recorded interpreter and dependency versions, inputs, measurements and outcomes are unchanged. File inventories bind the published portable serializations; any `recorded_` identity denotes the pre-normalization bytes.
