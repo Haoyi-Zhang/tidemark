@@ -52,8 +52,8 @@ review_mode=class_options.group(1) if class_options else 'class options not foun
 for name in figure_names:
  with fitz.open(P/'figures'/(name+'.pdf')) as fd:
   if len(fd)!=1:issues.append('standalone figure page count: '+name)
-record=json.loads((P/'data-macros.json').read_text())
-for rel,digest in record['input_sha256'].items():
+record=json.loads((A/'data/derived/paper-export-inputs.json').read_text())
+for rel,digest in record.items():
  if sha(R/rel)!=digest:issues.append('data source changed after export: '+rel)
 last=[w for w in D[-1].get_text('words') if w[0]>=38 and 45<w[1]<680 and not re.fullmatch(r'\d+',w[4])]
 y=max(w[3] for w in last)

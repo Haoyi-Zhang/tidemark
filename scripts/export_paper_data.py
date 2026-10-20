@@ -50,10 +50,12 @@ for name,y in sorted(v.items()):
  text=f'{y:.3f}'.rstrip('0').rstrip('.') if isinstance(y,float) else str(y)
  lines.append(r'\newcommand{\TM'+name+'}{'+text+'}')
 (P/'data-macros.tex').write_text('\n'.join(lines)+'\n',encoding='utf-8',newline='\n')
-(P/'data-macros.json').write_text(json.dumps({'values':v,'sources':paths,'input_sha256':{p.relative_to(R).as_posix():hashlib.sha256(p.read_bytes()).hexdigest() for p in files.values()}},indent=2)+'\n',encoding='utf-8',newline='\n')
+(P/'data-macros.json').write_text(json.dumps({'values':v,'sources':paths},indent=2)+'\n',encoding='utf-8',newline='\n')
 print('Exported',len(v),'bound values')
 
 # The overlap experiment has separate raw data and source-version bindings;
 # exporting it never changes the historical quota or LLVM aggregates above.
 from export_overlap_data import export as export_overlap
 export_overlap()
+
+(D/'paper-export-inputs.json').write_text(json.dumps({p.relative_to(R).as_posix():hashlib.sha256(p.read_bytes()).hexdigest() for p in files.values()},indent=2)+'\n',encoding='utf-8',newline='\n')
