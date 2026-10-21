@@ -96,7 +96,7 @@ def overview(out):
           'Identity: u ↔ u + 0     pure atomic base\n'
           'Adjacent: p; q ↔ q; p     independent data and effects')
     d.edge('source','families',sb='n',via=((2.15,6.77),(6.2,6.77)))
-    d.arrow(d.point('families','e'),(10.25,6.82),via=((12.13,5.78),(12.13,6.82)))
+    d.arrow(d.point('families','e'),d.point('target','s'),via=((12.13,5.78),(12.13,6.70),(10.25,6.70)))
     labels=[('p',.75,1.0,'P'),('c',3.15,2.8,'Candidates\nfrom P'),
             ('s',6.25,2.4,'Selected\nsource intervals'),
             ('f',9.1,2.1,'Frame$_3$(1)\n= 011'),('q',11.55,1.0,'Q')]
