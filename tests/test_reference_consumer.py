@@ -28,6 +28,15 @@ def item(record):
 
 
 class ReferenceConsumerTests(unittest.TestCase):
+    def test_current_compound_surnames_are_protected(self):
+        bib = ROOT.parent / 'paper/references.bib'
+        if not bib.is_file():
+            self.skipTest('Sibling manuscript not present in standalone artifact checkout')
+        entries = {e['key']: e for e in audit['parse_bib'](bib.read_text(encoding='utf-8'))}
+        for key in ('r51', 'r52', 'r53', 'r54'):
+            with self.subTest(key=key):
+                self.assertTrue(entries[key]['author'].startswith('Mila {Dalla Preda} and '))
+
     def setUp(self):
         self.entries = [entry('a', 'Alice Able and Bob Baker', 'Current Title'),
                         entry('spare', 'Carol Clark', 'Reserve Title')]

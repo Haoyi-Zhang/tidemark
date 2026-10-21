@@ -40,6 +40,17 @@ each policy's own quota, not a common-message comparison. Raw JSONL.gz retains
 sources, complete candidates/schedules, ranges, input states, targets,
 certificates, pre-/post-pass IR, outputs, generated COFF objects and mutations.
 
+Saved-run verification binds every goal to its generated payload (including
+the exhaustive small-run index) before target replay. The verifier accepts
+the current source identities or the exact retained producer driver
+`0bf0d190baa39052e12052d86c4d6fe408aec2f172860bc903340fefb9a7edfc`,
+with all five other source hashes still required to equal the current files.
+That one predecessor has identical generation/measurement semantics but lacked
+the goal/payload guard. The retained run identities, counts and timings are
+unchanged; this compatibility does not claim that the new verifier generated
+those runs. `tests/test_native_saved_goals.py` checks this control flow with
+an explicitly non-native backend double, not new LLVM measurements.
+
 LLVM 20.1.8 / llvmlite 0.46.0 MCJIT actually ran on native Windows x86-64.
 The default speed-level-2 IR pipeline and backend-opt0 are recorded separately;
 this is not a Clang O2 campaign. Objects are experiment evidence, not deployment

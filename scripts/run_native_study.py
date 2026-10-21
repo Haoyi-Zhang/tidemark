@@ -26,6 +26,25 @@ FILES = ("src/tidemark/core.py", "src/tidemark/reference.py", "src/tidemark/over
          "src/tidemark/native.py", "src/tidemark/native_jit.py", "scripts/run_native_study.py")
 BOX = {"a": [-3, 3], "b": [-3, 3]}
 INPUTS = list(itertools.product(range(-3, 4), range(-3, 4), (0, 1)))
+# Exact producer retained by the 20261014 campaigns. Only this driver changed:
+# verification now binds goals to payloads; generation/measurement semantics
+# are unchanged. All five other source identities must still match exactly.
+LEGACY_DRIVER_SHA256 = "0bf0d190baa39052e12052d86c4d6fe408aec2f172860bc903340fefb9a7edfc"
+
+
+def check_source_versions(versions):
+    current = hashes()
+    legacy = dict(current, **{"scripts/run_native_study.py": LEGACY_DRIVER_SHA256})
+    if versions not in (current, legacy):
+        raise ValueError("source version mismatch")
+
+
+def study_goals(capacity, small):
+    if small:
+        return [(f"all-{n}-{k}", bits) for n in range(capacity+1)
+                for k, bits in enumerate(itertools.product((0, 1), repeat=n))]
+    return [("empty", ()), ("fixed8", (0, 1)*4),
+            ("saturation", tuple(i % 2 for i in range(capacity)))]
 
 
 def sources(small):
@@ -219,10 +238,7 @@ def run(out, small):
                                     "schedule": [json.loads(x.descriptor_bytes) for x in s]} for p, s in plans.items()}})
             for p, sites in plans.items():
                 capacity = core.payload_capacity(len(sites))
-                goals = ([(f"all-{n}-{k}", bits) for n in range(capacity+1)
-                          for k, bits in enumerate(itertools.product((0, 1), repeat=n))] if small else
-                         [("empty", ()), ("fixed8", (0, 1)*4), ("saturation", tuple(i % 2 for i in range(capacity)))])
-                for goal, payload in goals:
+                for goal, payload in study_goals(capacity, small):
                     save(measure(name, source, p, goal, payload, values))
             print(name, flush=True)
     summary = summarize(rows)
@@ -239,12 +255,11 @@ def run(out, small):
 
 def verify(out):
     summary = json.loads((out / "summary.json").read_text(encoding="utf-8"))
-    if summary["source_versions"] != hashes():
-        raise ValueError("source version mismatch")
+    check_source_versions(summary["source_versions"])
     native_jit.initialize()
     sources_by_id = {}
     expected_sources = dict(sources(summary["small"]))
-    expected_attempts, seen_attempts = set(), set()
+    expected_attempts, seen_attempts = {}, set()
     rows = []
     with gzip.open(out / "raw.jsonl.gz", "rt", encoding="utf-8") as f:
         for line in f:
@@ -265,9 +280,8 @@ def verify(out):
                     cap = core.payload_capacity(len(plan))
                     assert r["policies"][p] == {"sites": len(plan), "capacity": cap,
                                               "schedule": [json.loads(s.descriptor_bytes) for s in plan]}
-                    goals = ([f"all-{n}-{k}" for n in range(cap+1) for k in range(1 << n)]
-                             if summary["small"] else ["empty", "fixed8", "saturation"])
-                    expected_attempts.update((r["id"], p, goal) for goal in goals)
+                    expected_attempts.update({(r["id"], p, goal): list(payload)
+                                              for goal, payload in study_goals(cap, summary["small"])})
                 assert native.admit(source, BOX) == r["range_audit"]
                 values = oracle(source)
                 actual, _, _ = native_jit.execute(r["source_ir"].encode(), INPUTS)
@@ -277,6 +291,9 @@ def verify(out):
             source, values = sources_by_id[r["id"]]
             identity = r["id"], r["policy"], r["goal"]
             assert identity not in seen_attempts
+            if (identity not in expected_attempts or
+                    core.canonical_json(r["payload"]) != core.canonical_json(expected_attempts[identity])):
+                raise ValueError("goal/payload mismatch")
             seen_attempts.add(identity)
             current = measure(r["id"], source, r["policy"], r["goal"], r["payload"], values)
             for key in current:
@@ -284,7 +301,7 @@ def verify(out):
                     continue
                 assert current[key] == r[key], (r["id"], key)
     actual = summarize(rows)
-    assert set(sources_by_id) == set(expected_sources) and seen_attempts == expected_attempts
+    assert set(sources_by_id) == set(expected_sources) and seen_attempts == set(expected_attempts)
     assert actual["counts"] == summary["counts"] and actual["policies"] == summary["policies"]
     return actual
 
