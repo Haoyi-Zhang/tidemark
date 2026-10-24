@@ -61,6 +61,34 @@ Python/Coq refinement are unvalidated.
 
 ## Reproduce from this directory
 
+### Complete owned source-to-native example
+
+`examples/shipping_quote.py` is a ten-assignment quote calculation, not a
+third-party or deployed application. The strict `tidemark.python_subset` AST
+adapter admits only annotated single-assignment pure Int/Bool expressions;
+calls, attributes, loops, imports, mutation and unsupported syntax are rejected.
+All 60 inputs in units=0..5, weight=0..4 and both priority values agree between
+CPython, two IR interpreters and LLVM. The same two one-bit requests under all
+four selectors produce eight targets and 1,020 native calls, without discrepancy.
+Mode 4/singleton-first select nine sites (five user bits), source-first six
+(three bits), adjacent-only four (one bit). Three policy pairs have identical
+optimized IR; adjacent-only does not collapse in this run.
+
+Run the optional pinned native dependency and use a fresh output directory:
+
+~~~sh
+python3 -B -m unittest discover -s coherence_tests -v
+python3 -B -O -m unittest discover -s coherence_tests -v
+python3 -B scripts/run_shipping_quote.py --output /path/to/fresh-quote --compare results/shipping-quote/summary.json
+~~~
+
+The comparison checks scientific counts and decisions, not platform-specific
+object bytes or timing. `results/shipping-quote/records.json` retains the actual
+source, translated tree, box, inputs, outputs, wrappers and pre-/post-pass IR.
+The paper table validates these records through `paper/generate_shipping_quote.py`.
+This is separate from the 96-source native campaign and its 592 collision pairs;
+no historical campaign is relabeled or overwritten.
+
 ```sh
 export PYTHONPATH="$PWD/src"
 export PYTHONDONTWRITEBYTECODE=1
@@ -221,8 +249,10 @@ wrong frozen counts, after preserving raw outputs. The prepared
 `.github/workflows/scientific-checks.yml` uses the flat artifact-repository root,
 Ubuntu 24.04, a whole-run deadline and resource limits, and always attempts to
 upload raw outputs and logs. It runs only owned IR/finite cases: no external
-compiler campaign, TeX build, API, or third-party application. It has not been
-executed on GitHub as part of the local checks.
+compiler campaign, TeX build, API, or third-party application. A separate job
+installs the pinned optional native backend and executes the owned quote
+example and source/native guard tests. The Actions result for the current
+commit identifies which remote checks actually completed.
 
 The 75-entry bibliography and every current citation are indexed in
 `reference/`. Read `reference-review.md` for the distinction between metadata

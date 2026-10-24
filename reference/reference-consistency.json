@@ -182,7 +182,7 @@
   "all_local_checks_passed": true,
   "bib_sha256": "30913dcc1b6c51a023730a0249293de8380364317aa73f93705760f87126ef1a",
   "bbl_sha256": "9cdb461b0e7e91e55cb29e012fc9f688b07e631c6b3471e984e31cad1d93a826",
-  "aux_sha256": "851d82ec72bed6a81481aebf677c7b7a8a655c9030229ad91a354eb626f85e7c",
+  "aux_sha256": "abcd0faf6f4b30bddb9f68f55c50da392b6c9dfbebd00fa10de5429a39b40565",
   "citation_occurrences": 88,
   "multi_key_citations": [],
   "active_tex_inputs": [
@@ -209,6 +209,7 @@
     "paper/sections/08-conclusion.tex",
     "paper/tables/carrier-ablation-rows.tex",
     "paper/tables/native-comparison.tex",
-    "paper/tables/overlap-comparison.tex"
+    "paper/tables/overlap-comparison.tex",
+    "paper/tables/shipping-quote.tex"
   ]
 }

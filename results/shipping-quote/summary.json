@@ -1,0 +1,54 @@
+{
+  "source_kind": "one_owned_shipping_quote_not_external_deployment",
+  "source_commands": 10,
+  "input_states": 60,
+  "policies": [
+    {
+      "policy": "mode4",
+      "sites": 9,
+      "capacity": 5,
+      "messages": 2,
+      "exact_ir_decodes": 2,
+      "different_prepass_ir": true,
+      "equal_optimized_ir": true
+    },
+    {
+      "policy": "source-first",
+      "sites": 6,
+      "capacity": 3,
+      "messages": 2,
+      "exact_ir_decodes": 2,
+      "different_prepass_ir": true,
+      "equal_optimized_ir": true
+    },
+    {
+      "policy": "singleton-first",
+      "sites": 9,
+      "capacity": 5,
+      "messages": 2,
+      "exact_ir_decodes": 2,
+      "different_prepass_ir": true,
+      "equal_optimized_ir": true
+    },
+    {
+      "policy": "adjacent-only",
+      "sites": 4,
+      "capacity": 1,
+      "messages": 2,
+      "exact_ir_decodes": 2,
+      "different_prepass_ir": true,
+      "equal_optimized_ir": false
+    }
+  ],
+  "targets": 8,
+  "native_calls": 1020,
+  "optimized_collision_pairs": 3,
+  "semantic_discrepancies": 0,
+  "python": "3.12.14",
+  "platform": "Windows-11-10.0.28000-SP0",
+  "llvm": [
+    20,
+    1,
+    8
+  ]
+}
