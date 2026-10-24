@@ -61,6 +61,29 @@ Python/Coq refinement are unvalidated.
 
 ## Reproduce from this directory
 
+### Attributed cubic-coefficient consumer
+
+`examples/bezier_coefficients.py` adapts the eight fontTools 4.60.1 cubic
+coefficient equations to the admitted integer grammar and a scalar coefficient
+selection interface. `examples/bezier-source.md` gives the upstream lines,
+adaptation map, consumer context and MIT notice. It is not a deployment study
+or execution of the third-party package. No capacity quota or dead binding is
+inserted. All 2,048 binary-polygon/coefficient inputs agree with an expanded
+polynomial oracle and both interpreters on six feasible targets. Both one-bit
+adjacent-only requests are rejected for capacity. All three full-library
+selectors tie at four sites and one user bit. Six deliberately rehashed return
+changes retain local extraction but are rejected by both whole-target checkers.
+
+~~~sh
+python3 -B scripts/run_bezier_consumer.py --verify results/bezier-consumer
+python3 -B scripts/run_bezier_consumer.py --output /path/to/fresh-bezier
+~~~
+
+The native range admission is checked; no new LLVM calls are claimed for this
+case. Raw inputs, outputs, actual target/certificate bytes and omission witnesses
+are retained in `results/bezier-consumer`. The manuscript build rechecks these
+records and derives `tables/bezier-consumer.tex` with the same script.
+
 ### Complete owned source-to-native example
 
 `examples/shipping_quote.py` is a ten-assignment quote calculation, not a
@@ -254,7 +277,7 @@ installs the pinned optional native backend and executes the owned quote
 example and source/native guard tests. The Actions result for the current
 commit identifies which remote checks actually completed.
 
-The 75-entry bibliography and every current citation are indexed in
+The inherited 75-entry bibliography and its earlier citations are indexed in
 `reference/`. Read `reference-review.md` for the distinction between metadata
 corroboration, local citation fit, full-text review, and scientific correctness.
 
@@ -267,7 +290,9 @@ DOIs, wrong AUX numbering and BBL/database identity mismatches still fail.
 The checker replays BibTeX with the bundled style in a temporary directory and
 compares the BBL, including ordered authors, titles, years and DOI mapping;
 renderer-specific name formatting is not treated as a spelling correction.
-This is local consistency, not certification of the original publications or
+The added fontTools source citation and MIT attribution are documented in
+`examples/bezier-source.md`; the current database has 76 records and 75 cited
+entries, with the same unpresented reserve. This is local consistency, not certification of the original publications or
 their support for a manuscript claim. Existing `reference/` outputs remain
 historical until a new check is actually run on the intended project copy.
 

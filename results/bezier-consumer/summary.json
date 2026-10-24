@@ -1,0 +1,42 @@
+{
+  "source_kind": "upstream_derived_integer_coordinate_adaptation",
+  "upstream": "fonttools/fonttools@4.60.1:Lib/fontTools/misc/bezierTools.py:890-901",
+  "source_commands": 9,
+  "inputs": 2048,
+  "policies": [
+    {
+      "policy": "mode4",
+      "sites": 4,
+      "user_bits": 1,
+      "accepted": 2,
+      "attempts": 2
+    },
+    {
+      "policy": "source-first",
+      "sites": 4,
+      "user_bits": 1,
+      "accepted": 2,
+      "attempts": 2
+    },
+    {
+      "policy": "singleton-first",
+      "sites": 4,
+      "user_bits": 1,
+      "accepted": 2,
+      "attempts": 2
+    },
+    {
+      "policy": "adjacent-only",
+      "sites": 1,
+      "user_bits": 0,
+      "accepted": 0,
+      "attempts": 2
+    }
+  ],
+  "targets": 6,
+  "attempts": 8,
+  "capacity_rejections": 2,
+  "omission_witnesses": 6,
+  "semantic_discrepancies": 0,
+  "native_execution": false
+}
